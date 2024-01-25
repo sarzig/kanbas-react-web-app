@@ -5,9 +5,37 @@
 </head>
 
 <body>
-    <h1>HTML Examples</h1>
-    <h2>2.3 Heading Tags - Long-Time Nuclear Waste Warnings</h2>
+    <h1>Lab 1 - Basic HTML Examples</h1>
+    <h2> Link to Sections</h2>
+    <a href="#2.3">[2.3 Heading Tags]</a>
+    <a href="#2.4">[2.4 Paragraph Tags]</a>
+    <a href="#2.5">[2.5 List Tags]</a>
+    <a href="#2.5.1">[2.5.1 Ordered List Tags]</a>
+    <a href="#2.5.2">[2.5.2 Unordered List Tags]</a>
+    <a href="#2.6">[2.6 Table Tags]</a>
+    <a href="#2.7">[2.7 Image Tags]</a>
+    <a href="#2.8">[2.8 Form Tags]</a>
+    <a href="#2.8.1">[2.8.1 Text fields]</a>
+    <a href="#2.8.2">[2.8.2 Textareas]</a>
+    <a href="#2.8.3">[2.8.3 Buttons]</a>
+    <a href="#2.8.4">[2.8.4 File upload button]</a>
+    <a href="#2.8.5">[2.8.5 Radio buttons]</a>
+    <a href="#2.8.6">[2.8.6 Checkboxes]</a>
+    <a href="#2.8.7">[2.8.7 Dropdowns]</a>
+    <a href="#2.8.8">[2.8.8 Other HTML field types]</a>
+    <a href="#2.9">[2.9 Anchor Tags]</a>
+    <a href="#sources">[Sources]</a>
+
+
+    <h2 id="2.3">2.3 Heading Tags - Long-Time Nuclear Waste Warnings</h2>
     <p>
+        Long-term nuclear waste warning messages are communication attempts intended to deter human intrusion at nuclear
+        waste repositories in the far future, within or above the order of magnitude of 10,000 years.
+        <br><br>
+        Creators of such warnings must consider thought-provoking questions such as: "How can I articulate danger
+        without knowing the language or culture of the target recipients?", "What if the humans of the future do not
+        have written language?", "What pictographics clearly indicate a threat to those disturbing the area?"
+        <br><br>
         This place is a message... and part of a system of messages... pay attention to it! <br>
         Sending this message was important to us. We considered ourselves to be a powerful culture. <br>
 
@@ -28,7 +56,7 @@
         The danger is unleashed only if you substantially disturb this place physically. This place is best shunned and
         left uninhabited. <br>
     </p>
-    <h2>2.4 Testing Adding Paragraph Tags</h2>
+    <h2 id="2.4">2.4 Paragraph Tags</h2>
     <p>
         This is the first paragraph. The paragraph tag is used to format vertical
         gaps between long pieces of text like this one.
@@ -43,8 +71,9 @@
         tell browsers to render the gaps.
     </p>
 
-    <h2>2.5 List Tags</h2>
-    <h3>2.5.1 Testing Ordered List Tag</h3>
+    <h2 id="2.5">2.5 List Tags</h2>
+    <h3 id="2.5.1">
+        </h3id>2.5.1 Ordered List Tag</h3>
     The Sandia report further recommended that any such message should comprise four levels of increasing complexity:
     <ol>
         <li>Rudimentary information: "Something man-made is here"</li>
@@ -53,7 +82,7 @@
         <li>Complex information: Highly detailed written records, tables, figures, graphs, maps and diagrams</li>
     </ol>
 
-    <h3>2.5.2 Testing Unordered List Tag</h3>
+    <h3 id="2.5.2"></h3>2.5.2 Unordered List Tag</h3>
     <ul>
         <li>Landscape of Thorns</li>
         <li style="margin-left:2em; list-style-type: circle">A mass of many irregularly-sized spikes protruding from the
@@ -81,7 +110,7 @@
             use.</li>
     </ul>
 
-    <h2>2.6 Table Tag</h2>
+    <h2 id="2.6">2.6 Table Tag</h2>
     <table border="1" width="100%" style="text-align: center;">
         <thead>
             <tr>
@@ -119,14 +148,49 @@
         </tfoot>
     </table>
 
-    <h2>2.7 Image Tag</h2>
+    <h2 id="2.7">2.7 Image Tag</h2>
     Loading an image from the internet:<br>
-    <img width="400px" src="https://preview.redd.it/the-warning-on-nuclear-waste-disposal-sites-designed-to-be-v0-aa758lwuo0691.png?width=640&crop=smart&auto=webp&s=eed30306e4fe9be192b6e183baf68a982347f184" />
+    <img width="400px"
+        src="https://preview.redd.it/the-warning-on-nuclear-waste-disposal-sites-designed-to-be-v0-aa758lwuo0691.png?width=640&crop=smart&auto=webp&s=eed30306e4fe9be192b6e183baf68a982347f184" />
     <br><br>
     Loading a local image that represents an example of long-term nuclear waste warning messaging:<br>
     <img src="nuclear_image_example.png" height="200px" />
 
 
-    
+    <h2 id="2.8">2.8 Form Tags</h2>
+    <h3 id="2.8.1">2.8.1 Text fields</h3>
+    <form id="text-fields">
+        <label for="text-fields-username">Username:</label>
+        <input id="text-fields-username" placeholder="jroppenheimer" /><br />
+
+        <label for="text-fields-password">Password:</label>
+        <input type="password" id="text-fields-password" value="123@#$asd" /><br />
+
+        <label for="text-fields-first-name">First name:</label>
+        <input type="text" id="text-fields-first-name" title="John" /><br />
+
+        <label for="text-fields-last-name">Last name:</label>
+        <input type="text" id="text-fields-last-name" placeholder="Oppenheimer" value="Wonderland" />
+    </form>
+
+    <h3 id="2.8.2">2.8.2 Textareas</h3>
+    <h3 id="2.8.3">2.8.3 Buttons</h3>
+    <h3 id="2.8.4">2.8.4 File upload button</h3>
+    <h3 id="2.8.5">2.8.5 Radio buttons</h3>
+    <h3 id="2.8.6">2.8.6 Checkboxes</h3>
+    <h3 id="2.8.7">2.8.7 Dropdowns</h3>
+    <h3 id="2.8.8">2.8.8 Other HTML field types</h3>
+
+
+    <h2 id="sources">Sources</h2>
+    <a href="https://en.wikipedia.org/wiki/Long-term_nuclear_waste_warning_messages">
+        Wikipedia article: Long-term nuclear waste warning messages
+    </a><br><br>
+    <a href="#top">[Back to Top]</a>
+    <br><br>
+    <h2 id="pages">Available Pages</h2>
+    <a href="/labs/a1/index.html">[Lab 1: "/labs/a1/index.html"]</a>
+    <a href="/labs/a2/index.html">[Lab 2: "/labs/a2/index.html"]</a>
 </body>
+
 </html>
