@@ -1,0 +1,129 @@
+<!-- 
+    main content of the Home screen as shown in Figure 3.1.3 (A1)
+    localhost:3000/Kanbas/Courses/Home/index.html
+-->
+<html>
+
+<body>
+    <table border="1">
+        <tbody>
+            <tr>
+                <td valign="top">
+                    <!--from Kanbas/Navigation/index.html-->
+                    <ul>
+                        <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
+                        <li><a href="/Kanbas/Dashboard/screen.html">Dashboard†</a></li>
+                        <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
+                        <li><a href="#">Calendar†</a></li>
+                        <li><a href="#">Inbox†</a></li>
+                        <li><a href="#">History†</a></li>
+                        <li><a href="#">Studio†</a></li>
+                        <li><a href="#">Commons†</a></li>
+                        <li><a href="#">Help†</a></li>
+                    </ul>
+                    † Refers to pages not yet published
+                </td>
+                <td valign="top">
+                    <!--from Kanbas/Account/Navigation/index.html-->
+
+                    <ul>
+                        <li><a href="#">Notifications†</a></li>
+                        <li><a href="/Kanbas/Account/Profile/screen.html">Profile</a></li>
+                        <li><a href="#">Files†</a></li>
+                        <li><a href="#">Settings†</a></li>
+                        <li><a href="#">ePortfolios†</a></li>
+                        <li><a href="#">Shared Content†</a></li>
+                        <li><a href="#">The Hub†</a></li>
+                        <li><a href="#">Qwickly Course Tools†</a></li>
+                        <li><a href="#">Global Announcements†</a></li>
+                    </ul>
+                </td>
+                <td>
+                    <!--Kanbas/Account/Profile/Edit/index.html-->
+                    <h2>Professor Ronak Padukone</h2>
+                    <label for="name-field">Name:</label>
+                    <input type="text" id="name-field" name="name-field" />
+
+                    <label for="pronoun-field">Pronouns </label>
+                    <select id="pronoun-field">
+                        <option value="she">She/Her</option>
+                        <option value="he">He/His</option>
+                        <option value="they">They/Their</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <br><br>
+
+                    <label for="title-field">Title:</label>
+                    <input type="text" id="title-field" name="title-field" />
+
+                    <h3>Contact</h3>
+                    No registered services, you can add some on the <a href="#">settings</a> page.
+
+                    <h3>Contact</h3>
+                    No registered services, you can add some on the <a href="#">settings</a> page.
+
+                    <h3>Biography</h3>
+                    <textarea cols="80" rows="10" title="tooltip">Nuclear and renewables expert.</textarea>
+
+                    <h3>Links</h3>
+                    <ul>
+                        <li>
+                            <a href="https://youtu.be/pkpjvTAmZg8?feature=shared">Youtube - Links to an External
+                                Site</a>
+                            <br>
+                        </li>
+                    </ul>
+
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>URL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="text" placeholder="YouTube" /> →
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="https://youtu.be/pkpjvTAmZg8?feature=shared" />
+                                    <a href="#">Remove</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <br>
+
+                    <form action="#">
+                        <input type="submit" value="Add another link" />
+                    </form>
+
+                    <div style="display: flex;">
+                        <form action="/Kanbas/Account/Profile/screen.html">
+                            <input type="submit" value="Cancel" />
+                        </form>
+                        &nbsp;
+                        <form action="/Kanbas/Account/Profile/screen.html">
+                            <input type="submit" value="Save Profile" />
+                        </form>
+                    </div>
+
+                    <div style="display: flex;">
+                        <form action="/Kanbas/Account/Profile/screen.html">
+                            <input type="submit" value="Edit Profile" />
+                        </form>
+                        &nbsp;
+                        <form action="/Kanbas/Account/Profile/screen.html">
+                            <input type="submit" value="Cancel Editing" />
+                        </form>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
