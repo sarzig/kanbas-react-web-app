@@ -1,15 +1,153 @@
-<html>
-    <head></head>
-    <body>
-        <table border = "2", width="100%">
-            <tbody> 
-                <tr>
-                    <td>Kanbas Navigation</td>
-                    <td>Course Navigation</td>
-                    <td>Modules</td>
-                    <td>Course Status</td>
-                </tr>
-            </tbody>
-        </table>
-    </body>
-</html>
+<!-- 
+    main content of the Home screen as shown in Figure 3.1.3 (A1)
+    localhost:3000/Kanbas/Courses/Home/index.html
+-->
+
+<table border="1">
+    <tbody>
+        <tr>
+            <td valign="top">
+                <!--from Kanbas/Navigation/index.html-->
+                <ul>
+                    <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
+                    <li><a href="/Kanbas/Dashboard/screen.html">Dashboard</a></li>
+                    <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
+                    <li><a href="/Kanbas/Calendar/screen.html">Calendar</a></li>
+                    <li><a href="/Kanbas/Inbox/screen.html">Inbox</a></li>
+                    <li><a href="#">History†</a></li>
+                    <li><a href="#">Studio†</a></li>
+                    <li><a href="#">Commons†</a></li>
+                    <li><a href="#">Help†</a></li>
+                </ul>
+                † Refers to pages not yet published
+            </td>
+            <td valign="top">
+                <!--from Kanbas/Courses/Navigation/index.html-->
+                <ul>
+                    <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
+                    <li><a href="/Kanbas/Courses/Modules/screen.html">Modules</a></li>
+                    <li><a href="#">Piazza</a></li>
+                    <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+                    <li><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
+                    <li><a href="#">Quizzes†</a></li>
+                    <li><a href="#">Zoom Meetings†</a></li>
+                    <li><a href="#">People†</a></li>
+                    <li><a href="#">Panopto Video†</a></li>
+                    <li><a href="#">Discussions†</a></li>
+                    <li><a href="#">Announcements†</a></li>
+                    <li><a href="#">Pages†</a></li>
+                    <li><a href="#">Files†</a></li>
+                    <li><a href="#">Rubrics†</a></li>
+                    <li><a href="#">Outcomes†</a></li>
+                    <li><a href="#">Collaborations†</a></li>
+                    <li><a href="#">Syllabus†</a></li>
+                    <li><a href="/Kanbas/Courses/Settings/screen.html">Settings</a></li>
+                </ul>
+                † Refers to pages not yet published
+            </td>
+            <td>
+                <!--  main content of the Home screen as shown in Figure 3.1.3 (A1)
+                    from Kanbas/Courses/Home/index.html-->
+                <!--This is the original table created. It now is relegated to the third column of the main table-->
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>
+                                <button>Collapse All</button>
+                                <button>View Progress</button>
+                                <select>
+                                    <option value="VAL1" selected>Publish All</option>
+                                    <option value="VAL2">Value 2</option>
+                                    <option value="VAL3">Value 3</option>
+                                </select>
+                                <button>Module</button>
+                            </th>
+                            <th>
+                                <h2>Course Status</h2>
+                                <button>Unpublish</button>
+                                <button>Published</button>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr valign="top">
+                            <td>
+                                <!--Bulleted list-->
+                                <ul>
+                                    <li>Week 0 - INTRO
+                                        <ul>
+                                            <li>LEARNING OBJECTIVES
+                                                <ul>
+                                                    <li>Introduction to the course</li>
+                                                    <li>Learn what is Web Development</li>
+                                                    <li>Creating a development environment</li>
+                                                    <li>Creating a Web Application</li>
+                                                    <li>Getting started with the 1st assignment</li>
+                                                </ul>
+                                            </li>
+                                            <li>READING
+                                                <ul>
+                                                    <li>Full Stack Developer - Chapter 1 - Introduction</li>
+                                                    <li>Full Stack Developer - Chapter 2 - Creating User Interfaces With
+                                                        HTML</li>
+                                                </ul>
+                                            </li>
+                                            <li>SLIDES
+                                                <ul>
+                                                    <li><a href="#">Introduction to Web Development Links to an external
+                                                            site</a></li>
+                                                    <li><a href="#">Creating an HTTP server with Node.js Links to an
+                                                            external site</a></li>
+                                                    <li><a href="#">Creating a React Application Links to an external
+                                                            site</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>Week 1 - HTML
+                                        <ul>
+                                            <li>LEARNING OBJECTIVES
+                                                <ul>
+                                                    <li>Learn how to create user interfaces with HTML</li>
+                                                    <li>Keep working on assigmnet 1</li>
+                                                    <li>Deploy the assignment to Netlify</li>
+
+                                                </ul>
+                                            </li>
+                                            <li>READING
+                                                <ul>
+                                                    <li>Full Stack Developer - Chapter 1 - Introduction</li>
+                                                    <li>Full Stack Developer - Chapter 2 - Creating User Interfaces With
+                                                        HTML</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><a href="#">Import Existing Content</a></li>
+                                    <li><a href="#">Import From Commons</a></li>
+                                    <li><a href="#">Choose Home Page</a></li>
+                                    <li><a href="#">View Course Stream</a></li>
+                                    <li><a href="#">New Announcement</a></li>
+                                    <li><a href="#">New Analytics</a></li>
+                                    <li><a href="#">View Course Notifications</a></li>
+                                </ul>
+
+                                <h2>Coming Up</h2>
+                                <a href="#">View Calender</a>
+                                <ul>
+                                    <li><a href="#">Lecture CS4550.12631.202410 Sep 7 at 11:45am</a></li>
+                                    <li><a href="#">Lecture CS4550.12631.202410 Sep 11 at 11:45am</a></li>
+                                    <li><a href="#">Lecture CS4550.12631.202410 Sep 11 at 6pm</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>

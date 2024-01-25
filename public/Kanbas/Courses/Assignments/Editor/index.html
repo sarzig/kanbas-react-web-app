@@ -1,35 +1,66 @@
-<label for=""assignment-name">Assignment_PROOF A2 BRANCH</label><br>
-<input value="A1" id="assignment-name" /><br>
-<textarea>ASSIGNMENT DESRIPTION BLAH BLAH BLAH</textarea>
-<table border="1"><br>
-    <tbody>
-        <tr>
-            <td>Points</td>
-            <td><input></td>
-        </tr>
-        <tr>
-            <td>Assignment Group</td> 
-            <td></td>
-        </tr>
-        <tr>
-            <td>Submission Type</td>
-            <td>
-                <label>Online Entry Options</label><br>
-                <input type="checkbox" name="wd-entry-options" id="wd-text-entry"/> <label>Text Entry</label><br>
-                <input type="checkbox" name="wd-entry-options" id="wd-website-url"/> <label>Website URL</label><br>
-                <input type="checkbox" name="wd-entry-options" id="wd-media-recordings"/> <label>Media Recordings</label><br>
-                <input type="checkbox" name="wd-entry-options" id="wd-student-annotations"/> <label>Student Annotations</label><br>
-                <input type="checkbox" name="wd-entry-options" id="wd-file-uploads"/> <label>File Uploads</label><br>
+<select>
+    <option>Speed Grader</option>
+    <option>Option 2</option>
+    <option>Option 3</option>
+    <option>Option 4</option>
+ </select>
 
-            </td>
-        </tr>
-        <tr>
-            <td>Submission Attempts</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
+ <HR>
+
+<label for="assignment-name"><h3>Assignment Name</h3></label>
+<input value="A1 - ENV + HTML" id="assignment-name" /><br><br>
+<textarea>This is the assignment description.</textarea><br><br>
+Points<br>
+<input type="text" value="100"><br><br>
+
+Assignment Group<br>
+<select>
+    <option>ASSIGNMENTS</option>
+    <option>QUIZZES</option>
+    <option>EXAMS</option>
+    <option>PROJECT</option>
+ </select><br><br>
+
+Display Grade as<br>
+<select>
+    <option>Percentage</option>
+    <option>Points</option>
+    <option>Pass/Fail</option>
+ </select><br><br>
+
+Submission Type<br>
+<select>
+    <option>Online</option>
+    <option>In-Person</option>
+    <option>Other</option>
+ </select><br><br>
+
+ <label>Online Entry Options</label><br>
+ <input type="checkbox" name="wd-entry-options" id="wd-text-entry"/> <label>Text Entry</label><br>
+ <input type="checkbox" name="wd-entry-options" id="wd-website-url"/> <label>Website URL</label><br>
+ <input type="checkbox" name="wd-entry-options" id="wd-media-recordings"/> <label>Media Recordings</label><br>
+ <input type="checkbox" name="wd-entry-options" id="wd-student-annotations"/> <label>Student Annotations</label><br>
+ <input type="checkbox" name="wd-entry-options" id="wd-file-uploads"/> <label>File Uploads</label><br>
+
+<br><br>
+Assign<br>
+Assign to<br>
+<input type="text" id="assign-to" value="Everyone"/><br><br>
+
+<label for="text-fields-dob"> Date of birth: </label><br>
+<input type="date" id="text-fields-dob" value="2024-01-01" /><br><br>
+<label for="text-fields-dob"> Available From: </label><br>
+<input type="date" id="text-fields-dob" value="2024-01-01" /><br><br>
+<label for="text-fields-dob"> Until: </label><br>
+<input type="date" id="text-fields-dob" value="2024-01-01" /><br><br>
+
+
+<div style="display: flex;">
+    <form action="/Kanbas/Courses/Assignments/screen.html">
+        <input type="submit" value="Cancel" />
+    </form>
+    &nbsp;
+    <form action="/Kanbas/Courses/Assignments/screen.html">
+        <input type="submit" value="Save" />
+    </form>
+</div>
