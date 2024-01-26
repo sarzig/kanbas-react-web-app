@@ -1,0 +1,12 @@
+/*you can make a style sheet in the top of your document*/
+
+p {
+    background-color: black;
+    color: white
+}
+
+/* Only apply if selector 4 has a direct ancesotr of selector 2
+*/
+.wd-selector-2 > .wd-selector-4 {
+    color:brown
+}
