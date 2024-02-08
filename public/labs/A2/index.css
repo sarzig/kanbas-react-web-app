@@ -4,8 +4,8 @@ Formats ALL paragraphs this way.
 p {
     background-color: blue;
     color: white;
- }
- 
+}
+
 /*
 ID Selector
 
@@ -13,13 +13,13 @@ Formats ALL paragraphs WITH A SPECIFIC ID this way.
 */
 p#id-selector-1 {
     background-color: beige;
-    color:darkgreen
+    color: darkgreen
 }
 
 p#id-selector-2 {
-    color:black;
-    background-color:burlywood;
-    font-style:italic;
+    color: black;
+    background-color: burlywood;
+    font-style: italic;
 }
 
 /*
@@ -28,13 +28,212 @@ Class Selector
 Formats ALL paragraphs WITH A SPECIFIED CLASS selected.
 */
 .wd-class-selector {
-    color:blueviolet;
-    background-color:palegoldenrod;
-    font-style:oblique;
+    color: blueviolet;
+    background-color: palegoldenrod;
+    font-style: oblique;
 }
 
 /* Only apply if selector 4 has a direct ancesotr of selector 2.
 */
-.wd-selector-2 > .wd-selector-4 {
-    color:brown
+.wd-selector-2>.wd-selector-4 {
+    color: brown
+}
+
+/* refers to .wd-selector-3 as a descendant of .wd-selector-1   */
+
+.wd-selector-1 .wd-selector-3 {
+    background-color: red;
+    color: white;
+}
+
+
+/* 
+refers to .wd-selector-4 as a direct child of .wd-selector-3
+ which is a direct child of .wd-selector-2       
+ */
+.wd-selector-2>.wd-selector-3>.wd-selector-4 {
+    background-color: yellow;
+    color: blue;
+}
+
+.some-css-selector {
+    color: blue;
+}
+
+.the-sun {
+    color: rgb(255, 255, 0);
+}
+
+.the-sky {
+    color: blue;
+}
+
+.ketchup {
+    color: #FF0000;
+}
+
+.wd-fg-color-black {
+    color: black;
+}
+
+.wd-fg-color-white {
+    color: white;
+}
+
+.wd-fg-color-blue {
+    color: #7070ff;
+}
+
+.wd-fg-color-red {
+    color: #ff7070;
+}
+
+.wd-fg-color-green {
+    color: green;
+}
+
+.wd-bg-color-yellow {
+    background-color: #ffff07;
+}
+
+.wd-bg-color-blue {
+    background-color: #7070ff;
+}
+
+.wd-bg-color-red {
+    background-color: #ff7070;
+}
+
+.wd-bg-color-green {
+    background-color: green;
+}
+
+/* 
+ Styling relative position
+ */
+.wd-pos-relative-nudge-up-right {
+    position: relative;
+    bottom: 30px;
+    left: 30px;
+}
+
+.wd-pos-relative-nudge-down-right {
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.wd-pos-relative {
+    position: relative;
+}
+
+
+/*
+ Styling absolute position
+ */
+.wd-pos-absolute-10-10 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.wd-pos-absolute-50-50 {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.wd-pos-absolute-120-20 {
+    position: absolute;
+    top: 20px;
+    left: 120px;
+}
+
+/*
+    z-index
+    */
+.wd-zindex-bring-to-front {
+    z-index: 10;
+}
+
+/*
+Floating content
+*/
+
+.wd-float-left {
+    float: left;
+}
+
+.wd-float-right {
+    float: right;
+    height: 100px;
+}
+
+.wd-float-done {
+    clear: both;
+}
+
+
+.wd-grid-row {
+    clear: both;
+}
+
+
+/*
+ Laying out content in a grid
+ */
+
+.wd-grid-col-half-page {
+    width: 50%;
+    float: left;
+}
+
+.wd-grid-col-third-page {
+    width: 33%;
+    float: left;
+}
+
+.wd-grid-col-two-thirds-page {
+    width: 67%;
+    float: left;
+}
+
+.wd-grid-col-left-sidebar {
+    width: 20%;
+    float: left;
+}
+
+.wd-grid-col-main-content {
+    width: 60%;
+    float: left;
+}
+
+.wd-grid-col-right-sidebar {
+    width: 20%;
+    float: left;
+}
+
+/*
+ FLEX
+ */
+.wd-flex-row-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.wd-flex-grow-1 {
+    flex-grow: 1;
+}
+
+.wd-flex-row-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.wd-flex-grow-1 {
+    flex-grow: 1;
+}
+
+.wd-width-85px {
+    width: 85px;
 }
