@@ -1,11 +1,39 @@
-/*you can make a style sheet in the top of your document*/
-
+/*
+Formats ALL paragraphs this way.
+*/
 p {
-    background-color: black;
-    color: white
+    background-color: blue;
+    color: white;
+ }
+ 
+/*
+ID Selector
+
+Formats ALL paragraphs WITH A SPECIFIC ID this way.
+*/
+p#id-selector-1 {
+    background-color: beige;
+    color:darkgreen
 }
 
-/* Only apply if selector 4 has a direct ancesotr of selector 2
+p#id-selector-2 {
+    color:black;
+    background-color:burlywood;
+    font-style:italic;
+}
+
+/*
+Class Selector
+
+Formats ALL paragraphs WITH A SPECIFIED CLASS selected.
+*/
+.wd-class-selector {
+    color:blueviolet;
+    background-color:palegoldenrod;
+    font-style:oblique;
+}
+
+/* Only apply if selector 4 has a direct ancesotr of selector 2.
 */
 .wd-selector-2 > .wd-selector-4 {
     color:brown
