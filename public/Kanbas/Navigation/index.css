@@ -1,0 +1,60 @@
+.wd-kanbas-navigation {
+    background-color: black;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    width: 80px;
+}
+
+.wd-kanbas-navigation li {
+    padding: 8px;
+    margin-bottom: 8px;
+    font-size: 0.8em;
+    text-align: center;
+    border: 1px solid white; /* Add border to create an outline xxx delete later */
+}
+
+/* Active list item should have white background */
+.wd-kanbas-navigation li.wd-active {
+    background-color: white;
+}
+
+/* Active list item which is a link should red text */
+.wd-kanbas-navigation li.wd-active a {
+    color: red;
+}
+
+/* Links should be white */
+.wd-kanbas-navigation a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Icons should be a certain size */
+.wd-kanbas-navigation a i {
+    color: red;
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+/*
+  Custom icons, second doesn't work:
+  */
+  .custom-northeastern-icon {
+    background-image: url('/Kanbas/Navigation/northeastern_icon.png');
+    background-size: cover;
+    width: 70px;
+    height: 45px;
+    display: block;
+    margin: 0 auto;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+.custom-account-icon {
+    background-image: url('/Kanbas/Navigation/account_icon.jpg');
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+}
