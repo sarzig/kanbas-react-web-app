@@ -7,7 +7,7 @@
 }
 
 .wd-kanbas-navigation li {
-    padding: 8px;
+    padding: 6px;
     margin-bottom: 8px;
     font-size: 0.8em;
     text-align: center;
@@ -34,7 +34,7 @@
 .wd-kanbas-navigation a i {
     color: red;
     font-size: 2em;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
 }
 
 /*
@@ -44,7 +44,7 @@
     background-image: url('/Kanbas/Navigation/northeastern_icon.png');
     background-size: cover;
     width: 70px;
-    height: 45px;
+    height: 45;
     display: block;
     margin: 0 auto;
     padding: 0px;
