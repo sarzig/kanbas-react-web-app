@@ -11,7 +11,7 @@
     margin-bottom: 8px;
     font-size: 0.8em;
     text-align: center;
-    border: 1px solid white; /* Add border to create an outline xxx delete later */
+    /*border: 1px solid white;  Add border to create an outline xxx delete later */
 }
 
 /* Active list item should have white background */
