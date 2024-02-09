@@ -21,6 +21,7 @@ body * {
   }
 }
 
+
 /* This let's content fit around the nav column - Adjust padding for larger screens */
 @media (min-width: 576px) {
   .avoid-kanbas-nav-column-tight {
