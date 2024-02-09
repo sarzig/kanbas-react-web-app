@@ -237,3 +237,17 @@ Floating content
 .wd-width-85px {
     width: 85px;
 }
+
+.btn-primary.override-bs-button {
+    background-color: hotpink;
+    border-color: black;
+    border-width: 10px;
+    border-radius: 20px;
+    border-style: dashed;
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+.noticeable-border {
+    border:2px solid black;
+}

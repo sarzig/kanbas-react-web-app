@@ -49,20 +49,6 @@
 }
 
 
-/* This let's content fit around the nav column - Adjust padding for larger screens */
-@media (min-width: 576px) {
-    .avoid-kanbas-nav-column {
-        padding-left: 100px;
-    }
-}
-
-/* This let's content fit around the nav column - Adjust padding for smaller screens */
-@media (max-width: 575px) {
-    .avoid-kanbas-nav-column {
-        padding-left: 10;
-    }
-}
-
 /*
   Custom icons, second doesn't work:
   */
