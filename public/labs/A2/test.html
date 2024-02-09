@@ -28,15 +28,15 @@
 
         .course-nav-sidebar {
             background-color: pink;
-            -ms-flex: 0 0 125px;
-            flex: 0 0 125px;
+            flex: 0 0 175px;
             height: 100%;
             position: sticky;
-            width: 125px;
+            width: 185px;
             height: 100vh;
             top: 0;
             left: 0;
             bottom: 0;
+            padding-left: 0px;
         }
 
         @media (max-width: 541px) {
@@ -52,19 +52,18 @@
 <body>
     <div class="container-fluid ">
         <div class="row">
-            <!-- Main Navigation Column 
-        Shows: all screens larger than 541px
-        -->
+            <!-- 
+                Main Navigation Column 
+                Shows: all screens larger than 541px
+            -->
             <div id="inject-main-nav-sidebar" class="col main-nav-sidebar">
-
             </div>
 
             <!-- 
-            Course Navigation Column
-            Shows: all screens larger than 541px
-        -->
-            <div class="col course-nav-sidebar">
-                a
+                Course Navigation Column
+                Shows: all screens larger than 541px
+             -->
+             <div id="inject-course-nav-sidebar" class="col course-nav-sidebar">
             </div>
 
             <!-- Course Home Main Content -->
@@ -265,7 +264,11 @@
             </div>
         </div>
     </div>
-    <script src="/Kanbas/Navigation/injectMainNavigationMenu.js?activeIndex=dashboard"></script>
+
+    <script src="/Kanbas/Navigation/injectMainNavigationMenu.js?activeIndex=courses"></script>
+    <script src="/Kanbas/Courses/Navigation/injectCourseNavigationMenu.js?activeIndex=piazza"></script>
+
+
 </body>
 
 </html>
