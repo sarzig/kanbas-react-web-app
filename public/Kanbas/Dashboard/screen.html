@@ -1,3 +1,8 @@
+<!--xxx nice to have: 
+    more cards should show horizontally. Right now there's too few on each row
+    The padding to the right of the
+-->
+
 <html>
 
 <head>
@@ -27,30 +32,19 @@
         .col-custom {
             width: 320px;
         }
-
-        /* need to put this into css xxx */
-
-        .kanbas-nav-column {
-            position: fixed;
-            width: 85px;
-            height: 100vh;
-            padding-left: 0;
-            padding-right: 20px;
-        }
-
-        .avoid-kanbas-nav-column {
-            padding-left:85px;
-        }
-
+        
     </style>
 </head>
+
+
 
 <body>
     <div class="container-fluid">
         <div class="row">
 
-            <!--Fixed menu handles keeping the Kanbas Navigation bar on the left-hand side. -->
-            <div class="col-sm-2 d-none d-sm-block kanbas-nav-column">
+            <!--Fixed menu handles keeping the Kanbas Navigation bar on the left-hand side. 
+            This menu disappears when the screen is extra small
+            <div class="d-none d-sm-block kanbas-nav-column">
                 <ul class="wd-kanbas-navigation">
                     <li><a href="http://northeastern.edu"><i class="custom-northeastern-icon"></i></a></li>
                     <li><a href="/Kanbas/Account/Profile/screen.html"><i class="fa fa-smile-o"></i><br>Account</a>
@@ -68,19 +62,19 @@
                     <li><a href="#"><i class="fa fa-question"></i><br>Help</a></li>
                     <li><a href="#"><i class="fa fa-envelope"></i><br>Messages</a></li>
                 </ul>
-            </div>
+            </div>-->
 
-            <!--main is SUPPOSED to handle everything else on the dashboard screen xxx not working well. -->
-            <div class="avoid-kanbas-nav-column col-sm-10 col-xs-12"> <!-- p-xs-85 p-sm-85 -->
+            <!--This div holds everything else on the screen.-->
+            <div class="avoid-kanbas-nav-column col-sm-10 col-xs-12">
                 <h1>Dashboard</h1>
-                <hr />
-                <h2>Published Courses (12)</h2>
                 <hr />
 
                 <div class="container-fluid">
+                    <h2>Published Courses (12)</h2>
+                    <hr />
                     <div class="row">
 
-                        <div class="d-flex flex-row flex-wrap">
+                        <div class="d-flex flex-wrap">
 
                             <div class="col-custom g-2">
                                 <div class="card flex-shrink-0">
@@ -271,6 +265,7 @@
             </div>
         </div>
     </div>
+    <script src="injectMainNavigationMenu.js"></script>
 </body>
 
 </html>
