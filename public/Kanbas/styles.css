@@ -7,14 +7,14 @@ body * {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* This let's content fit around the nav column - Adjust padding for larger screens */
+/* This let's content fit around the nav column - Adjust padding for larger screens 
 @media (min-width: 576px) {
   .avoid-kanbas-nav-column {
     padding-left: 100px;
   }
 }
 
-/* This let's content fit around the nav column - Adjust padding for smaller screens */
+/* This let's content fit around the nav column - Adjust padding for smaller screens 
 @media (max-width: 575px) {
   .avoid-kanbas-nav-column {
     padding-left: 10;
@@ -22,16 +22,17 @@ body * {
 }
 
 
-/* This let's content fit around the nav column - Adjust padding for larger screens */
+/* This let's content fit around the nav column - Adjust padding for larger screens 
 @media (min-width: 576px) {
   .avoid-kanbas-nav-column-tight {
     padding-left: 90px;
   }
 }
 
-/* This let's content fit around the nav column - Adjust padding for smaller screens */
+/* This let's content fit around the nav column - Adjust padding for smaller screens 
 @media (max-width: 575px) {
   .avoid-kanbas-nav-column-tight {
     padding-left: 10;
   }
 }
+*/

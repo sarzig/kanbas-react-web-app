@@ -1,9 +1,11 @@
+// need to have logic to determine active leement! xxx to-do
+
 // injectCourseNavigationMenu.js
 
 // Wrap your HTML content in a function
 function injectCourseNavigationMenu() {
     var html = `
-    <ul class="wd-navigation avoid-kanbas-nav-column-tight">
+    <ul class="wd-navigation">
     <li class="wd-active"><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
     <li><a href="#">Modules</a></li>
     <li><a href="#">Piazza</a></li>
