@@ -47,7 +47,7 @@ body * {
 }
 
 #above-main-content {
-  background-color: lightblue;
+  background-color: white;
   display: flex;
   height: 60px;
 }

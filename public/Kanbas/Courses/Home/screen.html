@@ -1,65 +1,64 @@
-<!-- 
-    main content of the Home screen as shown in Figure 3.1.3 (A1)
-    localhost:3000/Kanbas/Courses/Home/index.html
--->
-
 <head>
     <link href="/libs/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="/libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
-    <link rel="stylesheet" href="/Kanbas/styles.css" />
     <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+
+    <style>
+    </style>
 </head>
 
+<html>
+
 <body>
-
-    <div class="container-fluid">
+    <div class="container-fluid ">
         <div class="row">
-            <div class="col-md-1">
-                <!-- Inject the main navigation menu here -->
-                <script src="/Kanbas/Navigation/injectMainNavigationMenu.js?activeIndex=courses"></script>
+            <!-- 
+                Main Navigation Column 
+                Shows: all screens larger than 541px
+            -->
+            <div id="inject-main-nav-sidebar" class="col main-nav-sidebar">
             </div>
-            <div class="col-md-1">
-                <!-- Inject the course navigation menu here -->
-                <script src="/Kanbas/Courses/Navigation/injectCourseNavigationMenu.js?activeIndex=Home"></script>
-            </div>
-            <div class="col-md-6">
 
-                <!-- Implement buttons Collapse All, View Progress, etc. here -->
-                <ul class="list-group wd-modules">
-                    <li class="list-group-item">
-                        <div>
-                            <i class="fa fa-ellipsis-v"></i> Week 1
-                            <span class="float-end">
-                                <i class="fa fa-check-circle text-success"></i>
-                                <i class="fa fa-plus ms-2"></i>
-                                <i class="fa fa-ellipsis-v ms-2"></i>
-                            </span>
-                        </div>
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <i class="fa fa-ellipsis-v"></i> Learning Objectives
-                                <span class="float-end">
-                                    <i class="fa fa-check-circle text-success"></i>
-                                    <i class="fa fa-ellipsis-v ms-2"></i>
-                                </span>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="list-group-item">
-                        <div>
-                            <i class="fa fa-ellipsis-v"></i> Week 2
-                            <span class="float-end">
-                                <i class="fa fa-check-circle text-success"></i>
-                                <i class="fa fa-plus ms-2"></i>
-                                <i class="fa fa-ellipsis-v ms-2"></i>
-                            </span>
-                        </div>
-                    </li>
-                </ul>
+            <!-- Contains everything except for main navigation column-->
+            <div id="main-content" class="col flex">
+
+                <!--Contains breadcrumb and header info-->
+                <div class="row flex">
+                    <div id="above-main-content">
+                        <!-- Content for the row above main content goes here -->
+                        <h2>Above Main Content</h2>
+                    </div>
+                </div>
+
+                <!--Contains column system of internal main content, including course nav sidebar-->
+                <div class="row flex">
+                    <!-- 
+                            Course Navigation Column
+                            Shows: all screens larger than 541px
+                        -->
+                    <div id="inject-course-nav-sidebar" class="col course-nav-sidebar">
+                    </div>
+
+                    <!-- Course Home Main Content -->
+                    <div class="col" style="display: flex">
+                        <h1>CENTER (FLUID COLUMN)</h1>
+                    </div>
+
+                    <!-- Course Right Sidebar -->
+                    <div class="col d-none col-xl-2 d-xl-block"
+                        style="display: flex; background-color: rgb(104, 172, 192);">
+                        right sidebar stuffs
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+    <script src="/Kanbas/Navigation/injectMainNavigationMenu.js?activeIndex=courses"></script>
+    <script src="/Kanbas/Courses/Navigation/injectCourseNavigationMenu.js?activeIndex=Home"></script>
+
 
 </body>
 
