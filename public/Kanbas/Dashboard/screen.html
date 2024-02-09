@@ -7,7 +7,7 @@
 
 <head>
     <link href="/libs/bootstrap/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
+    <link href="/libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/Kanbas/styles.css" />
     <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
 
@@ -21,6 +21,8 @@
 
         .card-img-top {
             max-height: 150px;
+            object-fit: cover;
+            /* xxx could maybe change to contain but need to fix pics */
         }
 
         .card-title {
@@ -32,18 +34,24 @@
         .col-custom {
             width: 320px;
         }
-        
+
+        /* Exact font copied from Canvas */
+        .css-pljkwv-view-heading {
+            line-height: 1.25;
+            font-family: LatoWeb, "Lato Extended", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 2.375rem;
+            font-weight: 700;
+            color: inherit;
+        }
     </style>
 </head>
-
-
 
 <body>
     <div class="container-fluid">
         <div class="row">
             <!--This div holds everything else on the screen outside of the navigation bar.-->
             <div class="avoid-kanbas-nav-column col-sm-10 col-xs-12">
-                <h1>Dashboard</h1>
+                <h1 class="css-pljkwv-view-heading">Dashboard</h1>
                 <hr />
 
                 <div class="container-fluid">

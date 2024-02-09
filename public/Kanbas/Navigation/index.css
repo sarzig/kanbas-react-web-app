@@ -21,7 +21,7 @@
 
 /* Active list item which is a link should red text */
 .wd-kanbas-navigation li.wd-active a {
-    color: red;
+    color: #d41b2c;
 }
 
 /* Links should be white */
@@ -32,7 +32,7 @@
 
 /* Icons should be a certain size */
 .wd-kanbas-navigation a i {
-    color: red;
+    color: #d41b2c;
     font-size: 2em;
     margin-bottom: 3px;
 }
@@ -67,7 +67,7 @@
   Custom icons, second doesn't work:
   */
   .custom-northeastern-icon {
-    background-image: url('/Kanbas/Navigation/northeastern_icon.png');
+    background-image: url('/images/custom_icons/northeastern_icon.png');
     background-size: cover;
     width: 70px;
     height: 45;
@@ -77,7 +77,7 @@
     margin-bottom: 0px;
 }
 .custom-account-icon {
-    background-image: url('/Kanbas/Navigation/account_icon.jpg');
+    background-image: url('/images/custom_icons/account_icon.jpg');
     background-size: cover;
     width: 40px;
     height: 40px;
