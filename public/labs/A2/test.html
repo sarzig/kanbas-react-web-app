@@ -6,44 +6,6 @@
     <link rel="stylesheet" href="/Kanbas/styles.css" />
 
     <style>
-        .main-nav-sidebar {
-            -ms-flex: 0 0 80px;
-            flex: 0 0 80px;
-            background-color: black;
-            height: 100%;
-            position: sticky;
-            width: 80px;
-            height: 100vh;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            padding: 0;
-        }
-
-        @media (max-width: 541px) {
-            .main-nav-sidebar {
-                display: none;
-            }
-        }
-
-        .course-nav-sidebar {
-            background-color: pink;
-            flex: 0 0 175px;
-            height: 100%;
-            position: sticky;
-            width: 185px;
-            height: 100vh;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            padding-left: 0px;
-        }
-
-        @media (max-width: 541px) {
-            .course-nav-sidebar {
-                display: none;
-            }
-        }
     </style>
 </head>
 
@@ -59,214 +21,43 @@
             <div id="inject-main-nav-sidebar" class="col main-nav-sidebar">
             </div>
 
-            <!-- 
-                Course Navigation Column
-                Shows: all screens larger than 541px
-             -->
-             <div id="inject-course-nav-sidebar" class="col course-nav-sidebar">
-            </div>
+            <!-- Contains everything except for main navigation column-->
+            <div id="main-content" class="col flex">
 
-            <!-- Course Home Main Content -->
-            <div class="col">
-                <h1>CENTER (FLUID COLUMN)</h1>
-                <div>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-                    deleniti
-                    atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
-                    similique
-                    sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem
-                    rerum
-                    facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque
-                    nihil
-                    impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
-                    repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe
-                    eveniet
-                    ut et
-                    voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente
-                    delectus,
-                    ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores
-                    repellat.<br><br> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                    praesentium
-                    voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
-                    cupiditate
-                    non
-                    provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
-                    fuga.
-                    Et
-                    harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est
-                    eligendi
-                    optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas
-                    assumenda
-                    est,
-                    omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus
-                    saepe
-                    eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic
-                    tenetur a
-                    sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis
-                    doloribus
-                    asperiores repellat.<br><br>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-                    deleniti
-                    atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
-                    similique
-                    sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem
-                    rerum
-                    facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque
-                    nihil
-                    impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
-                    repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe
-                    eveniet
-                    ut et
-                    voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente
-                    delectus,
-                    ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores
-                    repellat.<br><br>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-                    deleniti
-                    atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
-                    similique
-                    sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem
-                    rerum
-                    facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque
-                    nihil
-                    impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
-                    repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe
-                    eveniet
-                    ut et
-                    voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente
-                    delectus,
-                    ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores
-                    repellat.<br><br>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-                    deleniti
-                    atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
-                    similique
-                    sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem
-                    rerum
-                    facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque
-                    nihil
-                    impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
-                    repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe
-                    eveniet
-                    ut et
-                    voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente
-                    delectus,
-                    ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores
-                    repellat.<br><br>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-                    deleniti
-                    atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
-                    similique
-                    sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem
-                    rerum
-                    facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque
-                    nihil
-                    impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
-                    repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe
-                    eveniet
-                    ut et
-                    voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente
-                    delectus,
-                    ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores
-                    repellat.<br><br>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-                    deleniti
-                    atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
-                    similique
-                    sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem
-                    rerum
-                    facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque
-                    nihil
-                    impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
-                    repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe
-                    eveniet
-                    ut et
-                    voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente
-                    delectus,
-                    ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores
-                    repellat.<br><br>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-                    deleniti
-                    atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
-                    similique
-                    sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem
-                    rerum
-                    facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque
-                    nihil
-                    impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
-                    repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe
-                    eveniet
-                    ut et
-                    voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente
-                    delectus,
-                    ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores
-                    repellat.<br><br>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-                    deleniti
-                    atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
-                    similique
-                    sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem
-                    rerum
-                    facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque
-                    nihil
-                    impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
-                    repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe
-                    eveniet
-                    ut et
-                    voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente
-                    delectus,
-                    ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores
-                    repellat.<br><br>
+                <!--Contains breadcrumb and header info-->
+                <div class="row flex">
+                    <div id="above-main-content">
+                        <!-- Content for the row above main content goes here -->
+                        <h2>Above Main Content</h2>
+                    </div>
                 </div>
 
+                <!--Contains column system of internal main content, including course nav sidebar-->
+                <div class="row flex">
+                    <!-- 
+                            Course Navigation Column
+                            Shows: all screens larger than 541px
+                        -->
+                    <div id="inject-course-nav-sidebar" class="col course-nav-sidebar">
+                    </div>
 
-            </div>
+                    <!-- Course Home Main Content -->
+                    <div class="col" style="display: flex">
+                        <h1>CENTER (FLUID COLUMN)</h1>
+                    </div>
 
-            <!-- Course Right Sidebar -->
-            <div class="col col-lg-2 d-none d-lg-block" style="background-color: rgb(104, 172, 192);">
-                <div>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-                    deleniti
-                    atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
-                    similique
-                    sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem
-                    rerum
-                    facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque
-                    nihil
-                    impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
-                    repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe
-                    eveniet
-                    ut et
-                    voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente
-                    delectus,
-                    ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores
-                    repellat.<br><br> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                    praesentium
-                    voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
-                    cupiditate
-                    non
-                    provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
-                    fuga.
-                    Et
-                    harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est
-                    eligendi
-                    optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas
-                    assumenda
-                    est,
-                    omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus
-                    saepe
-                    eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic
-                    tenetur a
-                    sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis
-                    doloribus
-                    asperiores repellat.<br><br>
+                    <!-- Course Right Sidebar -->
+                    <div class="col d-none col-xl-2 d-xl-block"
+                        style="display: flex; background-color: rgb(104, 172, 192);">
+                        right sidebar stuffs
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <script src="/Kanbas/Navigation/injectMainNavigationMenu.js?activeIndex=courses"></script>
-    <script src="/Kanbas/Courses/Navigation/injectCourseNavigationMenu.js?activeIndex=piazza"></script>
+    <script src="/Kanbas/Courses/Navigation/injectCourseNavigationMenu.js?activeIndex=Home"></script>
 
 
 </body>
