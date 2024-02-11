@@ -7,6 +7,9 @@ body * {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Main Navigation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Main Navigation
+*/
 .main-nav-sidebar {
   -ms-flex: 0 0 80px;
   flex: 0 0 80px;
@@ -27,6 +30,82 @@ body * {
   }
 }
 
+.wd-kanbas-navigation {
+  background-color: black;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  width: 80px;
+}
+
+.wd-kanbas-navigation li {
+  padding: 4px;
+  margin-bottom: 8px;
+  font-size: 0.8em;
+  text-align: center;
+  /*border: 1px solid white;  Add border to create an outline xxx delete later */
+}
+
+/* Active list item should have white background */
+.wd-kanbas-navigation li.wd-active {
+  background-color: white;
+}
+
+/* Active list item which is a link should red text */
+.wd-kanbas-navigation li.wd-active a {
+  color: #d41b2c;
+}
+
+/* Links should be white */
+.wd-kanbas-navigation a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Icons should be a certain size */
+.wd-kanbas-navigation a i {
+  color: #d41b2c;
+  font-size: 2em;
+  margin-bottom: 3px;
+}
+
+/* Define sizing and fixed aspect of navigation column*/
+.kanbas-nav-column {
+  z-index: 100;
+  position: fixed;
+  width: 85px;
+  height: 100vh;
+  padding-left: 0;
+  padding-right: 20px;
+  background-color: black;
+}
+
+/*
+Custom icons, second doesn't work:
+*/
+.custom-northeastern-icon {
+  background-image: url('/images/custom_icons/northeastern_icon.png');
+  background-size: cover;
+  width: 70px;
+  height: 45;
+  display: block;
+  margin: 0 auto;
+  padding: 0px;
+  margin-bottom: 0px;
+}
+
+.custom-account-icon {
+  background-image: url('/images/custom_icons/account_icon.jpg');
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Course Navigation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Course Navigation
+*/
 .course-nav-sidebar {
   background-color: white;
   flex: 0 0 185px;
@@ -44,6 +123,9 @@ body * {
   }
 }
 
+/* Above Main Content 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Above Main Content 
+*/
 .above-main-content {
   background-color: white;
   display: flex;
@@ -64,6 +146,9 @@ body * {
   color: gray;
 }
 
+/* Above Main Content Small Screen
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Above Main Content Small Screen
+*/
 .above-main-content-small-screen {
   background-color: black;
   color: white;
@@ -76,7 +161,6 @@ body * {
   text-decoration: none;
 }
 
-
 .above-main-content-small-screen a:hover {
   text-decoration: underline;
 }
@@ -88,6 +172,9 @@ body * {
   display: inline-block;
 }
 
+/* Right Sidebar
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Right Sidebar
+*/
 .course-right-sidebar {
   background-color: white;
   flex: 0 0 auto;
@@ -105,6 +192,9 @@ body * {
   }
 }
 
+/* Buttons
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Buttons
+*/
 .button-sidebar-wide {
   background-color: rgb(245, 245, 245);
   border-color: rgb(199, 205, 205);
@@ -140,12 +230,21 @@ body * {
   /* Remove underlining */
   transition: background-color 0.3s;
   /* Add smooth transition effect */
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.button-topbar-medium a {
+  text-decoration: none;
+  color:black;
 }
 
 .button-topbar-medium i {
   color: rgb(45, 59, 69);
+  margin-left: 0px;
+  margin-right: 5px;
 }
 
 .button-topbar-medium:hover {
@@ -166,8 +265,101 @@ body * {
   border-color: rgb(166, 42, 45);
 }
 
+.red-button i {
+  color: white;
+  margin-right: 5px;
+}
+
 .green-button {
   color: white;
   background-color: rgb(158, 193, 153);
   border-color: rgb(134, 172, 134);
+}
+
+.mini-button {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.mini-button i {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/* wd-List
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ wd-List
+*/
+.wd-modules,
+.wd-modules * {
+  border-radius: 0%;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wd-modules {
+  margin: 5px;
+}
+
+.wd-modules>li {
+  background-color: rgb(245, 245, 245);
+  border: 1px solid rgb(222, 225, 227) !important;
+  border-left: none !important;
+}
+
+.wd-modules>li>div {
+  padding: 6px;
+  border-left: 1px solid rgb(222, 225, 227) !important;
+}
+
+.wd-modules>li>ul>li {
+  padding: 5px;
+  border-top: 1px solid rgb(222, 225, 227) !important;
+  border-left: 2px solid rgb(60, 133, 81);
+}
+
+.wd-modules>li>ul>li:hover {
+  background-color: rgb(238,247,255);
+}
+
+.wd-modules>li {
+  margin-bottom: 20px;
+}
+
+.wd-modules i {
+  color: rgb(60, 133, 81);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.wd-modules .assignment-info {
+  margin-left: 15px;
+}
+
+.wd-modules .assignment-info .header {
+  font-size: 0.9em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.wd-modules .assignment-info .header a {
+  text-decoration: none;
+  color: black;
+}
+
+.wd-modules .assignment-info .header a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+
+.wd-modules .assignment-info .details {
+  font-size: 0.7em;
+}
+
+.wd-modules .assignment-round-button {
+  color: black;
+  border-color: black;
+  border-radius: 12px;
+  padding:2px;
 }
