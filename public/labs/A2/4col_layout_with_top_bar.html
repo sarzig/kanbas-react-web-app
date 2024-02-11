@@ -1,0 +1,233 @@
+<head>
+    <link href="/libs/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="/libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" />
+
+    <style>
+        .button-sidebar-wide {
+            background-color: rgb(245, 245, 245);
+            border-color: rgb(199, 205, 205);
+            color: rgb(45, 55, 69);
+            margin-top: 3px;
+            text-decoration: none;
+            /* Remove underlining */
+            transition: background-color 0.3s;
+            /* Add smooth transition effect */
+            width: 100%;
+            text-align: left;
+            outline: red
+        }
+
+        .button-sidebar-wide:hover {
+            background-color: rgb(233, 233, 233);
+            color: rgb(45, 55, 69);
+            /* Change color on hover */
+        }
+
+        .button-sidebar-wide:focus {
+            border-color: rgb(180, 40, 40);
+            background-color: pink;
+            /* Change border color on click */
+        }
+
+        .button-topbar-medium {
+            background-color: rgb(245, 245, 245);
+            border-color: rgb(199, 205, 205);
+            color: rgb(45, 55, 69);
+            margin-top: 3px;
+            text-decoration: none;
+            /* Remove underlining */
+            transition: background-color 0.3s;
+            /* Add smooth transition effect */
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .button-topbar-medium:hover {
+            border-color: rgb(199, 205, 205);
+            color: rgb(45, 55, 69);
+            /* Change color on hover */
+        }
+
+        .button-topbar-medium:active {
+            border-color: rgb(180, 40, 40);
+            color: pink;
+            /* Change border color on click */
+        }
+
+        .red-button {
+            color: white;
+            background-color: rgb(195, 50, 52);
+            border-color: rgb(166, 42, 45);
+        }
+    </style>
+</head>
+
+<html>
+
+<body>
+    <div class="container-fluid ">
+        <div class="row">
+            <!-- 
+                Main Navigation Column 
+                Shows: all screens larger than 541px
+            -->
+            <div id="inject-main-nav-sidebar" class="col main-nav-sidebar" style="background-color: black;">
+            </div>
+
+            <!-- Contains everything except for main navigation column-->
+            <div id="main-content" class="col flex">
+
+                <!--Contains breadcrumb and header info-->
+                <div id="above-main-content" class="row flex d-none d-md-flex">
+                    <h2><i class="fa fa-bars"></i> CS1234: Advanced Bromance > Home</h2>
+                    <hr>
+                </div>
+
+
+                <!--Black bar that pops up on small screen-->
+                <div id="above-main-content" class="row flex d-md-none">
+                    <h2>OTHER STUFF HERE</h2>
+                    <hr>
+                </div>
+
+
+                <!--Contains column system of internal main content, including course nav sidebar-->
+                <div class="row flex">
+                    <!-- 
+                            Course Navigation Column  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                            Shows: all screens larger than 541px
+                        -->
+                    <div id="inject-course-nav-sidebar" class="col course-nav-sidebar"
+                        style="background-color: blanchedalmond;">
+                    </div>
+
+                    <!-- Course Home Main Content ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                    <div class="col" style="display: flex; flex-direction: column; background-color: lightsalmon;">
+
+
+                        <!-- Implement buttons Collapse All, View Progress, etc. here -->
+                        <div class="d-flex justify-content-end mb-3">
+                            <!-- Collapse All Button -->
+                            <button class="btn button-topbar-medium">Collapse All</button>
+
+                            <!-- View Progress Button -->
+                            <button class="btn button-topbar-medium">View Progress</button>
+
+                            <!-- Publish All Button with Drop-down Menu -->
+                            <div class="btn-group">
+                                <button type="button" class="btn button-topbar-medium">Publish All</button>
+                                <button type="button"
+                                    class="btn button-topbar-medium dropdown-toggle dropdown-toggle-split"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Option 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                    <!-- Add more options as needed -->
+                                </ul>
+                            </div>
+
+                            <!-- +Module Button -->
+                            <button class="btn button-topbar-medium red-button">+Module</button>
+
+                            <!-- + Button -->
+                            <button class="btn button-topbar-medium"><i class="fa fa-ellipsis-v"></i></button>
+                        </div>
+
+                        <ul class="list-group wd-modules">
+                            <li class="list-group-item">
+                                <div>
+                                    <i class="fa fa-ellipsis-v"></i> Week 1
+                                    <span class="float-end">
+                                        <i class="fa fa-check-circle text-success"></i>
+                                        <i class="fa fa-plus ms-2"></i>
+                                        <i class="fa fa-ellipsis-v ms-2"></i>
+                                    </span>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <i class="fa fa-ellipsis-v"></i> Learning Objectives
+                                        <span class="float-end">
+                                            <i class="fa fa-check-circle text-success"></i>
+                                            <i class="fa fa-ellipsis-v ms-2"></i>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="list-group-item">
+                                <div>
+                                    <i class="fa fa-ellipsis-v"></i> Week 2
+                                    <span class="float-end">
+                                        <i class="fa fa-check-circle text-success"></i>
+                                        <i class="fa fa-plus ms-2"></i>
+                                        <i class="fa fa-ellipsis-v ms-2"></i>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+
+
+                    </div>
+
+                    <!-- Course Right Sidebar -->
+                    <!---xxx to-do: make right sidebar NOT shrink when page shrinks, only dissappear when it's time-->
+                    <div class="col flex d-none col-xl-2 d-xl-block course-right-sidebar">
+
+                        <p><strong>Course Status</strong></p>
+                        <div class="d-flex">
+                            <button class="btn btn button-sidebar-wide"><i class="fa fa-ban"></i> Unpublish</button>
+                            <button class="btn button-sidebar-wide btn-success" style="margin-left: 5px;"><i
+                                    class="fa fa-check-circle"></i> Published</button>
+                        </div>
+
+                        <br>
+
+                        <div class="d-flex flex-column">
+                            <a class="btn btn-link button-sidebar-wide" href="#"><i class="fa fa-file"></i> Import
+                                Existing Content</a>
+                            <a class="btn btn-link button-sidebar-wide" href="#"><i class="fa fa-cloud-upload"></i>
+                                Import from Commons</a>
+                            <a class="btn btn-link button-sidebar-wide" href="#"><i class="fa fa-crosshairs"></i> Choose
+                                Home Page</a>
+                            <a class="btn btn-link button-sidebar-wide" href="#"><i class="fa fa-line-chart"></i> View
+                                Course Stream</a>
+                            <a class="btn btn-link button-sidebar-wide" href="#"><i class="fa fa-bullhorn"></i> New
+                                Announcement</a>
+                            <a class="btn btn-link button-sidebar-wide" href="#"><i class="fa fa-line-chart"></i> New
+                                Analytics</a>
+                            <a class="btn btn-link button-sidebar-wide" href="#"><i class="fa fa-bell"></i> View Course
+                                Notifications</a>
+                        </div>
+
+                        <br>
+
+                        <p><strong>To Do</strong></p>
+                        <hr>
+                        <p>Grade A1 - ENV + HTML</p>
+
+                        <br>
+
+                        <p><strong>Coming Up</strong></p>
+                        <hr>
+                        <p><i class="fa fa-calendar"></i> View Calendar</p>
+
+
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/Kanbas/Navigation/injectMainNavigationMenu.js?activeIndex=courses"></script>
+    <script src="/Kanbas/Courses/Navigation/injectCourseNavigationMenu.js?activeIndex=home"></script>
+
+
+</body>
+
+</html>

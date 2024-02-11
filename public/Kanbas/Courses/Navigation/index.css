@@ -1,6 +1,5 @@
 .wd-navigation {
     z-index: 100;
-    position: fixed;
     background-color: white;
     list-style: none;
     padding: 0px;
@@ -28,4 +27,9 @@
 .wd-navigation a {
     color: #b52828;
     text-decoration: none;
+}
+
+.wd-navigation a:hover {
+    color:black;
+    text-decoration: underline;
 }
