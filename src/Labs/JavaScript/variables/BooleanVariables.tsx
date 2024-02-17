@@ -10,7 +10,7 @@ let false3 = numberVariable < 100;
 function BooleanVariables() {
     return (
         <div>
-            <h2>Boolean Variables</h2>
+            <h2>2.2.4 Boolean Variables</h2>
             true1 = {true1.toString()} <br />
             false1 = {false1.toString()} <br />
             false2 = {false2.toString()} <br />

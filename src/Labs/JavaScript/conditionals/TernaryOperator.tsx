@@ -10,7 +10,7 @@ function TernaryOperator() {
     let loggedIn = false;
     return (
         <div>
-            <h2>Ternary Operator</h2>
+            <h2>2.2.5.2 Ternary Operator</h2>
             {loggedIn ? <p>Welcome</p> : <p>Please login</p>}
         </div>
     );

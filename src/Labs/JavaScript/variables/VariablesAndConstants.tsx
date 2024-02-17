@@ -13,7 +13,7 @@ function VariablesAndConstants() {
 
     return(
         <div>
-            <h2> Variables and Constants</h2>
+            <h2>2.2.2 Variables and Constants</h2>
             functionScoped = {functionScoped}<br/>
             blockScoped = {blockScoped}<br/>
             constant1 = {constant1}<br/>
