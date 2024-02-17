@@ -1,10 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Labs from "./Labs";
+import HelloWorld from "./Labs/A3/HelloWorld"
 
 function App() {
-  return(
-    <h1>Hello World!</h1>
+  return (
+    <div>
+      <Labs />
+      <HelloWorld />
+    </div>
   );
 }
 
