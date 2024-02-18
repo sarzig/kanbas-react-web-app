@@ -1,9 +1,13 @@
+import { Link } from "react-router-dom";
 import Assignment3 from "./A3";
 
 function Labs() {
     return (
         <div>
-            <Assignment3/>
+            <Link to="/Labs/a3">A3</Link> |
+            <Link to="/Kanbas">Kanbas</Link> |
+            <Link to="/hello">Hello</Link>
+            <Assignment3 />
         </div>
     );
 }

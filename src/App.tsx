@@ -1,9 +1,8 @@
-import React from 'react';
-import './App.css';
 import Labs from "./Labs";
-import HelloWorld from './Labs/A3/HelloWorld';
-import Kanbas from './Kanbas'; /** Imports index.tsx */
-import JavaScript from './Labs/JavaScript';
+import HelloWorld from "./Labs/A3/HelloWorld";
+import Kanbas from "./Kanbas";
+import { HashRouter } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router";
 
 function App() {
   /** 
@@ -11,12 +10,16 @@ function App() {
    * within each folder
    */
   return (
-    <div>
-      <Labs />
-      <Kanbas />
-      <HelloWorld />
-      <JavaScript/>
-    </div>
+    <HashRouter>
+      <div>
+        <Routes>
+          <Route path="/" element={<Navigate to="/Labs" />} />
+          <Route path="/Labs/*" element={<Labs />} />
+          <Route path="/Kanbas/*" element={<Kanbas />} />
+          <Route path="/Hello" element={<HelloWorld />} />
+        </Routes>
+      </div>
+    </HashRouter>
   );
 }
 

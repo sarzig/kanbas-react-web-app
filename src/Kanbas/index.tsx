@@ -1,19 +1,14 @@
+import { Link } from "react-router-dom";
+
 function Kanbas() {
     return (
-    <div className="d-flex">
         <div>
-            <h1>Kanbas Navigator</h1>
-        </div>
-        <div>
-            <h2>Account</h2>
-            <h2>Dashboard</h2>
-            <h2>Courses</h2>
-            <h2>Calendar</h2>
+            <Link to="/Labs/a3">A3</Link> |
+            <Link to="/Kanbas">Kanbas</Link> |
+            <Link to="/hello">Hello</Link> |
+            <h1>Kanbas</h1>
 
         </div>
-
-
-    </div>
     );
 }
 export default Kanbas;
