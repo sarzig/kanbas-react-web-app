@@ -4,7 +4,7 @@ import BooleanVariables from "./variables/BooleanVariables";
 import IfElse from "./conditionals/IfElse"
 import TernaryOperator from "./conditionals/TernaryOperator";
 import ES5Functions from "./functions/ES5Functions";
-import MyQuestions from "../A3/MyQuestions";
+import MyQuestions from "../MyQuestions";
 import ES6ArrowFunctions from "./functions/ArrowFunctions";
 import ImpliedReturn from "./functions/ImpliedReturns";
 import FunctionParenthesisAndParameters from "./functions/FunctionParenthesisAndParameters"
@@ -21,6 +21,8 @@ import House from "./json/House"
 import Spreading from "./json/Spreading";
 import Destructing from "./json/Destructing";
 import FunctionDestructing from "./functions/FunctionDestructing";
+import Add from "../Routing/Add";
+import PathParameters from "../Routing/PathParameters";
 
 // import "./styles.css"; // Adjust the path based on your project structure
 
@@ -54,6 +56,7 @@ function JavaScript() {
                 <Spreading /><br/>
                 <Destructing /><br/>
                 <FunctionDestructing/><br/>
+                <PathParameters /><br/>
                 
                 <br /><br /><br /><br /><br />
             </div>

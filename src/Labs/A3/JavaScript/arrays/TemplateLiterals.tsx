@@ -10,10 +10,10 @@ function TemplateLiterals() {
     return (
         <>
             <h2>2.2.8 Template Literals</h2>
-            result1 = {result1}
-            result2 = {result2}
-            greeting1 = {greeting1}
-            greeting2 = {greeting2}
+            result1 = {result1}<br />
+            result2 = {result2}<br />
+            greeting1 = {greeting1}<br />
+            greeting2 = {greeting2}<br />
         </>
     )
 }
