@@ -1,0 +1,97 @@
+[
+    {
+        "_id": "1",
+        "name": "CS1234 Advanced Confections",
+        "number": "CS1234.12452.202410",
+        "startDate": "2023-01-10",
+        "endDate": "2023-05-15",
+        "image": "../../images/advanced_confections.jpg"
+    },
+    {
+        "_id": "2",
+        "name": "CS1235 Advanced Herbology",
+        "number": "CS1235.12452.202410",
+        "startDate": "2023-01-10",
+        "endDate": "2023-05-15",
+        "image": "../../images/advanced_herbology.jpg"
+    },
+    {
+        "_id": "3","name": "CS1236 Beginner Hindi",
+        "number": "CS1236.12452.202410",
+        "startDate": "2023-01-10",
+        "endDate": "2023-05-15",
+        "image": "../../images/advanced_hindi.jpg"
+    },
+    {
+        "_id": "4",
+        "name": "CS1237 Advanced Bromance",
+        "number": "CS1237.12452.202410",
+        "startDate": "2023-01-10",
+        "endDate": "2023-05-15",
+        "image": "../../images/advanced_bromance.jpg"
+    },
+    {
+        "_id": "5",
+        "name": "CS1238 Driver's Ed.",
+        "number": "CS1238.12452.202410",
+        "startDate": "2023-01-10",
+        "endDate": "2023-05-15",
+        "image": "../../images/drivers_ed.jpg"
+    },
+    {
+        "_id": "6",
+        "name": "CS1239 Himalayan Topology",
+        "number": "CS1239.12452.202410",
+        "startDate": "2023-01-10",
+        "endDate": "2023-05-15",
+        "image": "../../images/himalayan_topology.jpg"
+    },
+    {
+        "_id": "7",
+        "name": "CS1240 Exterior Decorating",
+        "number": "CS1240.12452.202410",
+        "startDate": "2023-01-10",
+        "endDate": "2023-05-15",
+        "image": "../../images/interior_decorating.jpg"
+    },
+    {
+        "_id": "8",
+        "name": "CS1241 Women's Studies",
+        "number": "CS1241.12452.202410",
+        "startDate": "2023-01-10",
+        "endDate": "2023-05-15",
+        "image": "../../images/womens_studies.jpg"
+    },
+    {
+        "_id": "9",
+        "name": "CS1242 Intermediate Catology",
+        "number": "CS1242.12452.202410",
+        "startDate": "2023-01-10",
+        "endDate": "2023-05-15",
+        "image": "../../images/intermediate_catology.jpg"
+    },
+    {
+        "_id": "10",
+        "name": "CS1243 Introduction to Canine Studies",
+        "number": "CS1243.12452.202410",
+        "startDate": "2023-01-10",
+        "endDate": "2023-05-15",
+        "image": "../../images/intro_to_dogs.jpg"
+    },
+    {
+        "_id": "11",
+        "name": "CS1244 Mamata: Politics and Influence in West Bengal",
+        "number": "CS1244.12452.202410",
+        "startDate": "2023-01-10",
+        "endDate": "2023-05-15",
+        "image": "../../images/mamata_politics_of_influence.jpg"
+    },
+    {
+        "_id": "12",
+        "name": "CS1245 The Beatles: A Retrospective on Transcendental Meditation",
+        "number": "CS1245.12452.202410",
+        "startDate": "2023-01-10",
+        "endDate": "2023-05-15",
+        "image": "../../images/the_beatles_a_retrospective_on_psychadelics.jpg"
+    }
+]
