@@ -1,3 +1,24 @@
+.main-nav-sidebar {
+    -ms-flex: 0 0 80px;
+    flex: 0 0 80px;
+    background-color: black;
+    height: 100%;
+    position: sticky;
+    width: 80px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .main-nav-sidebar {
+        display: none;
+    }
+}
+
+
 .wd-kanbas-navigation {
     background-color: black;
     list-style: none;
@@ -7,9 +28,8 @@
 }
 
 .wd-kanbas-navigation li {
-    padding: 4px;
-    margin-bottom: 8px;
-    font-size: 0.8em;
+    padding: 8px;
+    font-size: 14px;
     text-align: center;
     /*border: 1px solid white;  Add border to create an outline xxx delete later */
 }
@@ -33,9 +53,15 @@
 /* Icons should be a certain size */
 .wd-kanbas-navigation .fs-2 {
     color: #d41b2c;
-    font-size: 0.5em;
+    font-size: 20px;
     margin-bottom: 3px;
 }
+
+/* if the dashbaord is fixed width then don't necesasrily need this*/
+.nav-icon {
+    font-size: 30px !important;
+}
+
 
 /* Define sizing and fixed aspect of navigation column*/
 .kanbas-nav-column {
@@ -49,9 +75,9 @@
 }
 
 /*
-  Custom icons, second doesn't work:
+  Custom icons for navigation bar
   */
-  .custom-northeastern-icon {
+.custom-northeastern-icon {
     background-image: url('../../images/custom_icons/northeastern_icon.png');
     background-size: cover;
     width: 70px;
@@ -60,12 +86,4 @@
     margin: 0 auto;
     padding: 0px;
     margin-bottom: 0px;
-}
-.custom-account-icon {
-    background-image: url('../../images/custom_icons/account_icon.jpg');
-    background-size: cover;
-    width: 40px;
-    height: 40px;
-    display: block;
-    margin: 0 auto;
 }

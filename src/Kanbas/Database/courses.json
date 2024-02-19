@@ -16,7 +16,8 @@
         "image": "../../images/advanced_herbology.jpg"
     },
     {
-        "_id": "3","name": "CS1236 Beginner Hindi",
+        "_id": "3",
+        "name": "CS1236 Beginner Hindi",
         "number": "CS1236.12452.202410",
         "startDate": "2023-01-10",
         "endDate": "2023-05-15",
