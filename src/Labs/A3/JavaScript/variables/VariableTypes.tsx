@@ -1,4 +1,4 @@
-function VariableTypes() {
+function variableTypes() {
     let numberVariable = 123;
     let floatingPointNumber = 234.345;
     let stringVariable = 'Hello World';
@@ -24,4 +24,4 @@ function VariableTypes() {
 
 }
 
-export default VariableTypes;
+export default variableTypes;

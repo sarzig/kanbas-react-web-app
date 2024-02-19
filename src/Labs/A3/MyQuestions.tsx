@@ -1,4 +1,4 @@
-function MyQuestions() {
+function myQuestions() {
     return (
         <div className="container">
             <h4>My Questions from this lab:</h4>
@@ -14,4 +14,4 @@ function MyQuestions() {
 
     );
 }
-export default MyQuestions
+export default myQuestions
