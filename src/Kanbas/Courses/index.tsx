@@ -2,14 +2,34 @@ import { courses } from "../../Kanbas/Database";
 import { Navigate, Route, Routes, useParams } from "react-router-dom";
 import { HiMiniBars3 } from "react-icons/hi2";
 import CourseNavigation from "./Navigation";
+import React, { useState } from 'react';
+import "../styles.css";
+import "./index.css";
 
 function Courses() {
   const { courseId } = useParams();
   const course = courses.find((course) => course._id === courseId);
+
+  const [isNavigationOpen, setNavigationOpen] = useState(false);
+
+  /* Handle the toggle feature */
+  const handleToggleNavigation = () => {
+    setNavigationOpen((prev) => !prev);
+  };
+
+  /* Handle the hover text when clicking hamburger */
+  const handleToggleTitle = () => {return isNavigationOpen ? "Hide Account Navigation Menu" : "Show Account Navigation Menu";};
+
   return (
-    <div>
-      <h1><HiMiniBars3 /> Course {course?.name ?? "Unknown Course"}</h1>
-      <CourseNavigation />
+    <div className="main-content">
+      <h1>
+        <HiMiniBars3 className="top-bar-menu-hamburger" onClick={handleToggleNavigation} title={handleToggleTitle()} />
+        Course {course?.name ?? 'Unknown Course'}
+      </h1>
+      <hr />
+
+      {isNavigationOpen && <CourseNavigation />}
+
       <div>
         <div
           className="overflow-y-scroll position-fixed bottom-0 end-0"
@@ -27,4 +47,5 @@ function Courses() {
       </div>
     </div>
   );
-}
+};
+export default Courses;

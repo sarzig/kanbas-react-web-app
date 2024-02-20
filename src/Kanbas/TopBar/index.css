@@ -1,0 +1,25 @@
+  /* 
+  Above Main Content Small Screen - black top bar
+  */
+  .above-main-content-small-screen {
+      background-color: black;
+      color: white;
+      display: flex;
+      height: 60px;
+  }
+
+  .above-main-content-small-screen a {
+      color: white;
+      text-decoration: none;
+  }
+
+  .above-main-content-small-screen a:hover {
+      text-decoration: underline;
+  }
+
+  .above-main-content-small-screen i {
+      color: white;
+      padding-right: 10px;
+      padding-left: 10px;
+      display: inline-block;
+  }

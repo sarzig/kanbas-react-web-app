@@ -1,0 +1,56 @@
+
+/* Course Navigation
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Course Navigation
+  */
+  .course-nav-sidebar {
+    background-color: white;
+    flex: 0 0 185px;
+    height: 100%;
+    width: 185px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    padding-left: 0px;
+}
+
+@media (max-width: 768px) {
+    .course-nav-sidebar {
+        display: none;
+    }
+}
+
+.wd-navigation {
+    z-index: 100;
+    background-color: white;
+    list-style: none;
+    padding: 0px;
+    width: 135px;
+    margin: 0px;
+    margin-left: 0px;
+}
+
+.wd-navigation li {
+    padding-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.wd-navigation li.wd-active {
+    border-left: 2px solid black;
+}
+
+.wd-navigation li.wd-active a {
+    color: black;
+}
+
+.wd-navigation a {
+    color: #b52828;
+    text-decoration: none;
+}
+
+.wd-navigation a:hover {
+    color:black;
+    text-decoration: underline;
+}
