@@ -7,7 +7,7 @@ import "../styles.css";
 import "./index.css";
 import Modules from "./Modules";
 import { Link, useLocation } from "react-router-dom";
-import TopBar from "../TopBar";
+import BlackTopBar from "../BlackTopBar/";
 import LocationLastElement from "../Functions/LocationLastElement";
 
 /* todo: xxx implement routes as a loop */
@@ -33,10 +33,7 @@ function Courses() {
   return (
     <>
       <div className="row flex">
-        <TopBar
-          lineOne={`${course?.number ?? 'Unknown Course'}: ${course?.name ?? 'Unknown Course'}`}
-          lineTwo={lastSegment}  // Get the current route path
-        />
+        <BlackTopBar />
       </div>
 
       <div className="main-content">
