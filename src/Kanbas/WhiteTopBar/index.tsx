@@ -15,10 +15,14 @@ import React, { useState } from 'react';
 function WhiteTopBar() {
 
     const { courseId } = useParams();
-    console.log(`courseId is ${courseId}`);
-    const course = courses.find((course) => course._id === courseId);
-    console.log(`course is ${course}`);
 
+    const course = courses.find((course) => course._id === courseId);
+
+    /* Get where we are. If we're at http://localhost:3000/#/Kanbas/Courses/RS101/Panopto-Video, this returns 
+       Panopto Video */
+    const lastSegment = LocationLastElement();
+
+    /*Trying to handle the toggling of the Course Navigation Menu */
 
     const [isNavigationOpen, setNavigationOpen] = useState(true);
 
@@ -28,11 +32,7 @@ function WhiteTopBar() {
     };
 
     /* Handle the hover text when clicking hamburger */
-    const handleToggleTitle = () => { return isNavigationOpen ? "Hide Account Navigation Menu" : "Show Account Navigation Menu"; };
-
-    /* Get where we are. If we're at http://localhost:3000/#/Kanbas/Courses/RS101/Panopto-Video, this returns 
-       Panopto Video */
-    const lastSegment = LocationLastElement();
+    const handleToggleTitle = () => { return isNavigationOpen ? "Hide Course Navigation Menu" : "Show Course Navigation Menu"; };
 
     return (
         <div className="white-top-bar d-flex align-items-center flex-wrap">

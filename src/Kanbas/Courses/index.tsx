@@ -16,20 +16,21 @@ import WhiteTopBar from "../WhiteTopBar";
 function Courses() {
   const { courseId } = useParams();
   const course = courses.find((course) => course._id === courseId);
+  /* Get where we are. If we're at http://localhost:3000/#/Kanbas/Courses/RS101/Panopto-Video, this returns 
+     Panopto Video */
+  const lastSegment = LocationLastElement();
+
 
   const [isNavigationOpen, setNavigationOpen] = useState(true);
 
-  /* Handle the toggle feature */
+   //Handle the toggle feature 
   const handleToggleNavigation = () => {
     setNavigationOpen((prev) => !prev);
   };
 
-  /* Handle the hover text when clicking hamburger */
+   //Handle the hover text when clicking hamburger 
   const handleToggleTitle = () => { return isNavigationOpen ? "Hide Account Navigation Menu" : "Show Account Navigation Menu"; };
 
-  /* Get where we are. If we're at http://localhost:3000/#/Kanbas/Courses/RS101/Panopto-Video, this returns 
-     Panopto Video */
-  const lastSegment = LocationLastElement();
 
   return (
     <>

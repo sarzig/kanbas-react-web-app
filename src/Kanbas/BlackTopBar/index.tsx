@@ -17,21 +17,11 @@ interface TopBarProps {
 
 function BlackTopBar() {
 
-
-    // Get the path of where we are
-    const location = useLocation();
-    console.log(`location is ${location.pathname}`);
-
-
     // Extract the final segment of the path (for http://localhost:3000/#/Kanbas/Dashboard it returns Dashboard)
     const lastSegment = LocationLastElement();
-    console.log(`lastSegment is ${lastSegment}`);
 
-
-    // If params are being used, capture them
+    // Capture the CourseId
     const courseId = CourseIdExtract();
-
-    console.log(`courseId is ${courseId}`);
 
     let lineOneResult;
     let lineTwoResult;
@@ -43,14 +33,13 @@ function BlackTopBar() {
         lineTwoResult = "";
     } else {
         const course = courses.find((course) => course._id === courseId);
-        console.log(`course is ${course}`);
 
         lineOneResult = `${course?.number ?? 'Unknown Course'}: ${course?.name ?? 'Unknown Course'}`;
         lineTwoResult = lastSegment;
     }
 
     // Conditionally render the down arrow icon
-    const downArrow = location.pathname.includes("Kanbas/Courses") && (
+    const downArrow = (courseId !== "") && (
         <div className="top-bar-icon">
             <FaAngleDown />
         </div>
