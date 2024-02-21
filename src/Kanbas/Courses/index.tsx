@@ -9,6 +9,7 @@ import Modules from "./Modules";
 import { Link, useLocation } from "react-router-dom";
 import BlackTopBar from "../BlackTopBar/";
 import LocationLastElement from "../Functions/LocationLastElement";
+import WhiteTopBar from "../WhiteTopBar";
 
 /* todo: xxx implement routes as a loop */
 
@@ -32,20 +33,10 @@ function Courses() {
 
   return (
     <>
-      <div className="row flex">
-        <BlackTopBar />
-      </div>
-
       <div className="main-content">
 
         <div className="row flex">
-          <div className="widescreen-top-bar">
-            <h1>
-              <HiMiniBars3 className="top-bar-menu-hamburger" onClick={handleToggleNavigation} title={handleToggleTitle()} />
-              {course?.number ?? 'Unknown Course'}: {course?.name ?? 'Unknown Course'}  {`>`}  {lastSegment}
-            </h1>
-            <hr />
-          </div>
+          <WhiteTopBar />
         </div>
 
         <div className="container">

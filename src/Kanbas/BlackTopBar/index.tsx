@@ -7,6 +7,7 @@ import Dashboard from "../Dashboard";
 import Courses from "../Courses";
 import { courses } from "../Database";
 import LocationLastElement from "../Functions/LocationLastElement";
+import CourseIdExtract from '../Functions/CourseIdExtract';
 
 
 interface TopBarProps {
@@ -19,27 +20,33 @@ function BlackTopBar() {
 
     // Get the path of where we are
     const location = useLocation();
+    console.log(`location is ${location.pathname}`);
+
 
     // Extract the final segment of the path (for http://localhost:3000/#/Kanbas/Dashboard it returns Dashboard)
     const lastSegment = LocationLastElement();
+    console.log(`lastSegment is ${lastSegment}`);
+
 
     // If params are being used, capture them
-    const { courseId } = useParams();
+    const courseId = CourseIdExtract();
+
+    console.log(`courseId is ${courseId}`);
 
     let lineOneResult;
     let lineTwoResult;
 
     // If we're in "Kanbas/Courses" screen, then base the top bar text on the course. 
     // Otherwise, base the top bar text on where we are in Canvas.
-    if (location.pathname.includes("Kanbas/Courses")) {
+    if (courseId === "") {
+        lineOneResult = lastSegment;
+        lineTwoResult = "";
+    } else {
         const course = courses.find((course) => course._id === courseId);
+        console.log(`course is ${course}`);
 
         lineOneResult = `${course?.number ?? 'Unknown Course'}: ${course?.name ?? 'Unknown Course'}`;
         lineTwoResult = lastSegment;
-
-    } else {
-        lineOneResult = lastSegment;
-        lineTwoResult = "";
     }
 
     // Conditionally render the down arrow icon
