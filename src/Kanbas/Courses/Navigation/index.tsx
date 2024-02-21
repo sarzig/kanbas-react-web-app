@@ -8,13 +8,15 @@ function CourseNavigation() {
 
 
   return (
-    <ul className="wd-navigation course-nav-sidebar">
-      {links.map((link, index) => (
-        <li key={index} className={pathname.includes(link.replace(/\s/g, "")) ? "wd-active" : ""}>
-          <Link to={link}>{link.replace("-", " ")}</Link>
-        </li>
-      ))}
-    </ul>
+    <div className="col course-nav-sidebar">
+      <ul className="wd-navigation">
+        {links.map((link, index) => (
+          <li key={index} className={pathname.includes(link.replace(/\s/g, "")) ? "wd-active" : ""}>
+            <Link to={link}>{link.replace("-", " ")}</Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 export default CourseNavigation;

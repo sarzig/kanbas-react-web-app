@@ -1,25 +1,38 @@
-
-
-
 /* Black bar that pops up on small screen */
+import { FaBars, FaAngleDown } from 'react-icons/fa';
+import "./index.css";
 
-function TopBar() {
+interface TopBarProps {
+    lineOne: string;
+    lineTwo: string;
+}
+
+function TopBar({ lineOne, lineTwo }: TopBarProps) {
     return (
-        <>
-            <div className="row above-main-content-small-screen align-items-center text-center flex d-md-none">
-                <div className="col-2 text-start">
-                    <i className="fa fa-bars"></i>
-                </div>
+        <div className="black-top-bar d-flex align-items-center flex-wrap d-md-none">
 
-                <div className="col-8 justify-content-center">
-                    <a href="#">CS1234: Advanced Bromance<br />Modules</a>
-                </div>
-
-                <div className="col-2 text-end">
-                    <i className="fa fa-eye"></i><i className="fa fa-chevron-circle-down"></i>
+            <div className="col-2 icon-column d-flex justify-content-center align-items-center">
+                <div className="top-bar-icon">
+                    <FaBars />
                 </div>
             </div>
-        </>
+
+            <div className="col-8 text-center d-flex flex-column justify-content-center">
+                <div className="black-top-bar-text">
+                    {lineOne}
+                </div>
+                <div className="black-top-bar-text">
+                    {lineTwo}
+                </div>
+            </div>
+
+            <div className="col-2 icon-column d-flex justify-content-center align-items-center">
+                <div className="top-bar-icon">
+                    <FaAngleDown />
+                </div>
+            </div>
+        </div>
     );
-};
+}
+
 export default TopBar;

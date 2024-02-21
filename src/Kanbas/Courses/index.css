@@ -14,3 +14,14 @@ h1 {
     font-size: 1.125rem;
     white-space:nowrap;
 }
+
+/*
+.widescreen-top-bar {
+}
+*/
+
+@media (max-width: 768px) {
+    .widescreen-top-bar {
+        display: none;
+    }
+}

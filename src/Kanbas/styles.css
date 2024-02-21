@@ -13,7 +13,8 @@ main content
 */
 
 .main-content {
-  margin: 22px;
+  margin: 0px;
+  margin-top: 10px;
 }
 
 /* Above Main Content 
@@ -74,7 +75,9 @@ main content
   /* Add smooth transition effect */
   width: 100%;
   text-align: left;
-  outline: red
+  outline: red;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .button-sidebar-wide:hover {
@@ -102,6 +105,8 @@ main content
   margin-right: 2px;
   padding-left: 13px;
   padding-right: 13px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .button-topbar-medium a {
@@ -145,11 +150,8 @@ main content
 }
 
 .mini-button {
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.mini-button i {
+  padding-left: 0px;
+  padding-right: 0px;
   margin-left: 0px;
   margin-right: 0px;
 }

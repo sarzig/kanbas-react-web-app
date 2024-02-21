@@ -123,7 +123,7 @@ body * {
 
 /* Above Main Content Small Screen
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Above Main Content Small Screen
-  */
+  
 .above-main-content-small-screen {
     background-color: black;
     color: white;
@@ -146,6 +146,7 @@ body * {
     padding-left: 10px;
     display: inline-block;
 }
+*/
 
 /* Right Sidebar
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Right Sidebar
@@ -169,16 +170,16 @@ body * {
 
 /* Buttons
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Buttons
-  */
+
 .button-sidebar-wide {
     background-color: rgb(245, 245, 245);
     border-color: rgb(199, 205, 205);
     color: rgb(45, 55, 69);
     margin-top: 3px;
     text-decoration: none;
-    /* Remove underlining */
+     Remove underlining 
     transition: background-color 0.3s;
-    /* Add smooth transition effect */
+     Add smooth transition effect 
     width: 100%;
     text-align: left;
     outline: red
@@ -187,13 +188,13 @@ body * {
 .button-sidebar-wide:hover {
     background-color: rgb(233, 233, 233);
     color: rgb(45, 55, 69);
-    /* Change color on hover */
+     Change color on hover 
 }
 
 .button-sidebar-wide:focus {
     border-color: rgb(180, 40, 40);
     background-color: pink;
-    /* Change border color on click */
+     Change border color on click 
 }
 
 .button-topbar-medium {
@@ -202,9 +203,9 @@ body * {
     color: rgb(45, 55, 69);
     margin-top: 3px;
     text-decoration: none;
-    /* Remove underlining */
+     Remove underlining 
     transition: background-color 0.3s;
-    /* Add smooth transition effect */
+     Add smooth transition effect 
     margin-left: 2px;
     margin-right: 2px;
     padding-left: 13px;
@@ -225,13 +226,13 @@ body * {
 .button-topbar-medium:hover {
     border-color: rgb(199, 205, 205);
     color: rgb(45, 55, 69);
-    /* Change color on hover */
+     Change color on hover 
 }
 
 .button-topbar-medium:active {
     border-color: rgb(180, 40, 40);
     color: pink;
-    /* Change border color on click */
+     Change border color on click 
 }
 
 .red-button {
@@ -260,6 +261,7 @@ body * {
     margin-left: 0px;
     margin-right: 0px;
 }
+*/
 
 /* wd-List
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ wd-List
