@@ -19,7 +19,7 @@ function Kanbas() {
 
       <div className="d-flex">
         <KanbasNavigation />
-        <div className="flex-grow-1">
+        <div className="flex-grow-1 p-2">
 
           <Routes>
             <Route path="/" element={<Navigate to="Dashboard" />} />

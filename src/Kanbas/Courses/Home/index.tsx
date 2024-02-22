@@ -1,16 +1,18 @@
 import Modules from "../Modules";
+import Assignments from "../Assignments";
 import HomeSideBar from "./HomeSideBar";
+import "../../styles.css";
 
 function Home() {
     return (
         <>
             <div className="row">
-                <div className="col-9">
-                    <Modules />;
+                <div className="col">
+                    <Modules />
                 </div>
 
-                <div className="col-3">
-                    <HomeSideBar />;
+                <div className="col course-right-sidebar">
+                    <HomeSideBar />
                 </div>
 
             </div>

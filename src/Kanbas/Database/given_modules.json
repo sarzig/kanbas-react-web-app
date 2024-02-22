@@ -1,0 +1,80 @@
+[
+  {
+    "_id": "M101",
+    "name": "Art of Chocolate Making",
+    "description": "Mastering the craft of chocolate creation.",
+    "course": "CS1234",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Introduction to Chocolate Types",
+        "description": "Exploring different types of chocolate.",
+        "module": "M101"
+      },
+      {
+        "_id": "L102",
+        "name": "Techniques in Truffle Making",
+        "description": "Learning the art of truffle creation.",
+        "module": "M101"
+      },
+      {
+        "_id": "L103",
+        "name": "Chocolate Sculpting",
+        "description": "Creating edible art through chocolate sculpting.",
+        "module": "M101"
+      }
+    ]
+  },
+  {
+    "_id": "M102",
+    "name": "Pastry Mastery",
+    "description": "Mastering the art of pastry creation.",
+    "course": "CS1234",
+    "lessons": [
+      {
+        "_id": "L104",
+        "name": "Puff Pastry Perfection",
+        "description": "Creating perfect puff pastry.",
+        "module": "M102"
+      },
+      {
+        "_id": "L105",
+        "name": "Artisan Bread Baking",
+        "description": "Mastering the art of artisan bread.",
+        "module": "M102"
+      },
+      {
+        "_id": "L106",
+        "name": "Advanced Cake Decorating Techniques",
+        "description": "Exploring advanced cake decoration methods.",
+        "module": "M102"
+      }
+    ]
+  },
+  {
+    "_id": "M103",
+    "name": "Confectionery Innovation",
+    "description": "Exploring innovative techniques in confectionery.",
+    "course": "CS1234",
+    "lessons": [
+      {
+        "_id": "L107",
+        "name": "Molecular Gastronomy in Confections",
+        "description": "Applying molecular gastronomy to confectionery.",
+        "module": "M103"
+      },
+      {
+        "_id": "L108",
+        "name": "Sugar Pulling and Blowing",
+        "description": "Mastering the art of sugar pulling and blowing.",
+        "module": "M103"
+      },
+      {
+        "_id": "L109",
+        "name": "Creating Edible Art",
+        "description": "Transforming confections into edible works of art.",
+        "module": "M103"
+      }
+    ]
+  }
+]

@@ -33,16 +33,12 @@ function WhiteTopBar() {
     return (
         <div className="white-top-bar d-flex align-items-center flex-wrap">
 
-            <div className="col-9 widescreen-top-bar">
+            <div className="col widescreen-top-bar">
                 <h1>
                     <HiMiniBars3 className="top-bar-menu-hamburger" onClick={handleToggleNavigation} title={handleToggleTitle()} />
                     {course?.number ?? 'Unknown Course'}: {course?.name ?? 'Unknown Course'}  {`>`}  {lastSegment}
                     <hr />
                 </h1>
-            </div>
-
-            <div className="col-3 icon-column d-flex justify-content-center align-items-center">
-                ahh xxx fix me
             </div>
         </div>
     );

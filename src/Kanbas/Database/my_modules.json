@@ -1,0 +1,867 @@
+[
+    {
+      "_id": "C1",
+      "name": "Art of Chocolate Making",
+      "modules": [
+        {
+          "_id": "M1",
+          "name": "Art of Chocolate Making",
+          "lessons": [
+            {
+              "_id": "L1",
+              "name": "Introduction to Chocolate Types",
+              "description": "Learn about different types of chocolate.",
+              "module": "M1"
+            },
+            {
+              "_id": "L2",
+              "name": "Techniques in Truffle Making",
+              "description": "Master the art of making delicious truffles.",
+              "module": "M1"
+            },
+            {
+              "_id": "L3",
+              "name": "Chocolate Sculpting",
+              "description": "Explore the creative world of chocolate sculpting.",
+              "module": "M1"
+            }
+          ]
+        },
+        {
+          "_id": "M2",
+          "name": "Pastry Mastery",
+          "lessons": [
+            {
+              "_id": "L1",
+              "name": "Puff Pastry Perfection",
+              "description": "Learn the secrets to perfect puff pastry.",
+              "module": "M2"
+            },
+            {
+              "_id": "L2",
+              "name": "Artisan Bread Baking",
+              "description": "Master the art of baking artisan breads.",
+              "module": "M2"
+            },
+            {
+              "_id": "L3",
+              "name": "Advanced Cake Decorating Techniques",
+              "description": "Take your cake decorating skills to the next level.",
+              "module": "M2"
+            }
+          ]
+        },
+        {
+          "_id": "M3",
+          "name": "Confectionery Innovation",
+          "lessons": [
+            {
+              "_id": "L1",
+              "name": "Molecular Gastronomy in Confections",
+              "description": "Explore innovative confectionery techniques.",
+              "module": "M3"
+            },
+            {
+              "_id": "L2",
+              "name": "Sugar Pulling and Blowing",
+              "description": "Learn the delicate art of sugar pulling and blowing.",
+              "module": "M3"
+            },
+            {
+              "_id": "L3",
+              "name": "Creating Edible Art",
+              "description": "Discover how to create edible masterpieces.",
+              "module": "M3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "C2",
+      "name": "Medicinal Herb Gardens",
+      "modules": [
+        {
+          "_id": "M1",
+          "name": "Medicinal Herb Gardens",
+          "lessons": [
+            {
+              "_id": "L1",
+              "name": "Introduction to Medicinal Herbs",
+              "description": "Learn about the healing properties of medicinal herbs.",
+              "module": "M1"
+            },
+            {
+              "_id": "L2",
+              "name": "Designing a Medicinal Herb Garden",
+              "description": "Discover the principles of designing a medicinal herb garden.",
+              "module": "M1"
+            },
+            {
+              "_id": "L3",
+              "name": "Cultivation and Harvesting Techniques",
+              "description": "Master the techniques of cultivating and harvesting medicinal herbs.",
+              "module": "M1"
+            }
+          ]
+        },
+        {
+          "_id": "M2",
+          "name": "Herbal Remedies",
+          "lessons": [
+            {
+              "_id": "L1",
+              "name": "Making Herbal Tinctures and Infusions",
+              "description": "Learn to prepare herbal tinctures and infusions for health.",
+              "module": "M2"
+            },
+            {
+              "_id": "L2",
+              "name": "Herbal Salves and Balms",
+              "description": "Explore the world of herbal salves and balms.",
+              "module": "M2"
+            },
+            {
+              "_id": "L3",
+              "name": "Herbal Teas for Health",
+              "description": "Discover the health benefits of herbal teas.",
+              "module": "M2"
+            }
+          ]
+        },
+        {
+          "_id": "M3",
+          "name": "Herbology in Practice",
+          "lessons": [
+            {
+              "_id": "L1",
+              "name": "Case Studies in Herbology",
+              "description": "Analyze real-life case studies in herbology.",
+              "module": "M3"
+            },
+            {
+              "_id": "L2",
+              "name": "Integrating Herbs into Daily Life",
+              "description": "Learn practical ways to integrate herbs into daily routines.",
+              "module": "M3"
+            },
+            {
+              "_id": "L3",
+              "name": "Herb-Drug Interactions",
+              "description": "Understand the interactions between herbs and drugs.",
+              "module": "M3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "C3",
+      "name": "Hindi Language and Culture",
+      "modules": [
+        {
+          "_id": "M1",
+          "name": "Hindi Basics",
+          "lessons": [
+            {
+              "_id": "L1",
+              "name": "Introduction to Hindi Alphabet",
+              "description": "Learn the basics of the Hindi alphabet.",
+              "module": "M1"
+            },
+            {
+              "_id": "L2",
+              "name": "Basic Vocabulary and Phrases",
+              "description": "Build a foundation in Hindi vocabulary and common phrases.",
+              "module": "M1"
+            },
+            {
+              "_id": "L3",
+              "name": "Hindi Pronunciation",
+              "description": "Improve your Hindi pronunciation skills.",
+              "module": "M1"
+            }
+          ]
+        },
+        {
+          "_id": "M2",
+          "name": "Conversational Hindi",
+          "lessons": [
+            {
+              "_id": "L1",
+              "name": "Everyday Conversations",
+              "description": "Engage in everyday conversations in Hindi.",
+              "module": "M2"
+            },
+            {
+              "_id": "L2",
+              "name": "Greetings and Polite Expressions",
+              "description": "Learn common greetings and polite expressions in Hindi.",
+              "module": "M2"
+            },
+            {
+              "_id": "L3",
+              "name": "Asking for Directions and Common Phrases",
+              "description": "Navigate and communicate effectively in Hindi.",
+              "module": "M2"
+            }
+          ]
+        },
+        {
+          "_id": "M3",
+          "name": "Cultural Insights",
+          "lessons": [
+            {
+              "_id": "L1",
+              "name": "Understanding Hindi Culture",
+              "description": "Explore the rich cultural heritage of Hindi-speaking regions.",
+              "module": "M3"
+            },
+            {
+              "_id": "L2",
+              "name": "Festivals and Celebrations",
+              "description": "Learn about festivals and celebrations in Hindi culture.",
+              "module": "M3"
+            },
+            {
+              "_id": "L3",
+              "name": "Traditional Hindi Cuisine",
+              "description": "Discover the flavors of traditional Hindi cuisine.",
+              "module": "M3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "C4",
+      "name": "Understanding Male Friendships",
+      "modules": [
+        {
+          "_id": "M1",
+          "name": "Understanding Male Friendships",
+          "lessons": [
+            {
+              "_id": "L1",
+              "name": "Dynamics of Bromances",
+              "description": "Explore the dynamics and bonds of bromances.",
+              "module": "M1"
+            },
+            {
+              "_id": "L2",
+              "name": "Historical Perspectives",
+              "description": "Understand the historical perspectives of male friendships.",
+              "module": "M1"
+            },
+            {
+              "_id": "L3",
+              "name": "Psychological Aspects",
+              "description": "Examine the psychological aspects of male friendships.",
+              "module": "M1"
+            }
+          ]
+        },
+        {
+          "_id": "M2",
+          "name": "Nurturing Bromances",
+          "lessons": [
+            {
+              "_id": "L1",
+              "name": "Effective Communication",
+              "description": "Learn effective communication in male friendships.",
+              "module": "M2"
+            },
+            {
+              "_id": "L2",
+              "name": "Shared Activities and Hobbies",
+              "description": "Explore shared activities and hobbies in bromances.",
+              "module": "M2"
+            },
+            {
+              "_id": "L3",
+              "name": "Resolving Conflicts in Bromances",
+              "description": "Discover ways to resolve conflicts in bromances.",
+              "module": "M2"
+            }
+          ]
+        },
+        {
+          "_id": "M3",
+          "name": "Beyond Friendship",
+          "lessons": [
+            {
+              "_id": "L1",
+              "name": "Bromance in Popular Culture",
+              "description": "Examine the portrayal of bromance in popular culture.",
+              "module": "M3"
+            },
+            {
+              "_id": "L2",
+              "name": "Impact on Mental Health",
+              "description": "Explore the impact of male friendships on mental health.",
+              "module": "M3"
+            },
+            {
+              "_id": "L3",
+              "name": "Building Lasting Connections",
+              "description": "Discover strategies for building lasting connections.",
+              "module": "M3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "C5",
+      "name": "Road Safety and Defensive Driving",
+      "modules": [
+        {
+          "_id": "M1",
+          "name": "Traffic Rules and Regulations",
+          "lessons": [
+            {
+              "_id": "L1",
+              "name": "Understanding Road Signs",
+              "description": "Learn the meaning of common road signs.",
+              "module": "M1"
+            },
+            {
+              "_id": "L2",
+              "name": "Right of Way and Traffic Signals",
+              "description": "Understand right of way and traffic signals.",
+              "module": "M1"
+            },
+            {
+              "_id": "L3",
+              "name": "Speed Limits and Safe Driving Practices",
+              "description": "Follow speed limits and practice safe driving.",
+              "module": "M1"
+            }
+          ]
+        },
+        {
+          "_id": "M2",
+          "name": "Defensive Driving Techniques",
+          "lessons": [
+            {
+              "_id": "L1",
+              "name": "Anticipating and Avoiding Hazards",
+              "description": "Develop skills to anticipate and avoid driving hazards.",
+              "module": "M2"
+            },
+            {
+              "_id": "L2",
+              "name": "Proper Following Distances",
+              "description": "Maintain proper following distances for safety.",
+              "module": "M2"
+            },
+            {
+              "_id": "L3",
+              "name": "Handling Adverse Weather Conditions",
+              "description": "Learn techniques for driving in adverse weather conditions.",
+              "module": "M2"
+            }
+          ]
+        },
+        {
+          "_id": "M3",
+          "name": "Vehicle Maintenance",
+          "lessons": [
+            {
+              "_id": "L1",
+              "name": "Basic Car Maintenance Tips",
+              "description": "Learn basic tips for maintaining your vehicle.",
+              "module": "M3"
+            },
+            {
+              "_id": "L2",
+              "name": "Tire Care and Inspection",
+              "description": "Understand tire care and perform regular inspections.",
+              "module": "M3"
+            },
+            {
+              "_id": "L3",
+              "name": "Checking Fluids and Lights",
+              "description": "Regularly check fluids and lights for vehicle maintenance.",
+              "module": "M3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "C6",
+      "name": "Geology and Culture of the Himalayas",
+      "modules": [
+        {
+          "_id": "M1",
+          "name": "Geology of the Himalayas",
+          "lessons": [
+            {
+              "_id": "L1",
+              "name": "Formation and Tectonic Activity",
+              "description": "Explore the formation and tectonic activity of the Himalayas.",
+              "module": "M1"
+            },
+            {
+              "_id": "L2",
+              "name": "Types of Rocks in the Himalayas",
+              "description": "Learn about the different types of rocks in the Himalayas.",
+              "module": "M1"
+            },
+            {
+              "_id": "L3",
+              "name": "Glacial Processes",
+              "description": "Understand the glacial processes shaping the Himalayas.",
+              "module": "M1"
+            }
+          ]
+        },
+        {
+          "_id": "M2",
+          "name": "Biodiversity in the Himalayan Region",
+          "lessons": [
+            {
+              "_id": "L1",
+              "name": "Flora and Fauna Diversity",
+              "description": "Explore the rich flora and fauna diversity of the Himalayan region.",
+              "module": "M2"
+            },
+            {
+              "_id": "L2",
+              "name": "Conservation Challenges",
+              "description": "Understand the conservation challenges faced in the Himalayas.",
+              "module": "M2"
+            },
+            {
+              "_id": "L3",
+              "name": "Rare and Endangered Species",
+              "description": "Learn about rare and endangered species in the Himalayas.",
+              "module": "M2"
+            }
+          ]
+        },
+        {
+          "_id": "M3",
+          "name": "Cultural Significance",
+          "lessons": [
+            {
+              "_id": "L1",
+              "name": "Spiritual Practices and Himalayan Culture",
+              "description": "Explore spiritual practices and cultural aspects of the Himalayas.",
+              "module": "M3"
+            },
+            {
+              "_id": "L2",
+              "name": "Traditional Architecture",
+              "description": "Learn about traditional architecture in the Himalayan region.",
+              "module": "M3"
+            },
+            {
+              "_id": "L3",
+              "name": "Impact of Tourism on Himalayan Communities",
+              "description": "Examine the impact of tourism on Himalayan communities.",
+              "module": "M3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "C7",
+      "name": "Exterior Design and Decor",
+      "modules": [
+        {
+          "_id": "M1",
+          "name": "Introduction to Exterior Design",
+          "lessons": [
+            {
+              "_id": "L1",
+              "name": "Principles of Exterior Design",
+              "description": "Learn the fundamental principles of exterior design.",
+              "module": "M1"
+            },
+            {
+              "_id": "L2",
+              "name": "Balancing Form and Function",
+              "description": "Understand how to balance form and function in exterior design.",
+              "module": "M1"
+            },
+            {
+              "_id": "L3",
+              "name": "Outdoor Spaces and Landscaping",
+              "description": "Explore the design of outdoor spaces and landscaping.",
+              "module": "M1"
+            }
+          ]
+        },
+        {
+          "_id": "M2",
+          "name": "Materials and Finishes",
+          "lessons": [
+            {
+              "_id": "L1",
+              "name": "Choosing Exterior Materials",
+              "description": "Learn how to choose appropriate materials for exterior design.",
+              "module": "M2"
+            },
+            {
+              "_id": "L2",
+              "name": "Sustainable Design Practices",
+              "description": "Explore sustainable design practices for exteriors.",
+              "module": "M2"
+            },
+            {
+              "_id": "L3",
+              "name": "Exterior Finishes and Coatings",
+              "description": "Understand the variety of finishes and coatings used in exterior design.",
+              "module": "M2"
+            }
+          ]
+        },
+        {
+          "_id": "M3",
+          "name": "Trends in Exterior Decorating",
+          "lessons": [
+            {
+              "_id": "L1",
+              "name": "Modern vs. Traditional Styles",
+              "description": "Explore the differences between modern and traditional exterior styles.",
+              "module": "M3"
+            },
+            {
+              "_id": "L2",
+              "name": "Incorporating Technology",
+              "description": "Learn how to incorporate technology in exterior design.",
+              "module": "M3"
+            },
+            {
+              "_id": "L3",
+              "name": "Seasonal Decorating Tips",
+              "description": "Discover tips for decorating exteriors based on seasonal changes.",
+              "module": "M3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "C8",
+      "name": "Women's Studies and Feminism",
+      "modules": [
+        {
+          "_id": "M1",
+          "name": "Introduction to Women's Studies",
+          "lessons": [
+            {
+              "_id": "L1",
+              "name": "Historical Perspectives",
+              "description": "Explore historical perspectives in women's studies.",
+              "module": "M1"
+            },
+            {
+              "_id": "L2",
+              "name": "Feminist Movements",
+              "description": "Learn about influential feminist movements.",
+              "module": "M1"
+            },
+            {
+              "_id": "L3",
+              "name": "Key Concepts in Women's Studies",
+              "description": "Understand key concepts in the field of women's studies.",
+              "module": "M1"
+            }
+          ]
+        },
+        {
+          "_id": "M2",
+          "name": "Intersectionality",
+          "lessons": [
+            {
+              "_id": "L1",
+              "name": "Race, Class, and Gender",
+              "description": "Examine the intersectionality of race, class, and gender.",
+              "module": "M2"
+            },
+            {
+              "_id": "L2",
+              "name": "LGBTQ+ Perspectives",
+              "description": "Explore LGBTQ+ perspectives in women's studies.",
+              "module": "M2"
+            },
+            {
+              "_id": "L3",
+              "name": "Disability and Gender",
+              "description": "Understand the intersection of disability and gender.",
+              "module": "M2"
+            }
+          ]
+        },
+        {
+          "_id": "M3",
+          "name": "Contemporary Issues",
+          "lessons": [
+            {
+              "_id": "L1",
+              "name": "Global Women's Rights",
+              "description": "Examine global issues related to women's rights.",
+              "module": "M3"
+            },
+            {
+              "_id": "L2",
+              "name": "Women in Media",
+              "description": "Explore the portrayal of women in media.",
+              "module": "M3"
+            },
+            {
+              "_id": "L3",
+              "name": "Reproductive Rights and Health",
+              "description": "Understand reproductive rights and health issues.",
+              "module": "M3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "M1",
+      "name": "Feline Behavior",
+      "description": "Understanding cat behavior, body language, and social structure.",
+      "course": "C9",
+      "lessons": [
+        {
+          "_id": "L1",
+          "name": "Understanding Cat Communication",
+          "description": "Exploring the ways cats communicate with humans and other cats.",
+          "module": "M1"
+        },
+        {
+          "_id": "L2",
+          "name": "Cat Body Language",
+          "description": "Interpreting various aspects of cat body language.",
+          "module": "M1"
+        },
+        {
+          "_id": "L3",
+          "name": "Social Structure in Cats",
+          "description": "Examining the social hierarchy and behavior in cat communities.",
+          "module": "M1"
+        }
+      ]
+    },
+    {
+      "_id": "M2",
+      "name": "Health and Nutrition",
+      "description": "Understanding the basics of feline health, nutrition, and preventive care.",
+      "course": "C9",
+      "lessons": [
+        {
+          "_id": "L1",
+          "name": "Feeding Your Cat a Balanced Diet",
+          "description": "Guidelines for providing a nutritious and balanced diet to cats.",
+          "module": "M2"
+        },
+        {
+          "_id": "L2",
+          "name": "Common Health Issues",
+          "description": "Identifying and addressing common health problems in cats.",
+          "module": "M2"
+        },
+        {
+          "_id": "L3",
+          "name": "Preventive Care and Vaccinations",
+          "description": "Exploring preventive measures and vaccination schedules for cats.",
+          "module": "M2"
+        }
+      ]
+    },
+    {
+      "_id": "M3",
+      "name": "Cat Breeds and Genetics",
+      "description": "Overview of different cat breeds, their genetics, and selecting the right cat.",
+      "course": "C9",
+      "lessons": [
+        {
+          "_id": "L1",
+          "name": "Different Cat Breeds",
+          "description": "Introduction to various cat breeds and their characteristics.",
+          "module": "M3"
+        },
+        {
+          "_id": "L2",
+          "name": "Genetics and Coat Patterns",
+          "description": "Understanding the genetics behind cat coat patterns and colors.",
+          "module": "M3"
+        },
+        {
+          "_id": "L3",
+          "name": "Selecting the Right Cat for You",
+          "description": "Guidance on choosing a cat that suits your lifestyle and preferences.",
+          "module": "M3"
+        }
+      ]
+    },
+    {
+      "_id": "M1",
+      "name": "Basics of Canine Behavior",
+      "description": "Understanding the fundamental aspects of canine behavior and socialization.",
+      "course": "C10",
+      "lessons": [
+        {
+          "_id": "L1",
+          "name": "Communication and Socialization",
+          "description": "Exploring how dogs communicate and the importance of socialization.",
+          "module": "M1"
+        },
+        {
+          "_id": "L2",
+          "name": "Understanding Dog Body Language",
+          "description": "Interpreting various aspects of dog body language.",
+          "module": "M1"
+        },
+        {
+          "_id": "L3",
+          "name": "Common Behavioral Issues",
+          "description": "Identifying and addressing common behavioral problems in dogs.",
+          "module": "M1"
+        }
+      ]
+    },
+    {
+      "_id": "M2",
+      "name": "Canine Health and Care",
+      "description": "Essentials of canine health, including nutrition, grooming, and veterinary care.",
+      "course": "C10",
+      "lessons": [
+        {
+          "_id": "L1",
+          "name": "Nutrition and Exercise",
+          "description": "Guidelines for providing proper nutrition and exercise for dogs.",
+          "module": "M2"
+        },
+        {
+          "_id": "L2",
+          "name": "Grooming and Hygiene",
+          "description": "Maintaining the hygiene and grooming needs of dogs.",
+          "module": "M2"
+        },
+        {
+          "_id": "L3",
+          "name": "Veterinary Care and Preventive Measures",
+          "description": "Understanding veterinary care and preventive measures for dogs.",
+          "module": "M2"
+        }
+      ]
+    },
+    {
+      "_id": "M3",
+      "name": "Dog Breeds and Training",
+      "description": "Exploring different dog breeds and basic training techniques.",
+      "course": "C10",
+      "lessons": [
+        {
+          "_id": "L1",
+          "name": "Recognizing Different Dog Breeds",
+          "description": "Identifying various dog breeds and their characteristics.",
+          "module": "M3"
+        },
+        {
+          "_id": "L2",
+          "name": "Basic Training Techniques",
+          "description": "Introduction to basic training commands and techniques for dogs.",
+          "module": "M3"
+        },
+        {
+          "_id": "L3",
+          "name": "Agility and Specialty Training",
+          "description": "Exploring agility training and specialty training for dogs.",
+          "module": "M3"
+        }
+      ]
+    },
+    {
+      "_id": "C22",
+      "name": "The Beatles and Transcendental Meditation",
+      "description": "Exploring the intersection of The Beatles and Transcendental Meditation.",
+      "modules": [
+        {
+          "_id": "M1",
+          "name": "The Beatles and Transcendental Meditation",
+          "description": "Understanding the connection between The Beatles and Transcendental Meditation.",
+          "course": "C22",
+          "lessons": [
+            {
+              "_id": "L1",
+              "name": "Introduction to TM and The Beatles",
+              "description": "An introduction to Transcendental Meditation and its association with The Beatles.",
+              "module": "M1"
+            },
+            {
+              "_id": "L2",
+              "name": "Influence on Music and Creativity",
+              "description": "Exploring how Transcendental Meditation influenced The Beatles' music and creativity.",
+              "module": "M1"
+            },
+            {
+              "_id": "L3",
+              "name": "Spiritual Journey through Music",
+              "description": "Examining the spiritual journey depicted in The Beatles' music.",
+              "module": "M1"
+            }
+          ]
+        },
+        {
+          "_id": "M2",
+          "name": "Impact on Popular Culture",
+          "description": "Assessing the impact of The Beatles and Transcendental Meditation on popular culture.",
+          "course": "C22",
+          "lessons": [
+            {
+              "_id": "L1",
+              "name": "TM's Influence on the 1960s Counterculture",
+              "description": "Exploring how Transcendental Meditation influenced the counterculture of the 1960s.",
+              "module": "M2"
+            },
+            {
+              "_id": "L2",
+              "name": "Beatles' Contribution to Psychedelic Movement",
+              "description": "Analyzing The Beatles' contribution to the psychedelic movement.",
+              "module": "M2"
+            },
+            {
+              "_id": "L3",
+              "name": "Legacy in Modern Music and Meditation",
+              "description": "Examining the legacy of The Beatles in modern music and meditation practices.",
+              "module": "M2"
+            }
+          ]
+        },
+        {
+          "_id": "M3",
+          "name": "Exploring TM Practices",
+          "description": "Delving into the practices of Transcendental Meditation.",
+          "course": "C22",
+          "lessons": [
+            {
+              "_id": "L1",
+              "name": "Learning Transcendental Meditation",
+              "description": "A guide to learning Transcendental Meditation.",
+              "module": "M3"
+            },
+            {
+              "_id": "L2",
+              "name": "TM's Benefits for Mental Health",
+              "description": "Understanding the mental health benefits of Transcendental Meditation.",
+              "module": "M3"
+            },
+            {
+              "_id": "L3",
+              "name": "Integrating Meditation into Daily Life",
+              "description": "Exploring ways to integrate meditation into daily life.",
+              "module": "M3"
+            }
+          ]
+        }
+      ]
+    }
+  ]

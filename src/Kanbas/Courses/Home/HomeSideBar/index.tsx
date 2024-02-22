@@ -2,7 +2,6 @@
 function HomeSideBar() {
     return (
         <>
-            <div id="right-sidebar-content">
                 <p><strong>Course Status</strong></p>
                 <div className="d-flex">
                     <button className="btn btn button-sidebar-wide"><i className="fa fa-ban"></i> Unpublish</button>
@@ -45,7 +44,7 @@ function HomeSideBar() {
                 <hr />
                 <p><i className="fa fa-calendar"></i> View Calendar</p>
                 <hr />
-            </div>
+       
         </>
     );
 };

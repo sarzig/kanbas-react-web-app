@@ -5,7 +5,7 @@ import "./index.css";
 
 function Dashboard() {
   return (
-    <div className="p-4">
+    <div>
       <h1>Dashboard</h1>              <hr />
       <h2>Published Courses (12)</h2> <hr />
       <div className="row">
@@ -14,12 +14,14 @@ function Dashboard() {
             <div key={course._id} className="col" style={{ width: 300 }}>
               <div className="card flex-shrink-0">
 
-                <img src={`/images/${course.image}`} className="card-img-top" />
+                <Link className="card-title" to={`/Kanbas/Courses/${course._id}/Home`}>
+                  <img src={`/images/${course.image}`} className="card-img-top" />
+                </Link>
 
                 <Link className="card-title" to={`/Kanbas/Courses/${course._id}/Home`} title={`${course.name} - Homepage`}>
 
                   <div className="card-body">
-                    
+
                     <Link className="card-title" to={`/Kanbas/Courses/${course._id}/Home`}>
                       {course.name}
                     </Link>
@@ -35,7 +37,7 @@ function Dashboard() {
                     <Link to={`/Kanbas/Courses/${course._id}/Assignments`} title={`${course.name} - Assignments`} className="btn btn-primary">
                       Go
                     </Link>
-                    
+
                   </div>
                 </Link>
               </div>
