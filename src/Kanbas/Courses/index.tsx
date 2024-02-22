@@ -1,16 +1,32 @@
-import { courses } from "../../Kanbas/Database";
-import { Navigate, Route, Routes, useParams } from "react-router-dom";
-import { HiMiniBars3 } from "react-icons/hi2";
-import CourseNavigation from "./Navigation";
+
+// React Elements
 import React, { useState } from 'react';
+import { Navigate, Route, Routes, useParams, Link, useLocation } from "react-router-dom";
+
+// Icons
+import { HiMiniBars3 } from "react-icons/hi2";
+
+// Screen Elements
+import CourseNavigation from "./Navigation";
+import BlackTopBar from "../BlackTopBar/";
+import WhiteTopBar from "../WhiteTopBar";
+
+// Main Content elements
+import Modules from "./Modules";
+import Grades from "./Grades";
+import Home from "./Home/";
+import Assignments from "./Assignments";
+
+// Functions
+import LocationLastElement from "../Functions/LocationLastElement";
+
+// Data
+import { courses } from "../../Kanbas/Database";
+
+//Styles
 import "../styles.css";
 import "./index.css";
-import Modules from "./Modules";
-import { Link, useLocation } from "react-router-dom";
-import BlackTopBar from "../BlackTopBar/";
-import LocationLastElement from "../Functions/LocationLastElement";
-import WhiteTopBar from "../WhiteTopBar";
-import Home from "./Home/";
+
 
 /* todo: xxx implement routes as a loop */
 
@@ -24,12 +40,12 @@ function Courses() {
 
   const [isNavigationOpen, setNavigationOpen] = useState(true);
 
-   //Handle the toggle feature 
+  //Handle the toggle feature 
   const handleToggleNavigation = () => {
     setNavigationOpen((prev) => !prev);
   };
 
-   //Handle the hover text when clicking hamburger 
+  //Handle the hover text when clicking hamburger 
   const handleToggleTitle = () => { return isNavigationOpen ? "Hide Account Navigation Menu" : "Show Account Navigation Menu"; };
 
 
@@ -52,8 +68,8 @@ function Courses() {
                 <Route path="Home" element={<Home />} />
                 <Route path="Modules" element={<Modules />} />
                 <Route path="Piazza" element={<h2>Piazza</h2>} />
-                <Route path="Grades" element={<h2>Grades</h2>} />
-                <Route path="Assignments" element={<h2>Assignments</h2>} />
+                <Route path="Grades" element={<Grades />} />
+                <Route path="Assignments" element={<Assignments />} />
                 <Route path="Assignments/:assignmentId" element={<h2>Assignment Editor</h2>} />
                 <Route path="Quizzes" element={<h2>Quizzes</h2>} />
                 <Route path="Zoom-Meetings" element={<h2>Zoom Meetings</h2>} />
@@ -71,7 +87,6 @@ function Courses() {
               </Routes>
             </div>
           </div>
-
         </div>
       </div>
     </>

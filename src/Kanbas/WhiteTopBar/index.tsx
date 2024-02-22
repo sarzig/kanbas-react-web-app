@@ -1,14 +1,10 @@
 /* White bar that pops up on medium to large screen */
-import { FaBars, FaAngleDown } from 'react-icons/fa';
 import "./index.css";
-import KanbasNavigation from "../Navigation";
-import { Routes, Route, Navigate, useParams, useLocation } from "react-router-dom";
-import Dashboard from "../Dashboard";
-import Courses from "../Courses";
-import { courses } from "../Database";
+import { useParams } from "react-router-dom";
+import { courses } from "../../Kanbas/Database";
 import LocationLastElement from "../Functions/LocationLastElement";
 import { HiMiniBars3 } from "react-icons/hi2";
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 
 
@@ -46,7 +42,7 @@ function WhiteTopBar() {
             </div>
 
             <div className="col-3 icon-column d-flex justify-content-center align-items-center">
-                ahh
+                ahh xxx fix me
             </div>
         </div>
     );
