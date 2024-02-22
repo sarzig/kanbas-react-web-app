@@ -10,6 +10,7 @@ import { Link, useLocation } from "react-router-dom";
 import BlackTopBar from "../BlackTopBar/";
 import LocationLastElement from "../Functions/LocationLastElement";
 import WhiteTopBar from "../WhiteTopBar";
+import Home from "./Home/";
 
 /* todo: xxx implement routes as a loop */
 
@@ -40,7 +41,7 @@ function Courses() {
           <WhiteTopBar />
         </div>
 
-        <div className="container">
+        <div className="flex-grow-1">
           <div className="row">
             {isNavigationOpen && <CourseNavigation />}
 
@@ -48,7 +49,7 @@ function Courses() {
 
               <Routes>
                 <Route path="/" element={<Navigate to="Home" />} />
-                <Route path="Home" element={<h2>Home</h2>} />
+                <Route path="Home" element={<Home />} />
                 <Route path="Modules" element={<Modules />} />
                 <Route path="Piazza" element={<h2>Piazza</h2>} />
                 <Route path="Grades" element={<h2>Grades</h2>} />
@@ -67,7 +68,6 @@ function Courses() {
                 <Route path="Collaborations" element={<h2>Collaborations</h2>} />
                 <Route path="Syllabus" element={<h2>Syllabus</h2>} />
                 <Route path="Settings" element={<h2>Settings</h2>} />
-                <Route path="Modules" element={<Modules />} />
               </Routes>
             </div>
           </div>

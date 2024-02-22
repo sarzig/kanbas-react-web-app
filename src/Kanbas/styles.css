@@ -8,6 +8,14 @@ body * {
 
 }
 
+.col {
+  border: dashed pink 3px;
+}
+
+.row {
+  border: solid blue 1px;
+}
+
 /*
 main content
 */
