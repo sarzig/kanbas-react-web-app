@@ -164,6 +164,15 @@ main content
   margin-right: 0px;
 }
 
+.red-search:focus {
+  border-color: red;
+  /* Set the border color to red when the input is in focus */
+  outline: 0;
+  /* Remove the default outline on focus */
+  box-shadow: 0 0 0 0.23rem rgba(255, 0, 0, 0.25);
+  /* Optional: Add a red box shadow on focus for better visibility */
+}
+
 /* wd-List
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ wd-List
   */

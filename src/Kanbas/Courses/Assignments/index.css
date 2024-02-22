@@ -1,0 +1,77 @@
+/* Styling the assignments list */
+
+.row {
+    border: none;
+}
+
+.col {
+    border: none;
+}
+
+.kanbas-modules-title {
+    font-size: 1rem;
+}
+
+
+.kanbas-modules h1 {
+    background-color: red;
+}
+
+.mini-col {
+    margin: 0px;
+    padding: 0px;
+    width: 80px;
+}
+
+.modules-icon {
+    margin: 6px;
+    color: dark-grey;
+    font-size: 1.25rem;
+
+}
+
+.icon-green {
+    color: darkgreen;
+}
+
+.width-90px {
+    width: 60px;
+}
+
+.list-group-item {
+    padding-left: 0px;
+    padding-right:0px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    
+}
+
+.list-group-item .list-group-item  {
+    border-left-color: green;
+    border-left-width: 3px;
+    border-radius: 0px;
+}
+
+.assignment-name a {
+    color: rgb(50,50,50);
+    text-decoration: none;
+    font-size: 1.09rem;
+    font-weight: bold;
+}
+
+.assignment-name a:hover {
+    text-decoration: underline;
+}
+
+.byline {
+    color: rgb(50,50,50);
+}
+
+.byline a {
+    color: rgb(180, 40, 40);
+}
+
+.button-row {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
