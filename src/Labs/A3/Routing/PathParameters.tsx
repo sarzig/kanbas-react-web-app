@@ -12,5 +12,5 @@ function PathParameters() {
             </Routes>
         </div>
     );
-}
-export default PathParameters
+};
+export default PathParameters;
