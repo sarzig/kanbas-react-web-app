@@ -67,7 +67,7 @@ function Assignments() {
                                     <div className="col">
                                         <div className="assignment-name">
                                             <Link
-                                                to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}>{assignment.title}</Link>
+                                                to={`/Kanbas/Courses/${courseId}/Assignments/Editor/${assignment._id}`}>{assignment.title}</Link>
                                         </div>
 
                                         <div className="byline">

@@ -13,6 +13,8 @@ import Modules from "./Modules";
 import Grades from "./Grades";
 import Home from "./Home/";
 import Assignments from "./Assignments";
+import Editor from "./Assignments/Editor/";
+
 
 // Functions
 
@@ -69,7 +71,7 @@ function Courses() {
                 <Route path="Piazza" element={<h2>Piazza</h2>} />
                 <Route path="Grades" element={<Grades />} />
                 <Route path="Assignments" element={<Assignments />} />
-                <Route path="Assignments/:assignmentId" element={<h2>Assignment Editor</h2>} />
+                <Route path="Assignments/Editor/:assignmentId" element={<Editor />} />
                 <Route path="Quizzes" element={<h2>Quizzes</h2>} />
                 <Route path="Zoom-Meetings" element={<h2>Zoom Meetings</h2>} />
                 <Route path="People" element={<h2>People</h2>} />
