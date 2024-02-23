@@ -30,7 +30,7 @@ function KanbasNavigation() {
                 </li>
                 {links.map((link, index) => (
                     <li key={index} className={pathname.includes(link.label) ? "wd-active" : ""}>
-                        <Link to={`/Kanbas2/${link.label}`}> {link.icon}<br />{link.label} </Link>
+                        <Link to={`/Kanbas/${link.label}`}> {link.icon}<br />{link.label} </Link>
                     </li>
                 ))}
             </ul>

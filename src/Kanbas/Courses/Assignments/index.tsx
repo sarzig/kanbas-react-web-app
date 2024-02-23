@@ -1,6 +1,6 @@
 import { FaCheckCircle } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
-import { assignments } from "../../../Kanbas2/Database";
+import { assignments } from "../../../Kanbas/Database";
 import { PiDotsSixVerticalBold } from "react-icons/pi";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { GoPlus } from "react-icons/go";
@@ -62,7 +62,7 @@ function Assignments() {
                                     <div className="col">
                                         <div className="assignment-name">
                                             <Link
-                                                to={`/Kanbas2/Courses/${courseId}/Assignments/${assignment._id}`}>{assignment.title}</Link>
+                                                to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}>{assignment.title}</Link>
                                         </div>
 
                                         <div className="byline">

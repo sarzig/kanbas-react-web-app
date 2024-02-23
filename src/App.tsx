@@ -1,6 +1,6 @@
-import Labs from "./Labs2";
-import HelloWorld from "./Labs2/A3/HelloWorld";
-import Kanbas from "./Kanbas2";
+import Labs from "./Labs";
+import HelloWorld from "./Labs/A3/HelloWorld";
+import Kanbas from "./Kanbas";
 import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
@@ -12,9 +12,9 @@ function App() {
     <HashRouter>
       <div>
         <Routes>
-          <Route path="/" element={<Navigate to="/Labs2" />} />
-          <Route path="/Labs2/*" element={<Labs />} />
-          <Route path="/Kanbas2/*" element={<Kanbas />} />
+          <Route path="/" element={<Navigate to="/Labs" />} />
+          <Route path="/Labs/*" element={<Labs />} />
+          <Route path="/Kanbas/*" element={<Kanbas />} />
           <Route path="/Hello" element={<HelloWorld />} />
         </Routes>
       </div>

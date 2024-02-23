@@ -7,7 +7,7 @@ import CourseIdExtract from '../Functions/CourseIdExtract';
 
 function BlackTopBar() {
 
-    // Extract the final segment of the path (for http://localhost:3000/#/Kanbas2/Dashboard it returns Dashboard)
+    // Extract the final segment of the path (for http://localhost:3000/#/Kanbas/Dashboard it returns Dashboard)
     const lastSegment = LocationLastElement();
 
     // Capture the CourseId
@@ -16,7 +16,7 @@ function BlackTopBar() {
     let lineOneResult;
     let lineTwoResult;
 
-    // If we're in "Kanbas2/Courses" screen, then base the top bar text on the course. 
+    // If we're in "Kanbas/Courses" screen, then base the top bar text on the course. 
     // Otherwise, base the top bar text on where we are in Canvas.
     if (courseId === "") {
         lineOneResult = lastSegment;

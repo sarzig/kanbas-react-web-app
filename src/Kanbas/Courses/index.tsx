@@ -30,7 +30,7 @@ function Courses() {
   const { courseId } = useParams();
 
   const course = courses.find((course) => course._id === courseId);
-  //Get where we are. If we're at http://localhost:3000/#/Kanbas2/Courses/RS101/Panopto-Video, this returns 
+  //Get where we are. If we're at http://localhost:3000/#/Kanbas/Courses/RS101/Panopto-Video, this returns 
   // Panopto Video
   const lastSegment = LocationLastElement();
 

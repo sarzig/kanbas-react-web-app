@@ -14,15 +14,15 @@ function Dashboard() {
             <div key={course._id} className="col" style={{ width: 300 }}>
               <div className="card flex-shrink-0">
 
-                <Link className="card-title" to={`/Kanbas2/Courses/${course._id}/Home`}>
+                <Link className="card-title" to={`/Kanbas/Courses/${course._id}/Home`}>
                   <img src={`/images/${course.image}`} alt="alt_text" className="card-img-top" />
                 </Link>
 
-                <Link className="card-title" to={`/Kanbas2/Courses/${course._id}/Home`} title={`${course.name} - Homepage`}>
+                <Link className="card-title" to={`/Kanbas/Courses/${course._id}/Home`} title={`${course.name} - Homepage`}>
 
                   <div className="card-body">
 
-                    <Link className="card-title" to={`/Kanbas2/Courses/${course._id}/Home`}>
+                    <Link className="card-title" to={`/Kanbas/Courses/${course._id}/Home`}>
                       {course.name}
                     </Link>
 
@@ -34,7 +34,7 @@ function Dashboard() {
                       {course.startDate} to {course.endDate}
                     </div>
 
-                    <Link to={`/Kanbas2/Courses/${course._id}/Assignments`} title={`${course.name} - Assignments`} className="btn btn-primary">
+                    <Link to={`/Kanbas/Courses/${course._id}/Assignments`} title={`${course.name} - Assignments`} className="btn btn-primary">
                       Go
                     </Link>
 
