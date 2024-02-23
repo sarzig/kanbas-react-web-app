@@ -1,5 +1,5 @@
 import JavaScript from "./JavaScript";
-import PathParameters from "./routing/PathParameters";
+import PathParameters from "./MyRouting/PathParameters";
 import Classes from "./classes";
 import Styles from "./styles";
 import ConditionalOutput from "./ConditionalOutput";
