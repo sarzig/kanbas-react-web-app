@@ -1,4 +1,4 @@
-import { FaCheckCircle, FaEllipsisV, FaPlusCircle } from "react-icons/fa";
+import { FaCheckCircle } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
 import { assignments } from "../../../Kanbas/Database";
 import { PiDotsSixVerticalBold } from "react-icons/pi";

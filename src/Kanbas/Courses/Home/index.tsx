@@ -1,5 +1,4 @@
 import Modules from "../Modules";
-import Assignments from "../Assignments";
 import HomeSideBar from "./HomeSideBar";
 import "../../styles.css";
 

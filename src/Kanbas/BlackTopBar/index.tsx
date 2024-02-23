@@ -1,19 +1,9 @@
 /* Black bar that pops up on small screen */
 import { FaBars, FaAngleDown } from 'react-icons/fa';
 import "./index.css";
-import KanbasNavigation from "../Navigation";
-import { Routes, Route, Navigate, useParams, useLocation } from "react-router-dom";
-import Dashboard from "../Dashboard";
-import Courses from "../Courses";
 import { courses } from "../Database";
 import LocationLastElement from "../Functions/LocationLastElement";
 import CourseIdExtract from '../Functions/CourseIdExtract';
-
-
-interface TopBarProps {
-    lineOne: string;
-    lineTwo: string;
-}
 
 function BlackTopBar() {
 

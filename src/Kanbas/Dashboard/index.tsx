@@ -15,7 +15,7 @@ function Dashboard() {
               <div className="card flex-shrink-0">
 
                 <Link className="card-title" to={`/Kanbas/Courses/${course._id}/Home`}>
-                  <img src={`/images/${course.image}`} className="card-img-top" />
+                  <img src={`/images/${course.image}`} alt="alt_text" className="card-img-top" />
                 </Link>
 
                 <Link className="card-title" to={`/Kanbas/Courses/${course._id}/Home`} title={`${course.name} - Homepage`}>

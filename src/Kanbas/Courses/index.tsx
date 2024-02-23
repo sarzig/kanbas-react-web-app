@@ -1,14 +1,11 @@
 
 // React Elements
-import React, { useState } from 'react';
-import { Navigate, Route, Routes, useParams, Link, useLocation } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 // Icons
-import { HiMiniBars3 } from "react-icons/hi2";
 
 // Screen Elements
 import CourseNavigation from "./Navigation";
-import BlackTopBar from "../BlackTopBar/";
 import WhiteTopBar from "../WhiteTopBar";
 
 // Main Content elements
@@ -18,10 +15,8 @@ import Home from "./Home/";
 import Assignments from "./Assignments";
 
 // Functions
-import LocationLastElement from "../Functions/LocationLastElement";
 
 // Data
-import { courses } from "../../Kanbas/Database";
 
 //Styles
 import "../styles.css";
@@ -31,10 +26,12 @@ import "./index.css";
 /* todo: xxx implement routes as a loop */
 
 function Courses() {
+  /*
   const { courseId } = useParams();
+
   const course = courses.find((course) => course._id === courseId);
-  /* Get where we are. If we're at http://localhost:3000/#/Kanbas/Courses/RS101/Panopto-Video, this returns 
-     Panopto Video */
+  //Get where we are. If we're at http://localhost:3000/#/Kanbas/Courses/RS101/Panopto-Video, this returns 
+  // Panopto Video
   const lastSegment = LocationLastElement();
 
 
@@ -48,6 +45,8 @@ function Courses() {
   //Handle the hover text when clicking hamburger 
   const handleToggleTitle = () => { return isNavigationOpen ? "Hide Account Navigation Menu" : "Show Account Navigation Menu"; };
 
+  const [isNavigationOpen, setNavigationOpen] = useState(true);
+*/
 
   return (
     <>
@@ -59,7 +58,7 @@ function Courses() {
 
         <div className="flex-grow-1">
           <div className="row">
-            {isNavigationOpen && <CourseNavigation />}
+            <CourseNavigation />
 
             <div className="col">
 
