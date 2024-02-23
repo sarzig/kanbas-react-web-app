@@ -15,7 +15,7 @@ import { BsCalendar2Day } from "react-icons/bs";
 function HomeSideBar() {
 
     // hard code userRole: faculty for now
-    const myUserRole = "student";
+    const myUserRole = "faculty";
 
 
     // "Database" that drives button creation
