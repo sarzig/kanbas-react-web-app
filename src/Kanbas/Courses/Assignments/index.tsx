@@ -23,14 +23,16 @@ function Assignments() {
 
                 <div className="col-7">
                     <div className="d-flex float-end">
-                        <button className="btn button-topbar-medium"><i
-                            className="fa fa-plus"></i>Group</button>
+                        <button className="btn button-topbar-medium">
+                            <GoPlus className="icon" />
+                            Group</button>
 
-                        <button className="btn button-topbar-medium red-button"><i
-                            className="fa fa-plus"></i>Assignment</button>
+                        <button className="btn button-topbar-medium red-button">
+                            <GoPlus className="icon" />
+                            Assignment</button>
 
                         <button className="btn button-topbar-medium mini-button">
-                            <RxDotsVertical className="modules-icon" />
+                            <RxDotsVertical className="icon" />
                         </button>
                     </div>
                 </div>
@@ -39,12 +41,15 @@ function Assignments() {
             <ul className="list-group kanbas-modules">
                 <li className="list-group-item">
                     <div className="kanbas-modules-title">
+
                         <PiDotsSixVerticalBold className="modules-icon" />
                         <IoMdArrowDropdown className="modules-icon" />
-                        ASSIGNMENTS
+
+                        Assignments
+
                         <span className="float-end">
                             <GoPlus className="modules-icon" />
-                            <PiDotsSixVerticalBold className="modules-icon" />
+                            <RxDotsVertical className="modules-icon" />
                         </span>
                     </div>
                     <ul className="list-group">

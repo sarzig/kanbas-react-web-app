@@ -1,5 +1,9 @@
 import ModuleList from "./List";
 import { FaEllipsisV} from "react-icons/fa";
+import "../../styles.css";
+import "../Assignments/index.css";
+import { GoPlus } from "react-icons/go";
+import { RxDotsVertical } from "react-icons/rx";
 
 function Modules() {
     return (
@@ -22,9 +26,14 @@ function Modules() {
                     </ul>
                 </div>
 
-                <button className="btn button-topbar-medium red-button">+ Module</button>
+                <button className="btn button-topbar-medium red-button">
+                    <GoPlus className="icon"/>
+                    
+                    Module</button>
 
-                <button className="btn button-topbar-medium"><FaEllipsisV /></button>
+                <button className="btn button-topbar-medium">
+                    <RxDotsVertical/>
+                </button>
             </div>
 
             <ModuleList />

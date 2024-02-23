@@ -4,6 +4,8 @@ import "./index.css";
 import { courses } from "../Database";
 import LocationLastElement from "../Functions/LocationLastElement";
 import CourseIdExtract from '../Functions/CourseIdExtract';
+import "../styles.css";
+
 
 function BlackTopBar() {
 

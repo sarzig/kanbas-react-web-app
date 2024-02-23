@@ -163,7 +163,7 @@
     "lessons": [
       {
         "_id": "L119",
-        "name": "Introduction to Hindi Alphabet",
+        "name": "Introduction to the Devanagari script",
         "description": "Get started with the fundamentals of the Hindi alphabet.",
         "module": "M107"
       },
@@ -227,7 +227,7 @@
       },
       {
         "_id": "L127",
-        "name": "Traditional Hindi Cuisine",
+        "name": "Traditional Indian Cuisine - food and dining vocabulary",
         "description": "Explore the flavors and dishes of traditional Hindi cuisine.",
         "module": "M109"
       }

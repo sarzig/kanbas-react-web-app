@@ -90,6 +90,8 @@ right-margin-5 {
   outline: red;
   white-space: nowrap;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .button-sidebar-wide:hover {
@@ -102,6 +104,10 @@ right-margin-5 {
   border-color: rgb(180, 40, 40);
   background-color: pink;
   /* Change border color on click */
+}
+
+.button-sidebar-wide .sidebar-icon {
+  margin: 5px;
 }
 
 .button-topbar-medium {
@@ -126,7 +132,7 @@ right-margin-5 {
   color: black;
 }
 
-.button-topbar-medium i {
+.button-topbar-medium .icon {
   color: rgb(45, 59, 69);
   margin-left: 0px;
   margin-right: 5px;
@@ -150,10 +156,16 @@ right-margin-5 {
   border-color: rgb(166, 42, 45);
 }
 
-.red-button i {
+.red-button .icon {
   color: white;
   margin-right: 5px;
 }
+
+.red-button:hover .icon {
+  color: rgb(45, 55, 69);
+  margin-right: 5px;
+}
+
 
 .green-button {
   color: white;
@@ -179,7 +191,7 @@ right-margin-5 {
 
 /* wd-List
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ wd-List
-  */
+
 .wd-modules,
 .wd-modules * {
   border-radius: 0%;
@@ -254,3 +266,4 @@ right-margin-5 {
   border-radius: 12px;
   padding: 2px;
 }
+  */
