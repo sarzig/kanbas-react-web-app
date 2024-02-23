@@ -18,5 +18,5 @@ function linkContains(linkText: string, includeText: string, returnText: string)
     const lowercaseIncludeText = includeText.toLowerCase();
 
     return lowercaseLinkText.includes(lowercaseIncludeText) ? returnText : "";
-}
-export default linkContains
+};
+export default linkContains;
