@@ -12,22 +12,22 @@ function HomeSideBar() {
                 <br />
 
                 <div className="d-flex flex-column">
-                    <a className="btn btn-link button-sidebar-wide" href="#"><i className="fa fa-file"></i> Import
+                    <a className="btn btn-link button-sidebar-wide" href="google.com"><i className="fa fa-file"></i> Import
                         Existing Content</a>
-                    <a className="btn btn-link button-sidebar-wide" href="#"><i className="fa fa-cloud-upload"></i>
+                    <a className="btn btn-link button-sidebar-wide" href="google.com"><i className="fa fa-cloud-upload"></i>
                         Import from Commons</a>
-                    <a className="btn btn-link button-sidebar-wide" href="#"><i className="fa fa-crosshairs"></i>
+                    <a className="btn btn-link button-sidebar-wide" href="google.com"><i className="fa fa-crosshairs"></i>
                         Choose
                         Home Page</a>
-                    <a className="btn btn-link button-sidebar-wide" href="#"><i className="fa fa-line-chart"></i>
+                    <a className="btn btn-link button-sidebar-wide" href="google.com"><i className="fa fa-line-chart"></i>
                         View
                         Course Stream</a>
-                    <a className="btn btn-link button-sidebar-wide" href="#"><i className="fa fa-bullhorn"></i> New
+                    <a className="btn btn-link button-sidebar-wide" href="google.com"><i className="fa fa-bullhorn"></i> New
                         Announcement</a>
-                    <a className="btn btn-link button-sidebar-wide" href="#"><i className="fa fa-line-chart"></i>
+                    <a className="btn btn-link button-sidebar-wide" href="google.com"><i className="fa fa-line-chart"></i>
                         New
                         Analytics</a>
-                    <a className="btn btn-link button-sidebar-wide" href="#"><i className="fa fa-bell"></i> View
+                    <a className="btn btn-link button-sidebar-wide" href="google.com"><i className="fa fa-bell"></i> View
                         Course
                         Notifications</a>
                 </div>

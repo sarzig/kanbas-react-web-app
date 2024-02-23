@@ -17,8 +17,8 @@ function Modules() {
                         <span className="visually-hidden">Toggle Dropdown</span>
                     </button>
                     <ul className="dropdown-menu">
-                        <li><a className="dropdown-item" href="#">Option 1</a></li>
-                        <li><a className="dropdown-item" href="#">Option 2</a></li>
+                        <li><a className="dropdown-item" href="google.com">Option 1</a></li>
+                        <li><a className="dropdown-item" href="google.com">Option 2</a></li>
                     </ul>
                 </div>
 
