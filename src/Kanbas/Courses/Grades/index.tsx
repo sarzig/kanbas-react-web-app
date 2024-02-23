@@ -1,32 +1,52 @@
+import React from "react";
 import { assignments, enrollments, grades, users } from "../../Database";
 import { useParams } from "react-router-dom";
+import CourseIdExtract from "../../Functions/CourseIdExtract";
+
 function Grades() {
-    const { courseId } = useParams();
+    const courseId = CourseIdExtract();
     const as = assignments.filter((assignment) => assignment.course === courseId);
     const es = enrollments.filter((enrollment) => enrollment.course === courseId);
+
+    console.log(courseId);
+    console.log(as);
+    console.log(es);
+
     return (
-        <div>
+        <>
             <h1>Grades</h1>
             <div className="table-responsive">
                 <table className="table">
                     <thead>
-                        <th>Student Name</th>
-                        {as.map((assignment) => (<th>{assignment.title}</th>))}
+                        <tr>
+                            <th>Student Name</th>
+                            {as.map((assignment) => (
+                                <th key={assignment._id}>{assignment.title}</th>
+                            ))}
+                        </tr>
                     </thead>
                     <tbody>
                         {es.map((enrollment) => {
                             const user = users.find((user) => user._id === enrollment.user);
+
                             return (
-                                <tr>
+                                <tr key={enrollment._id}>
                                     <td>{user?.firstName} {user?.lastName}</td>
-                                    {assignments.map((assignment) => {
+                                    {as.map((assignment) => {
                                         const grade = grades.find(
-                                            (grade) => grade.student === enrollment.user && grade.assignment === assignment._id);
-                                        return (<td>{grade?.grade || ""}</td>);
+                                            (grade) => grade.student === enrollment.user && grade.assignment === assignment._id
+                                        );
+
+                                        return <td key={assignment._id}>{grade?.grade || ""}</td>;
                                     })}
-                                </tr>);
+                                </tr>
+                            );
                         })}
-                    </tbody></table>
-            </div></div>);
+                    </tbody>
+                </table>
+            </div>
+        </>
+    );
 }
+
 export default Grades;
