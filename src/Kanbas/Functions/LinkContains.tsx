@@ -13,10 +13,10 @@ The `LinkContains` function is a utility function designed for use in React appl
 - Returns the specified `returnText` if `includeText` is found within `linkText`; otherwise, returns an empty string.
 */
 
-function linkContains(linkText: string, includeText: string, returnText: string) {
+function LinkContains(linkText: string, includeText: string, returnText: string) {
     const lowercaseLinkText = linkText.toLowerCase();
     const lowercaseIncludeText = includeText.toLowerCase();
 
     return lowercaseLinkText.includes(lowercaseIncludeText) ? returnText : "";
 };
-export default linkContains;
+export default LinkContains;
