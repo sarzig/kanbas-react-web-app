@@ -1,6 +1,6 @@
-import Labs from "./Labs";
-import HelloWorld from "./Labs/A3/HelloWorld";
-import Kanbas from "./Kanbas";
+import Labs from "./Labs2";
+import HelloWorld from "./Labs2/A3/HelloWorld";
+import Kanbas from "./Kanbas2";
 import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
