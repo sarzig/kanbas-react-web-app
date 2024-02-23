@@ -1,6 +1,4 @@
-import React from "react";
 import { assignments, enrollments, grades, users } from "../../Database";
-import { useParams } from "react-router-dom";
 import CourseIdExtract from "../../Functions/CourseIdExtract";
 
 function Grades() {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { modules } from "../../Database";
-import { FaEllipsisV, FaCheckCircle, FaPlusCircle } from "react-icons/fa";
+import { FaCheckCircle } from "react-icons/fa";
 import { useParams } from "react-router";
 import "../../styles.css";
 import "../Assignments/index.css";

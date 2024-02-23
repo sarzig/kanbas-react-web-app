@@ -1,5 +1,4 @@
 import ModuleList from "./List";
-import { FaEllipsisV} from "react-icons/fa";
 import "../../styles.css";
 import "../Assignments/index.css";
 import { GoPlus } from "react-icons/go";

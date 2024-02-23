@@ -1,8 +1,7 @@
-import React, { ChangeEvent } from "react";
+import { ChangeEvent } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import GetAssignment from "../../../Functions/GetAssignment";
 import CourseIdExtract from "../../../Functions/CourseIdExtract";
-import { RxFileText } from "react-icons/rx";
 
 function AssignmentEditor() {
     const assignment = GetAssignment();
