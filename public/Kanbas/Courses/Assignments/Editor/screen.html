@@ -1,0 +1,195 @@
+<!-- 
+    main content of the Home screen as shown in Figure 3.1.3 (A1)
+    localhost:3000/Kanbas/Courses/Home/index.html
+-->
+<!--todo xxx implement bootstrap collapsible menus -->
+
+<head>
+    <link href="/libs/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="/libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .red-search:focus {
+            border-color: red;
+            /* Set the border color to red when the input is in focus */
+            outline: 0;
+            /* Remove the default outline on focus */
+            box-shadow: 0 0 0 0.23rem rgba(255, 0, 0, 0.25);
+            /* Optional: Add a red box shadow on focus for better visibility */
+        }
+    </style>
+</head>
+
+<html>
+
+<body>
+    <div class="container-fluid ">
+        <div class="row">
+            <!-- 
+                Main Navigation Column 
+                Shows: all screens larger than 541px
+            -->
+            <div id="inject-main-nav-sidebar" class="col main-nav-sidebar">
+            </div>
+
+            <!-- Contains everything except for main navigation column-->
+            <div id="main-content" class="col flex">
+
+                <!-- Contains breadcrumb and header info -->
+                <div class="row above-main-content d-none d-md-flex align-items-center">
+                    <div class="col-md-6">
+                        <i class="fa fa-bars"></i><a href="#">CS1234: Advanced Bromance</a> > Assignments
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <button class="btn button-topbar-medium"><i class="fa fa-eye"></i> Student View</button>
+                    </div>
+                </div>
+
+
+
+                <!--Black bar that pops up on small screen-->
+                <div class="row above-main-content-small-screen align-items-center text-center flex d-md-none">
+                    <div class="col-2 text-start">
+                        <i class="fa fa-bars"></i>
+                    </div>
+
+                    <div class="col-8 justify-content-center">
+                        <a href="#">CS1234: Advanced Bromance<br>Modules</a>
+                    </div>
+
+                    <div class="col-2 text-end">
+                        <i class="fa fa-eye"></i><i class="fa fa-chevron-circle-down"></i>
+                    </div>
+                </div>
+
+
+                <!--Contains column system of internal main content, including course nav sidebar-->
+                <div class="row flex pb-5">
+
+                    <hr>
+                    <!-- 
+                            Course Navigation Column  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                            Shows: all screens larger than 541px
+                        -->
+                    <div id="inject-course-nav-sidebar" class="col course-nav-sidebar">
+                    </div>
+
+                    <!-- Course Home Main Content ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                    <div class="col" style="display: flex; flex-direction: column;">
+
+                        <!--Content-->
+                        <div id="main-center-content">
+
+                            <div class="row">
+                                <div>
+                                    <div class="d-flex float-end">
+                                        <!-- +Published Button -->
+                                        <button class="btn button-topbar-medium green-button"><i
+                                                class="fa fa-check"></i>Published</button>
+
+                                        <!-- + Button -->
+                                        <button class="btn button-topbar-medium mini-button"><i
+                                                class="fa fa-ellipsis-v"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <form>
+
+                                <!-- Assignment Name Text Entry Box -->
+                                <div class="form-group row mb-3">
+                                    <label for="assignmentName" class="col-sm-2 col-form-label">Assignment
+                                        Name<br></label>
+                                    <div class="col-12">
+                                        <input type="text" class="form-control" id="assignmentName"
+                                            placeholder="Enter assignment name">
+                                    </div>
+                                </div>
+
+                                <!-- Lorem Ipsum Text Box -->
+                                <div class="form-group row mb-3">
+                                    <div class="form-control-plaintext" id="loremIpsum">
+                                        This assignment describes how to install the development environment for
+                                        creating and working with Web applications we will be developing this semester.
+                                        We will add new content every week, pushing the code to a GitHub source
+                                        repository, and then deploying the content to a remove server hosted on Netlify.
+                                    </div>
+                                </div>
+                                <form class="form" role="form" autocomplete="off">
+                                    <div class="form-group row mb-3">
+                                        <label class="col-md-3 col-form-label form-control-label">Points</label>
+                                        <div class="col-md-9">
+                                            <input class="form-control" type="text" value="100" 100 />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-3">
+                                        <label class="col-lg-3 col-form-label form-control-label">Assignment
+                                            Group</label>
+                                        <div class="col-lg-9">
+                                            <input class="form-control" type="text" value="" readonly />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-3">
+                                        <label class="col-lg-3 col-form-label form-control-label">Display Grade
+                                            as</label>
+                                        <div class="col-lg-9">
+                                            <input class="form-control" type="text" value="" readonly />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-3">
+                                        <label class="col-lg-3 col-form-label form-control-label">Name
+                                            Extension</label>
+                                        <div class="col-lg-9">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="notifyCheckbox">
+                                                <label class="form-check-label" for="notifyCheckbox">
+                                                    Do not count this assignment towards the final grade
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-3">
+                                        <label class="col-lg-3 col-form-label form-control-label">Assign</label>
+                                        <div class="col-lg-9">
+                                            xxx
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <hr>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="notifyCheckbox">
+                                        <label class="form-check-label" for="notifyCheckbox">
+                                            Notify users that this content has changed
+                                        </label>
+                                    </div>
+
+                                    <div>
+                                        <button class="btn button-topbar-medium">Cancel</button>
+                                        <button class="btn button-topbar-medium red-button"><a
+                                                href="/Kanbas/Courses/Assignments/screen.html">Save</button></a>
+                                    </div>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/Kanbas/Navigation/injectMainNavigationMenu.js?activeIndex=courses"></script>
+    <script src="/Kanbas/Courses/Navigation/injectCourseNavigationMenu.js?activeIndex=assignments"></script>
+
+
+</body>
+
+</html>

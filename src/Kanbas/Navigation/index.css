@@ -1,0 +1,90 @@
+.main-nav-sidebar {
+    -ms-flex: 0 0 80px;
+    flex: 0 0 80px;
+    background-color: black;
+    height: 100%;
+    position: sticky;
+    width: 80px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 0;
+    margin-right:20px;
+}
+
+@media (max-width: 768px) {
+    .main-nav-sidebar {
+        display: none;
+    }
+}
+
+
+.wd-kanbas-navigation {
+    /*background-color: black;*/
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    width: 80px;
+}
+
+.wd-kanbas-navigation li {
+    padding: 8px;
+    font-size: 14px;
+    text-align: center;
+    /*border: 1px solid white;  Add border to create an outline xxx delete later */
+}
+
+/* Active list item should have white background */
+.wd-kanbas-navigation li.wd-active {
+    background-color: white;
+}
+
+/* Active list item which is a link should red text */
+.wd-kanbas-navigation li.wd-active a {
+    color: #d41b2c;
+}
+
+/* Links should be white */
+.wd-kanbas-navigation a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Icons should be a certain size */
+.wd-kanbas-navigation .fs-2 {
+    color: #d41b2c;
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+/* if the dashbaord is fixed width then don't necesasrily need this*/
+.nav-icon {
+    font-size: 30px !important;
+}
+
+
+/* Define sizing and fixed aspect of navigation column*/
+.kanbas-nav-column {
+    z-index: 100;
+    position: fixed;
+    width: 85px;
+    height: 100vh;
+    padding-left: 0;
+    padding-right: 20px;
+    background-color: black;
+}
+
+/*
+  Custom icons for navigation bar
+  */
+.custom-northeastern-icon {
+    background-image: url('../../images/custom_icons/northeastern_icon.png');
+    background-size: cover;
+    width: 70px;
+    height: 45;
+    display: block;
+    margin: 0 auto;
+    padding: 0px;
+    margin-bottom: 0px;
+}

@@ -1,0 +1,275 @@
+<head>
+    <link href="/libs/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="/libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+
+    <style>
+        .card {
+            margin: 8px;
+            max-width: 300px;
+            min-width: 300px;
+            height: 300px;
+        }
+
+        .card-img-top {
+            max-height: 150px;
+            object-fit: cover;
+            /* xxx could maybe change to contain but need to fix pics */
+        }
+
+        .card-title {
+            text-decoration: none;
+            color: navy;
+            font-weight: bold;
+        }
+
+        .col-custom {
+            width: 320px;
+        }
+
+        /* Exact font copied from Canvas */
+        .css-pljkwv-view-heading {
+            line-height: 1.25;
+            font-family: LatoWeb, "Lato Extended", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 2.375rem;
+            font-weight: 700;
+            color: inherit;
+        }
+    </style>
+</head>
+
+
+<html>
+
+<body>
+    <div class="container-fluid ">
+        <div class="row">
+            <!-- 
+                Main Navigation Column 
+                Shows: all screens larger than 541px
+            -->
+            <div id="inject-main-nav-sidebar" class="col main-nav-sidebar">
+            </div>
+
+            <!-- Contains everything except for main navigation column-->
+            <div id="main-content" class="col flex">
+
+                <!--Contains breadcrumb and header info-->
+                <div id="above-main-content" class="row flex d-none d-md-flex">
+                    <div>
+                        <!-- Content for the row above main content goes here -->
+                        <h2>Dashboard
+                            <hr />
+                        </h2>
+                    </div>
+                </div>
+
+                <!--Contains column system of internal main content, including course nav sidebar-->
+                <div class="row flex">
+
+                    <div class="container-fluid">
+                        <h2>Published Courses (12)</h2>
+                        <hr />
+                        <div class="row">
+
+                            <div class="d-flex flex-wrap">
+
+                                <div class="col-custom g-2">
+                                    <div class="card flex-shrink-0">
+                                        <img src="/images/advanced_confections.jpg" class="card-img-top" />
+                                        <div class="card-body">
+                                            <a class="card-title" href="/Kanbas/Courses/Home/screen.html">
+                                                CS1234 Advanced Confections
+                                            </a>
+                                            <p class="card-text">
+                                                CS1234.12452.202410
+                                            </p>
+                                            <a href="#"><i class="fa fa-file"></i> <!--xxx make this icon gray--></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-custom g-2">
+                                    <div class="card flex-shrink-0">
+                                        <img src="/images/advanced_herbology.jpg" class="card-img-top" />
+                                        <div class="card-body">
+                                            <a class="card-title" href="/Kanbas/Courses/Home/screen.html">
+                                                CS1235 Advanced Herbology
+                                            </a>
+                                            <p class="card-text">
+                                                CS1235.12452.202410
+                                            </p>
+                                            <a href="#"><i class="fa fa-file"></i> <!--xxx make this icon gray--></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-custom g-2">
+                                    <div class="card flex-shrink-0">
+                                        <img src="/images/advanced_hindi.jpg" class="card-img-top" />
+                                        <div class="card-body">
+                                            <a class="card-title" href="/Kanbas/Courses/Home/screen.html">
+                                                CS1236 Beginner Hindi
+                                            </a>
+                                            <p class="card-text">
+                                                CS1236.12452.202410
+                                            </p>
+                                            <a href="#"><i class="fa fa-file"></i> <!--xxx make this icon gray--></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-custom g-2">
+                                    <div class="card flex-shrink-0">
+                                        <img src="/images/advanced_bromance.jpg" class="card-img-top" />
+                                        <div class="card-body">
+                                            <a class="card-title" href="/Kanbas/Courses/Home/screen.html">
+                                                CS1237 Advanced Bromance
+                                            </a>
+                                            <p class="card-text">
+                                                CS1237.12452.202410
+                                            </p>
+                                            <a href="#"><i class="fa fa-file"></i> <!--xxx make this icon gray--></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-custom g-2">
+                                    <div class="card flex-shrink-0">
+                                        <img src="/images/drivers_ed.jpg" class="card-img-top" />
+                                        <div class="card-body">
+                                            <a class="card-title" href="/Kanbas/Courses/Home/screen.html">
+                                                CS1238 Driver's Ed.
+                                            </a>
+                                            <p class="card-text">
+                                                CS1238.12452.202410
+                                            </p>
+                                            <a href="#"><i class="fa fa-file"></i> <!--xxx make this icon gray--></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-custom g-2">
+                                    <div class="card flex-shrink-0">
+                                        <img src="/images/himalayan_topology.jpg" class="card-img-top" />
+                                        <div class="card-body">
+                                            <a class="card-title" href="/Kanbas/Courses/Home/screen.html">
+                                                CS1239 Himalayan Topology
+                                            </a>
+                                            <p class="card-text">
+                                                CS1239.12452.202410
+                                            </p>
+                                            <a href="#"><i class="fa fa-file"></i> <!--xxx make this icon gray--></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-custom g-2">
+                                    <div class="card flex-shrink-0">
+                                        <img src="/images/interior_decorating.jpg" class="card-img-top" />
+                                        <div class="card-body">
+                                            <a class="card-title" href="/Kanbas/Courses/Home/screen.html">
+                                                CS1240 Exterior Decorating
+                                            </a>
+                                            <p class="card-text">
+                                                CS1240.12452.202410
+                                            </p>
+                                            <a href="#"><i class="fa fa-file"></i> <!--xxx make this icon gray--></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-custom g-2">
+                                    <div class="card flex-shrink-0">
+                                        <img src="/images/womens_studies.jpg" class="card-img-top" />
+                                        <div class="card-body">
+                                            <a class="card-title" href="/Kanbas/Courses/Home/screen.html">
+                                                CS1241 Women's Studies
+                                            </a>
+                                            <p class="card-text">
+                                                CS1241.12452.202410
+                                            </p>
+                                            <a href="#"><i class="fa fa-file"></i> <!--xxx make this icon gray--></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-custom g-2">
+                                    <div class="card flex-shrink-0">
+                                        <img src="/images/intermediate_catology.jpg" class="card-img-top" />
+                                        <div class="card-body">
+                                            <a class="card-title" href="/Kanbas/Courses/Home/screen.html">
+                                                CS1242 Intermediate Catology
+                                            </a>
+                                            <p class="card-text">
+                                                CS1242.12452.202410
+                                            </p>
+                                            <a href="#"><i class="fa fa-file"></i> <!--xxx make this icon gray--></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-custom g-2">
+                                    <div class="card flex-shrink-0">
+                                        <img src="/images/intro_to_dogs.jpg" class="card-img-top" />
+                                        <div class="card-body">
+                                            <a class="card-title" href="/Kanbas/Courses/Home/screen.html">
+                                                CS1243 Introduction to Canine Studies
+                                            </a>
+                                            <p class="card-text">
+                                                CS1243.12452.202410
+                                            </p>
+                                            <a href="#"><i class="fa fa-file"></i> <!--xxx make this icon gray--></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-custom g-2">
+                                    <div class="card flex-shrink-0">
+                                        <img src="/images/mamata_politics_of_influence.jpg" class="card-img-top" />
+                                        <div class="card-body">
+                                            <a class="card-title" href="/Kanbas/Courses/Home/screen.html">
+                                                CS1244 Mamata: Politics and Influence in West Bengal
+                                            </a>
+                                            <p class="card-text">
+                                                CS1244.12452.202410
+                                            </p>
+                                            <a href="#"><i class="fa fa-file"></i> <!--xxx make this icon gray--></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-custom g-2">
+                                    <div class="card flex-shrink-0">
+                                        <img src="/images/the_beatles_a_retrospective_on_psychadelics.jpg"
+                                            class="card-img-top" />
+                                        <div class="card-body">
+                                            <a class="card-title" href="/Kanbas/Courses/Home/screen.html">
+                                                CS1245 The Beatles: A Retrospective on Transcendental Meditation
+                                                <!--how to get cards to overflow?-->
+                                            </a>
+                                            <p class="card-text">
+                                                CS1245.12452.202410
+                                            </p>
+                                            <a href="#"><i class="fa fa-file"></i> <!--xxx make this icon gray--></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/Kanbas/Navigation/injectMainNavigationMenu.js?activeIndex=dashboard"></script>
+
+
+
+</body>
+
+</html>

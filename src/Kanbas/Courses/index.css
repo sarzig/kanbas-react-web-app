@@ -1,0 +1,27 @@
+.top-bar-menu-hamburger {
+    color: rgb(180, 40, 40);
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1.85rem;
+}
+
+.top-bar-menu-hamburger:hover {
+    border: 1px solid rgb(180, 40, 40);
+}
+
+h1 {
+    color: rgb(180, 40, 40);
+    font-size: 1.125rem;
+    white-space: nowrap;
+}
+
+/*
+.widescreen-top-bar {
+}
+*/
+
+@media (max-width: 768px) {
+    .widescreen-top-bar {
+        display: none;
+    }
+}

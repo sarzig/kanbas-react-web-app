@@ -1,0 +1,45 @@
+  /* 
+  Above Main Content Small Screen - black top bar
+  */
+  .black-top-bar {
+      background-color: black;
+      display: flex;
+      height: 72px;
+  }
+
+  .black-top-bar a {
+      color: white;
+      text-decoration: none;
+  }
+
+  .black-top-bar a:hover {
+      text-decoration: underline;
+  }
+
+  .black-top-bar-text {
+      white-space: nowrap;
+      overflow: hidden;
+      color: white;
+      text-overflow: ellipsis;
+      font-size: 1rem;
+  }
+
+  .icon-column {
+      overflow: hidden;
+      align-items: center;
+      margin: 0px;
+  }
+
+  .top-bar-icon {
+      color: white;
+      font-size: 1.3rem;
+      padding: 8px;
+  }
+
+  .top-bar-icon:hover {
+      color: lightgray;
+  }
+
+  .top-bar-icon:active {
+      border: 2px solid white;
+  }
