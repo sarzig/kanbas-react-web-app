@@ -43,14 +43,14 @@ function AssignmentEditor() {
 
                     {/* Right Column for Form Fields */}
                     <div className="col-md-5">
-                        <input type="text" className="form-control mb-2" id="points" placeholder="Enter Points" />
-                        <input type="text" className="form-control mb-2" id="assignmentGroup" placeholder="Enter Assignment Group" />
-                        <input type="text" className="form-control mb-2" id="displayGradeAs" placeholder="Enter Display Grade as" />
+                        <input type="text" className="form-control mb-2" id="points" defaultValue = "100" placeholder="Enter Points" />
+                        <input type="text" className="form-control mb-2" id="assignmentGroup" defaultValue = "ASSIGNMENTS" placeholder="Enter Assignment Group" />
+                        <input type="text" className="form-control mb-2" id="displayGradeAs" defaultValue = "Percentage" placeholder="Enter Display Grade as" />
                         <select className="form-control mb-2" id="submissionType">
                             <option value="online">Online</option>
                             <option value="offline">Offline</option>
                         </select>
-                        <input type="text" className="form-control mb-2" id="assign" placeholder="Enter Assign" />
+                        <input type="text" className="form-control mb-2" id="assign" defaultValue="everyone" placeholder="Enter Assign To" />
                         <input type="text" className="form-control mb-2" id="due" placeholder="Enter Due Date" />
                         <input type="text" className="form-control mb-2" id="availableFrom" placeholder="Enter Available from Date" />
                         <input type="text" className="form-control mb-2" id="until" placeholder="Enter Until Date" />
