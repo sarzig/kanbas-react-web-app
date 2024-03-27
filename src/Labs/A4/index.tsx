@@ -57,11 +57,10 @@ function Assignment4() {
             This is accessing the SAME ChildStateComponent but through a parent:
             <ParentStateComponent /><br /><br />
 
+            <ReduxExamples />
             <HelloRedux /><br /><br />            
             <AddRedux /><br /><br />
             <CounterRedux /><br /><br />
-
-            <ReduxExamples />
         </div>
     );
 };

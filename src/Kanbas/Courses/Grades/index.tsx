@@ -1,6 +1,7 @@
 import { assignments, enrollments, grades, users } from "../../Database";
 import CourseIdExtract from "../../Functions/CourseIdExtract";
 
+
 function Grades() {
     const courseId = CourseIdExtract();
     const as = assignments.filter((assignment) => assignment.course === courseId);
