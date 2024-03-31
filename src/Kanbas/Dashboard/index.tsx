@@ -2,27 +2,17 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // import { courses } from "../Database";
 import "./index.css";
-import db from "../Database/database2";
 
-function Dashboard() {
-  const [courses, setCourses] = useState(db.courses);
-  const [course, setCourse] = useState({
-    _id: "0", name: "New Course", number: "New Number",
-    startDate: "2023-09-10", endDate: "2023-12-15",
-    image: "/images/reactjs.jpg"
-  });
-
-  const addNewCourse = () => {
-    const newCourse = {
-      ...course,
-      _id: new Date().getTime().toString()
-    };
-    setCourses([...courses, { ...course, ...newCourse }]);
-  };
-
-  const deleteCourse = (courseId: string) => {
-    setCourses(courses.filter((course) => course._id !== courseId));
-  };
+function Dashboard(
+  { courses, course, setCourse, addNewCourse, deleteCourse, updateCourse }: {
+    courses: any[],
+    course: any,
+    setCourse: React.Dispatch<React.SetStateAction<any>>,
+    addNewCourse: () => void,
+    deleteCourse: (id: string) => void,
+    updateCourse: () => void
+  }
+) {
 
   return (
     <div>
@@ -37,8 +27,13 @@ function Dashboard() {
         onChange={(e) => setCourse({ ...course, startDate: e.target.value })} />
       <input value={course.endDate} className="form-control" type="date"
         onChange={(e) => setCourse({ ...course, endDate: e.target.value })} />
+
       <button onClick={addNewCourse} >
         Add
+      </button>
+
+      <button onClick={updateCourse} >
+        Update
       </button>
 
       <h2>Published Courses (12)</h2> <hr />
@@ -58,6 +53,15 @@ function Dashboard() {
 
                     <Link className="card-title" to={`/Kanbas/Courses/${course._id}/Home`}>
                       {course.name}
+
+                      <br />
+
+                      <button onClick={(event) => {
+                        event.preventDefault();
+                        setCourse(course);
+                      }}>
+                        Edit
+                      </button>
 
                       <button onClick={(event) => {
                         event.preventDefault();
