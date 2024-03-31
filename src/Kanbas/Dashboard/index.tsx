@@ -20,10 +20,13 @@ function Dashboard() {
     setCourses([...courses, { ...course, ...newCourse }]);
   };
 
+  const deleteCourse = (courseId: string) => {
+    setCourses(courses.filter((course) => course._id !== courseId));
+  };
 
   return (
     <div>
-      <h1>Dashboard</h1>              
+      <h1>Dashboard</h1>
       <hr />
       <h5>Course</h5>
       <input value={course.name} className="form-control"
@@ -55,6 +58,15 @@ function Dashboard() {
 
                     <Link className="card-title" to={`/Kanbas/Courses/${course._id}/Home`}>
                       {course.name}
+
+                      <button onClick={(event) => {
+                        event.preventDefault();
+                        deleteCourse(course._id);
+                      }}>
+                        Delete
+                      </button>
+
+
                     </Link>
 
                     <div className="card-code">
