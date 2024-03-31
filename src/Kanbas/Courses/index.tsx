@@ -1,6 +1,6 @@
 
 // React Elements
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useParams } from "react-router-dom";
 
 // Icons
 
@@ -27,8 +27,33 @@ import "./index.css";
 
 /* todo: xxx implement routes as a loop */
 
-function Courses() {
+interface Course {
+  _id: string;
+  name: string;
+  number: string;
+  startDate: string;
+  endDate: string;
+  image: string;
+}
+
+interface CoursesProps {
+  courses: Course[];
+}
+
+function Courses(
+  { courses }: { courses: any[] }
+) {
   /*
+
+    { courses, course, setCourse, addNewCourse, deleteCourse, updateCourse }: {
+    courses: any[],
+    course: any,
+    setCourse: React.Dispatch<React.SetStateAction<any>>,
+    addNewCourse: () => void,
+    deleteCourse: (id: string) => void,
+    updateCourse: () => void
+  }
+
   const { courseId } = useParams();
 
   const course = courses.find((course) => course._id === courseId);
@@ -49,6 +74,9 @@ function Courses() {
 
   const [isNavigationOpen, setNavigationOpen] = useState(true);
 */
+
+  const { courseId } = useParams();
+  const course = courses.find((course) => course._id === courseId);
 
   return (
     <>
