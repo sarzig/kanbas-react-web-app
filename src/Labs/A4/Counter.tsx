@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+
 function Counter() {
   let count = 7;
   console.log(count);

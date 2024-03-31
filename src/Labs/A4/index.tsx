@@ -15,7 +15,6 @@ import ParentStateComponent from "./ParentStateComponent";
 import ChildStateComponent from "./ChildStateComponent";
 import HelloRedux from "./ReduxExamples/HelloRedux";
 import AddRedux from "./ReduxExamples/AddRedux";
-import CounterReducer from "./ReduxExamples/CounterRedux/counterReducer";
 import CounterRedux from "./ReduxExamples/CounterRedux";
 
 function Assignment4() {
