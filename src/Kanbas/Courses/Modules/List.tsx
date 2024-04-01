@@ -15,18 +15,6 @@ import {
 } from "./modulesReducer";
 import { KanbasState } from "../../store"; // Import the KanbasState type
 
-interface Module {
-    _id: string;
-    name: string;
-    description: string;
-    course: string;
-    lessons?: {
-        _id: string;
-        name: string;
-        description: string;
-        module: string;
-    }[];
-}
 
 function ModuleList() {
     const { courseId } = useParams();
