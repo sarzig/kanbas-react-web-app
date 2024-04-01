@@ -13,13 +13,39 @@ import { GoPlus } from "react-icons/go";
 
 function ModuleList() {
     const { courseId } = useParams();
-    const modulesList = modules.filter((module) => module.course === courseId);
-    const [selectedModule, setSelectedModule] = useState(modulesList[0]);
+    // const modulesList = modules.filter((module) => module.course === courseId);
+
+    const [moduleList, setModuleList] = useState(modules);
+    const [selectedModule, setSelectedModule] = useState(moduleList[0]);
+
+    const [module, setModule] = useState({
+        name: "New Module",
+        description: "New Description",
+        course: courseId,
+    });
+
+
     return (
         <>
             {/* <!-- Add buttons here --> */}
             <ul className="list-group wd-modules">
-                {modulesList.map((module) => (
+
+                <li className="list-group-item">
+                    <button>Add</button>
+                    <input value={module.name}
+                        onChange={(e) => setModule({
+                            ...module, name: e.target.value
+                        })}
+                    />
+                    <textarea value={module.description}
+                        onChange={(e) => setModule({
+                            ...module, description: e.target.value
+                        })}
+                    />
+                </li>
+
+
+                {moduleList.map((module) => (
                     <li
                         className="list-group-item"
                         onClick={() => setSelectedModule(module)}>

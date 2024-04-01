@@ -36,9 +36,6 @@ interface Course {
   image: string;
 }
 
-interface CoursesProps {
-  courses: Course[];
-}
 
 function Courses(
   { courses }: { courses: any[] }
@@ -75,8 +72,9 @@ function Courses(
   const [isNavigationOpen, setNavigationOpen] = useState(true);
 */
 
-  const { courseId } = useParams();
-  const course = courses.find((course) => course._id === courseId);
+  // these lines are ruining deploy netlify
+  //const { courseId } = useParams();
+  //const course = courses.find((course) => course._id === courseId);
 
   return (
     <>
