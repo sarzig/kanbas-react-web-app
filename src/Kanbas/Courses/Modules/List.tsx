@@ -77,9 +77,7 @@ function ModuleList() {
                 {modules
                     .filter((module) => module.course === courseId)
                     .map((module, index) => (
-                        <li key={index} className="list-group-item"
-
-                            onClick={() => setSelectedModule(module)}>
+                        <li key={index} className="list-group-item">
 
                             <div className="kanbas-modules-title">
                                 <PiDotsSixVerticalBold className="modules-icon" />
@@ -104,20 +102,7 @@ function ModuleList() {
                                     <RxDotsVertical className="modules-icon" />
                                 </span>
                             </div>
-                            {selectedModule._id === module._id && (
-                                <ul className="list-group">
-                                    {module.lessons?.map((lesson) => (
-                                        <li className="list-group-item">
-                                            <PiDotsSixVerticalBold className="modules-icon" />
-                                            {lesson.name}
-                                            <span className="float-end">
-                                                <FaCheckCircle className="modules-icon icon-green" />
-                                                <RxDotsVertical className="modules-icon" />
-                                            </span>
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
+                        
                         </li>
                     ))}
             </ul>
