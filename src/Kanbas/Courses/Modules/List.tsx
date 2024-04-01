@@ -8,9 +8,17 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { GoPlus } from "react-icons/go";
 import "../../styles.css";
 import "../Assignments/index.css";
+import { useSelector, useDispatch } from "react-redux";
+import {
+    addModule,
+    deleteModule,
+    updateModule,
+    setModule,
+} from "./modulesReducer";
+import { KanbasState } from "../../store"; // Import the KanbasState type
 
 interface Module {
-    _id: string; // This is the property TypeScript is complaining about
+    _id: string;
     name: string;
     description: string;
     course: string;
@@ -24,43 +32,13 @@ interface Module {
 
 function ModuleList() {
     const { courseId } = useParams();
-    // const modulesList = modules.filter((module) => module.course === courseId);
-
-    const [moduleList, setModuleList] = useState<Module[]>(modules);
-    const [selectedModule, setSelectedModule] = useState(moduleList[0]);
-
-    const [module, setModule] = useState({
-        _id: "",
-        name: "New Module",
-        description: "New Description",
-        course: courseId,
-    });
-
-    const addModule = (module: any) => {
-        const newModule = {
-            ...module,
-            _id: new Date().getTime().toString()
-        };
-        const newModuleList = [newModule, ...moduleList];
-        setModuleList(newModuleList);
-    };
-
-    const deleteModule = (moduleId: string) => {
-        const newModuleList = moduleList.filter(
-            (module) => module._id !== moduleId);
-        setModuleList(newModuleList);
-    };
-
-    const updateModule = () => {
-        const updatedModuleList = moduleList.map((m) => {
-            if (m._id === module._id) {
-                return { ...module } as Module;
-            } else {
-                return m;
-            }
-        });
-        setModuleList(updatedModuleList);
-    };
+    const moduleList = useSelector((state: KanbasState) =>
+        state.modulesReducer.modules // Use KanbasState to define the type
+    );
+    const module = useSelector((state: KanbasState) =>
+        state.modulesReducer.module // Use KanbasState to define the type
+    );
+    const dispatch = useDispatch();
 
 
     return (
@@ -69,11 +47,13 @@ function ModuleList() {
             <ul className="list-group wd-modules">
 
                 <li className="list-group-item p-3">
-                    <button className="btn button-topbar-medium red-button p-1" onClick={() => { addModule(module) }}>
+                    <button className="btn button-topbar-medium red-button p-1"
+                        onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
                         Add
                     </button>
 
-                    <button className="btn button-topbar-medium red-button p-1" onClick={updateModule}>
+                    <button className="btn button-topbar-medium red-button p-1"
+                        onClick={() => dispatch(updateModule(module))}>
                         Update
                     </button>
 
@@ -81,27 +61,26 @@ function ModuleList() {
                     <br /><br />
 
                     <input value={module.name}
-                        onChange={(e) => setModule({
-                            ...module, name: e.target.value
-                        })}
+                        onChange={(e) =>
+                            dispatch(setModule({ ...module, name: e.target.value }))}
                     />
 
                     <br /><br />
 
                     <textarea value={module.description}
-                        onChange={(e) => setModule({
-                            ...module, description: e.target.value
-                        })}
+                        onChange={(e) =>
+                            dispatch(setModule({ ...module, name: e.target.value }))}
                     />
                 </li>
 
 
-                {moduleList
+                {modules
                     .filter((module) => module.course === courseId)
                     .map((module, index) => (
                         <li key={index} className="list-group-item"
 
                             onClick={() => setSelectedModule(module)}>
+
                             <div className="kanbas-modules-title">
                                 <PiDotsSixVerticalBold className="modules-icon" />
                                 <IoMdArrowDropdown className="modules-icon" />
@@ -111,13 +90,13 @@ function ModuleList() {
                                 <span className="float-end">
                                     <button
                                         className="btn button-topbar-medium red-button mt-0"
-                                        onClick={(event) => { setModule(module); }}>
+                                        onClick={() => dispatch(setModule(module))}>
                                         Edit
                                     </button>
 
                                     <button
                                         className="btn button-topbar-medium red-button mt-0"
-                                        onClick={() => deleteModule(module._id)}>
+                                        onClick={() => dispatch(deleteModule(module._id))}>
                                         Delete
                                     </button>
                                     <FaCheckCircle className="modules-icon icon-green" />

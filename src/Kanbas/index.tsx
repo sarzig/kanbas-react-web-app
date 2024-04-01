@@ -6,6 +6,9 @@ import BlackTopBar from "./BlackTopBar/";
 import "./styles.css";
 import db from "./Database/database2";
 import { useState } from "react";
+import store from "./store";
+import { Provider } from "react-redux";
+
 
 
 function Kanbas() {
@@ -42,7 +45,7 @@ function Kanbas() {
 
 
   return (
-    <>
+    <Provider store={store}>
       <div className="row flex">
         <BlackTopBar />
       </div>
@@ -67,7 +70,7 @@ function Kanbas() {
           </Routes>
         </div>
       </div>
-    </>
+    </Provider>
   );
 }
 
