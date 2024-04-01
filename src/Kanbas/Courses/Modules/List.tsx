@@ -9,15 +9,28 @@ import { GoPlus } from "react-icons/go";
 import "../../styles.css";
 import "../Assignments/index.css";
 
+interface Module {
+    _id: string; // This is the property TypeScript is complaining about
+    name: string;
+    description: string;
+    course: string;
+    lessons?: {
+        _id: string;
+        name: string;
+        description: string;
+        module: string;
+    }[];
+}
 
 function ModuleList() {
     const { courseId } = useParams();
     // const modulesList = modules.filter((module) => module.course === courseId);
 
-    const [moduleList, setModuleList] = useState(modules);
+    const [moduleList, setModuleList] = useState<Module[]>(modules);
     const [selectedModule, setSelectedModule] = useState(moduleList[0]);
 
     const [module, setModule] = useState({
+        _id: "",
         name: "New Module",
         description: "New Description",
         course: courseId,
@@ -38,6 +51,16 @@ function ModuleList() {
         setModuleList(newModuleList);
     };
 
+    const updateModule = () => {
+        const updatedModuleList = moduleList.map((m) => {
+            if (m._id === module._id) {
+                return { ...module } as Module;
+            } else {
+                return m;
+            }
+        });
+        setModuleList(updatedModuleList);
+    };
 
 
     return (
@@ -49,6 +72,11 @@ function ModuleList() {
                     <button className="btn button-topbar-medium red-button p-1" onClick={() => { addModule(module) }}>
                         Add
                     </button>
+
+                    <button className="btn button-topbar-medium red-button p-1" onClick={updateModule}>
+                        Update
+                    </button>
+
 
                     <br /><br />
 
@@ -81,6 +109,12 @@ function ModuleList() {
                                 {module.name}
 
                                 <span className="float-end">
+                                    <button
+                                        className="btn button-topbar-medium red-button mt-0"
+                                        onClick={(event) => { setModule(module); }}>
+                                        Edit
+                                    </button>
+
                                     <button
                                         className="btn button-topbar-medium red-button mt-0"
                                         onClick={() => deleteModule(module._id)}>

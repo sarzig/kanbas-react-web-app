@@ -3,11 +3,11 @@
 [
   {
       "_id": "C1",
-      "name": "Advanced Confections",
+      "name": "Advancedx Confections",
       "number": "CS1234",
       "startDate": "2023-01-10",
       "endDate": "2023-05-15",
-      "image": "../images/advanced_confections.jpg"
+      "image": "advanced_confections.jpg"
   },
   {
       "_id": "C2",
@@ -15,7 +15,7 @@
       "number": "CS1235",
       "startDate": "2023-01-10",
       "endDate": "2023-05-15",
-      "image": "../../images/advanced_herbology.jpg"
+      "image": "advanced_herbology.jpg"
   },
   {
       "_id": "C3",
@@ -23,7 +23,7 @@
       "number": "CS1236",
       "startDate": "2023-01-10",
       "endDate": "2023-05-15",
-      "image": "../../images/advanced_hindi.jpg"
+      "image": "advanced_hindi.jpg"
   },
   {
       "_id": "C4",
@@ -31,7 +31,7 @@
       "number": "CS1237",
       "startDate": "2023-01-10",
       "endDate": "2023-05-15",
-      "image": "../../images/advanced_bromance.jpg"
+      "image": "advanced_bromance.jpg"
   },
   {
       "_id": "C5",
@@ -39,7 +39,7 @@
       "number": "CS1238",
       "startDate": "2023-01-10",
       "endDate": "2023-05-15",
-      "image": "../../images/drivers_ed.jpg"
+      "image": "drivers_ed.jpg"
   },
   {
       "_id": "C6",
@@ -47,7 +47,7 @@
       "number": "CS1239",
       "startDate": "2023-01-10",
       "endDate": "2023-05-15",
-      "image": "../../images/himalayan_topology.jpg"
+      "image": "himalayan_topology.jpg"
   },
   {
       "_id": "C7",
@@ -55,7 +55,7 @@
       "number": "CS1240",
       "startDate": "2023-01-10",
       "endDate": "2023-05-15",
-      "image": "../../images/interior_decorating.jpg"
+      "image": "interior_decorating.jpg"
   },
   {
       "_id": "C8",
@@ -63,7 +63,7 @@
       "number": "CS1241",
       "startDate": "2023-01-10",
       "endDate": "2023-05-15",
-      "image": "../../images/womens_studies.jpg"
+      "image": "womens_studies.jpg"
   },
   {
       "_id": "C9",
@@ -71,7 +71,7 @@
       "number": "CS1242",
       "startDate": "2023-01-10",
       "endDate": "2023-05-15",
-      "image": "../../images/intermediate_catology.jpg"
+      "image": "intermediate_catology.jpg"
   },
   {
       "_id": "C10",
@@ -79,7 +79,7 @@
       "number": "CS1243",
       "startDate": "2023-01-10",
       "endDate": "2023-05-15",
-      "image": "../../images/intro_to_dogs.jpg"
+      "image": "intro_to_dogs.jpg"
   },
   {
       "_id": "C11",
@@ -87,7 +87,7 @@
       "number": "CS1244",
       "startDate": "2023-01-10",
       "endDate": "2023-05-15",
-      "image": "../../images/mamata_politics_of_influence.jpg"
+      "image": "mamata_politics_of_influence.jpg"
   },
   {
       "_id": "C12",
@@ -95,6 +95,6 @@
       "number": "CS1245",
       "startDate": "2023-01-10",
       "endDate": "2023-05-15",
-      "image": "../../images/the_beatles_a_retrospective_on_psychadelics.jpg"
+      "image": "the_beatles_a_retrospective_on_psychadelics.jpg"
   }
 ]
