@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { modules } from "../../Database";
 import { FaCheckCircle } from "react-icons/fa";
 import { useParams } from "react-router";
@@ -74,7 +73,7 @@ function ModuleList() {
                 </li>
 
 
-                {modules
+                {moduleList
                     .filter((module) => module.course === courseId)
                     .map((module, index) => (
                         <li key={index} className="list-group-item">
