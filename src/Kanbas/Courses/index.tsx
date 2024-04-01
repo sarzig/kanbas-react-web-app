@@ -1,6 +1,6 @@
 
 // React Elements
-import { Navigate, Route, Routes, useParams } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 // Icons
 
@@ -27,6 +27,7 @@ import "./index.css";
 
 /* todo: xxx implement routes as a loop */
 
+/*
 interface Course {
   _id: string;
   name: string;
@@ -35,7 +36,7 @@ interface Course {
   endDate: string;
   image: string;
 }
-
+*/
 
 function Courses(
   { courses }: { courses: any[] }
