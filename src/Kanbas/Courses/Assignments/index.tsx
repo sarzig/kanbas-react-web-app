@@ -1,4 +1,4 @@
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle, FaTrash } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
 import { assignments } from "../../../Kanbas/Database";
 import { PiDotsSixVerticalBold } from "react-icons/pi";
@@ -58,9 +58,12 @@ function Assignments() {
 
                                 <div className="row">
                                     <div className="col col-2 mini-col text-center d-flex flex-column align-items-center justify-content-center">
-                                        <div className="d-flex">
+                                        <div className="d-flex align-items-center">
                                             <PiDotsSixVerticalBold className="modules-icon" />
-                                            <FaRegPenToSquare className="modules-icon icon-green" />
+                                            <FaTrash className="modules-icon icon-red" />
+                                            <Link to={`/Kanbas/Courses/${courseId}/Assignments/Editor/${assignment._id}`}>
+                                                <FaRegPenToSquare className="modules-icon icon-green" />
+                                            </Link>
                                         </div>
                                     </div>
 

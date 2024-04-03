@@ -22,18 +22,21 @@
 .mini-col {
     margin: 0px;
     padding: 0px;
-    width: 80px;
+    width: 120px;
 }
 
 .modules-icon {
     margin: 6px;
     color: dark-grey;
     font-size: 1.25rem;
-
 }
 
 .icon-green {
     color: darkgreen;
+}
+
+.icon-red {
+    color: rgb(195, 50, 52);
 }
 
 .width-90px {
