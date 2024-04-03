@@ -51,24 +51,10 @@ function Dashboard(
 
                   <div className="card-body">
 
-                    <Link className="card-title" to={`/Kanbas/Courses/${course._id}/Home`}>
+                    <Link className="card-title underline-target-text" to={`/Kanbas/Courses/${course._id}/Home`}>
                       {course.name}
 
                       <br />
-
-                      <button onClick={(event) => {
-                        event.preventDefault();
-                        setCourse(course);
-                      }}>
-                        Edit
-                      </button>
-
-                      <button onClick={(event) => {
-                        event.preventDefault();
-                        deleteCourse(course._id);
-                      }}>
-                        Delete
-                      </button>
 
 
                     </Link>
@@ -81,9 +67,34 @@ function Dashboard(
                       {course.startDate} to {course.endDate}
                     </div>
 
-                    <Link to={`/Kanbas/Courses/${course._id}/Assignments`} title={`${course.name} - Assignments`} className="btn btn-primary">
-                      Go
-                    </Link>
+                    <br />
+
+                    <div className="card-buttons">
+                      <Link to={`/Kanbas/Courses/${course._id}/Assignments`} title={`${course.name} - Assignments`} 
+                      className="btn btn-primary">
+                        Go
+                      </Link>
+
+                      <div className="card-button-group">
+                        <div className="btn btn-primary"
+                          onClick={(event) => {
+                            event.preventDefault();
+                            setCourse(course);
+                          }}>
+                          Edit
+                        </div>
+
+                        <div className="btn btn-primary red-button"
+                          onClick={(event) => {
+                            event.preventDefault();
+                            deleteCourse(course._id);
+                          }}>
+                          Delete
+                        </div>
+
+                      </div>
+                    </div>
+
 
                   </div>
                 </Link>

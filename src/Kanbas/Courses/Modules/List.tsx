@@ -33,16 +33,6 @@ function ModuleList() {
             <ul className="list-group wd-modules">
 
                 <li className="list-group-item p-3">
-                    <button className="btn button-topbar-medium red-button p-1"
-                        onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
-                        Add
-                    </button>
-
-                    <button className="btn button-topbar-medium red-button p-1"
-                        onClick={() => dispatch(updateModule(module))}>
-                        Update
-                    </button>
-
 
                     <br /><br />
 
@@ -57,6 +47,18 @@ function ModuleList() {
                         onChange={(e) =>
                             dispatch(setModule({ ...module, name: e.target.value }))}
                     />
+
+                    <br /><br />
+                    
+                    <button className="btn button-topbar-medium red-button p-1"
+                        onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+                        Add
+                    </button>
+
+                    <button className="btn button-topbar-medium red-button p-1"
+                        onClick={() => dispatch(updateModule(module))}>
+                        Update
+                    </button>
                 </li>
 
 
@@ -88,7 +90,7 @@ function ModuleList() {
                                     <RxDotsVertical className="modules-icon" />
                                 </span>
                             </div>
-                        
+
                         </li>
                     ))}
             </ul>

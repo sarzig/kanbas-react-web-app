@@ -77,6 +77,7 @@ function Assignments() {
                                         </div>
                                     </div>
 
+
                                     <div className="col col-2 mini-col text-center d-flex flex-column align-items-center justify-content-center">
                                         <div className="d-flex">
                                             <FaCheckCircle className="modules-icon icon-green" />

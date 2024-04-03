@@ -17,8 +17,33 @@ body * {
     box-shadow: 2px 2px 5px lightgray;
 }
 
-.card-body:hover {
-    text-decoration: underline red;
+.card-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-buttons .btn {
+    text-decoration: none;   
+
+}
+
+.card-button-group {
+    display: flex;
+    gap: 8px;
+    /* Adjust the space between buttons as needed */
+}
+.card-button-group button {
+    text-decoration: none; /* Remove underline from buttons */
+}
+
+.card-button-group button:focus {
+    outline: none; /* Remove outline on focus if not needed */
+}
+
+
+.card-body:hover .underline-target-text {
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 .card:hover {
