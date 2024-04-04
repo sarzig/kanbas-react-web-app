@@ -22,7 +22,7 @@
 .mini-col {
     margin: 0px;
     padding: 0px;
-    width: 120px;
+    width: 135px;
 }
 
 .modules-icon {
@@ -35,8 +35,23 @@
     color: darkgreen;
 }
 
+.icon-green:hover {
+    color: rgb(4, 156, 4);
+}
+
 .icon-red {
     color: rgb(195, 50, 52);
+}
+
+.delete-button {
+    background-color: white;
+    border: none;
+    padding: none;
+    margin: none;
+}
+
+.delete-button:hover {
+    color: rgb(129, 35, 36);
 }
 
 .width-90px {

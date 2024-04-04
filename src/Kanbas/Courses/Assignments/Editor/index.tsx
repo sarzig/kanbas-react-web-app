@@ -3,15 +3,31 @@ import { useNavigate, Link } from "react-router-dom";
 import GetAssignment from "../../../Functions/GetAssignment";
 import CourseIdExtract from "../../../Functions/CourseIdExtract";
 
+import { useSelector, useDispatch } from "react-redux";
+import {
+    addAssignment,
+    deleteAssignment,
+    updateAssignment,
+    setAssignment,
+} from "../assignmentsReducer";
+import { KanbasState } from "../../../store"; // Import the KanbasState type
+import { SetStateAction, useState } from "react";
+
 function AssignmentEditor() {
-    const assignment = GetAssignment();
+    /*const assignment = GetAssignment();*/
     const courseId = CourseIdExtract();
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
-    const handleSave = () => {
-        console.log("Actually saving assignment TBD in later assignments");
+    const assignment = useSelector((state: KanbasState) =>
+        state.assignmentsReducer.assignment // Use KanbasState to define the type
+    );
+
+
+    const goBackToAssignments = () => {
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
     };
+
 
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
         // Handle input changes here
@@ -63,12 +79,20 @@ function AssignmentEditor() {
                         <input type="text" className="form-control mb-2" id="until" placeholder="Enter Until Date" />
 
 
-                        <button onClick={handleSave} className="btn btn-success ms-2 float-end">
+                        <button
+                            onClick={() => {
+                                dispatch(addAssignment({ ...assignment, course: courseId }));
+                                goBackToAssignments();
+                            }}
+                            className="btn btn-success ms-2 float-end">
                             Save
                         </button>
-                        <Link to={`/Kanbas/Courses/${courseId}/Assignments`} className="btn btn-danger float-end">
+
+                        <button
+                            className="btn btn-danger float-end"
+                            onClick={() => goBackToAssignments()}>
                             Cancel
-                        </Link>
+                        </button>
                     </div>
 
                     <div className="col col-2">

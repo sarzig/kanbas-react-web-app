@@ -8,10 +8,49 @@ import { FaRegPenToSquare } from "react-icons/fa6";
 import { RxDotsVertical } from "react-icons/rx";
 import "../../styles.css";
 import "./index.css";
+import { useSelector, useDispatch } from "react-redux";
+import {
+    addAssignment,
+    deleteAssignment,
+    updateAssignment,
+    setAssignment,
+} from "./assignmentsReducer";
+import { KanbasState } from "../../store"; // Import the KanbasState type
+import { SetStateAction, useState } from "react";
 
 function Assignments() {
     const { courseId } = useParams();
-    const assignmentList = assignments.filter((assignment) => assignment.course === courseId);
+
+    const assignmentList = useSelector((state: KanbasState) =>
+        state.assignmentsReducer.assignments // Use KanbasState to define the type
+    );
+
+    const assignment = useSelector((state: KanbasState) =>
+        state.assignmentsReducer.assignment // Use KanbasState to define the type
+    );
+
+    const dispatch = useDispatch();
+
+    const [showDeleteDialog, setShowDeleteDialog] = useState(false);
+    const [selectedAssignmentId, setSelectedAssignmentId] = useState(null);
+
+    const handleDeleteClick = (assignmentId: string) => {
+        const confirmDelete = window.confirm("Are you sure you want to delete this assignment?");
+
+        /*if (confirmDelete) {
+            dispatch(deleteAssignment(assignmentId));
+        }*/
+    };
+
+    const handleConfirmDelete = () => {
+        dispatch(deleteAssignment(selectedAssignmentId));
+        setShowDeleteDialog(false);
+    };
+
+    const handleCancelDelete = () => {
+        setShowDeleteDialog(false);
+    };
+
     return (
         <>
 
@@ -25,11 +64,16 @@ function Assignments() {
                     <div className="d-flex float-end">
                         <button className="btn button-topbar-medium">
                             <GoPlus className="icon" />
-                            Group</button>
+                            Group
+                        </button>
 
-                        <button className="btn button-topbar-medium red-button">
+                        <button 
+                        className="btn button-topbar-medium red-button">
                             <GoPlus className="icon" />
-                            Assignment</button>
+                            <Link to={`/Kanbas/Courses/${courseId}/Assignments/Editor/addNewAssignment`}>
+                            Assignment
+                            </Link>
+                        </button>
 
                         <button className="btn button-topbar-medium mini-button">
                             <RxDotsVertical className="icon" />
@@ -52,44 +96,54 @@ function Assignments() {
                             <RxDotsVertical className="modules-icon" />
                         </span>
                     </div>
+
                     <ul className="list-group">
-                        {assignmentList.map((assignment) => (
-                            <li className="list-group-item">
+                        {assignmentList
+                            .filter((assignment) => assignment.course === courseId)
+                            .map((assignment, index) => (
+                                <li key={index} className="list-group-item">
 
-                                <div className="row">
-                                    <div className="col col-2 mini-col text-center d-flex flex-column align-items-center justify-content-center">
-                                        <div className="d-flex align-items-center">
-                                            <PiDotsSixVerticalBold className="modules-icon" />
-                                            <FaTrash className="modules-icon icon-red" />
-                                            <Link to={`/Kanbas/Courses/${courseId}/Assignments/Editor/${assignment._id}`}>
-                                                <FaRegPenToSquare className="modules-icon icon-green" />
-                                            </Link>
+                                    <div className="row">
+                                        <div className="col col-2 mini-col text-center d-flex flex-column align-items-center justify-content-center">
+                                            <div className="d-flex align-items-center">
+                                                <PiDotsSixVerticalBold className="modules-icon" />
+
+                                                <button
+                                                    className="modules-icon icon-red delete-button"
+                                                    onClick={() => handleDeleteClick(assignment._id)}                                                >
+                                                    <FaTrash className="modules-icon icon-red delete-button" />
+                                                </button>
+
+                                                <Link to={`/Kanbas/Courses/${courseId}/Assignments/Editor/${assignment._id}`}>
+                                                    <FaRegPenToSquare className="modules-icon icon-green" />
+                                                </Link>
+                                            </div>
+                                        </div>
+
+                                        <div className="col">
+                                            <div className="assignment-name">
+                                                <Link
+                                                    to={`/Kanbas/Courses/${courseId}/Assignments/Editor/${assignment._id}`}>{assignment.title}</Link>
+                                            </div>
+
+
+                                            <div className="byline">
+                                                <Link to={`#`}>Multiple Modules</Link>&nbsp;&nbsp;&nbsp;|
+                                                &nbsp;&nbsp;&nbsp;Due {assignment.due_date}&nbsp;&nbsp;&nbsp;|
+                                                &nbsp;&nbsp;&nbsp;{assignment.points} pts
+                                            </div>
+                                        </div>
+
+
+                                        <div className="col col-2 mini-col text-center d-flex flex-column align-items-center justify-content-center">
+                                            <div className="d-flex">
+                                                <FaCheckCircle className="modules-icon icon-green" />
+                                                <PiDotsSixVerticalBold className="modules-icon" />
+                                            </div>
                                         </div>
                                     </div>
 
-                                    <div className="col">
-                                        <div className="assignment-name">
-                                            <Link
-                                                to={`/Kanbas/Courses/${courseId}/Assignments/Editor/${assignment._id}`}>{assignment.title}</Link>
-                                        </div>
-
-                                        <div className="byline">
-                                            <Link to={`#`}>Multiple Modules</Link>&nbsp;&nbsp;&nbsp;|
-                                            &nbsp;&nbsp;&nbsp;Due {assignment.due_date}&nbsp;&nbsp;&nbsp;|
-                                            &nbsp;&nbsp;&nbsp;{assignment.points} pts
-                                        </div>
-                                    </div>
-
-
-                                    <div className="col col-2 mini-col text-center d-flex flex-column align-items-center justify-content-center">
-                                        <div className="d-flex">
-                                            <FaCheckCircle className="modules-icon icon-green" />
-                                            <PiDotsSixVerticalBold className="modules-icon" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </li>))}
+                                </li>))}
                     </ul>
                 </li >
             </ul >
