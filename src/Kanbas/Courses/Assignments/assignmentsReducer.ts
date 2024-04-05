@@ -8,7 +8,7 @@ const initialState = {
     assignments: assignments,
     assignment:
     {
-        title: "New Assignment 123",
+        title: "New Assignment",
         description: "New Description",
         points: 100
     },

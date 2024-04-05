@@ -1,52 +1,67 @@
-import { ChangeEvent } from "react";
-import { useNavigate, Link } from "react-router-dom";
-import GetAssignment from "../../../Functions/GetAssignment";
-import CourseIdExtract from "../../../Functions/CourseIdExtract";
-
+import { useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import {
-    addAssignment,
-    deleteAssignment,
-    updateAssignment,
-    setAssignment,
-} from "../assignmentsReducer";
-import { KanbasState } from "../../../store"; // Import the KanbasState type
-import { SetStateAction, useState } from "react";
+import { setAssignment, addAssignment, updateAssignment } from "../assignmentsReducer";
+import { KanbasState } from "../../../store";
+import CourseIdExtract from "../../../Functions/CourseIdExtract";
+import GetAssignmentById from "../../../Functions/GetAssignmentById";
 
 function AssignmentEditor() {
-    /*const assignment = GetAssignment();*/
     const courseId = CourseIdExtract();
     const navigate = useNavigate();
     const dispatch = useDispatch();
+    const assignmentId = useParams().assignmentId;
+
+
+    useEffect(() => {
+        if (assignmentId !== undefined && assignmentId !== 'addNewAssignment') {
+            const assignment = GetAssignmentById(assignmentId);
+            if (assignment) {
+                dispatch(setAssignment(assignment));
+            } else {
+                // Handle case where assignment is not found
+            }
+        } else {
+            // If it's a new assignment, initialize with default values
+            const newAssignment = {
+                title: "New Assignment",
+                description: "New Description",
+                points: 100
+            };
+            dispatch(setAssignment(newAssignment));
+        }
+    }, [assignmentId, dispatch]);
 
     const assignment = useSelector((state: KanbasState) =>
-        state.assignmentsReducer.assignment // Use KanbasState to define the type
+        state.assignmentsReducer.assignment
     );
-
 
     const goBackToAssignments = () => {
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
     };
 
-
-    const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-        // Handle input changes here
-        // For example: setAssignmentTitle(event.target.value);
+    const handleSave = () => {
+        if (assignmentId === 'addNewAssignment') {
+            dispatch(addAssignment({ ...assignment, course: courseId }));
+        } else {
+            dispatch(updateAssignment(assignment));
+        }
+        navigate(`/Kanbas/Courses/${courseId}/Assignments`);
     };
 
     return (
         <div>
             Assignment Name
             <input
-                value={assignment?.title || ""}
-                onChange={handleInputChange}
+                value={assignment.title}
+                onChange={(e) => dispatch(setAssignment({ ...assignment, title: e.target.value }))}
                 className="form-control mb-2"
             />
 
             Assignment Description
             <input
-                value={assignment?.description || ""}
-                onChange={handleInputChange}
+                value={assignment.description}
+                onChange={(e) => dispatch(setAssignment({ ...assignment, description: e.target.value }))}
                 className="form-control mb-2"
             />
 
@@ -80,17 +95,14 @@ function AssignmentEditor() {
 
 
                         <button
-                            onClick={() => {
-                                dispatch(addAssignment({ ...assignment, course: courseId }));
-                                goBackToAssignments();
-                            }}
+                            onClick={handleSave}
                             className="btn btn-success ms-2 float-end">
                             Save
                         </button>
 
                         <button
                             className="btn btn-danger float-end"
-                            onClick={() => goBackToAssignments()}>
+                            onClick={goBackToAssignments}>
                             Cancel
                         </button>
                     </div>
