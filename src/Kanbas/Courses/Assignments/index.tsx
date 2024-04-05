@@ -3,10 +3,7 @@ import { FaCheckCircle, FaTrash } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
-    addAssignment,
-    deleteAssignment,
-    updateAssignment,
-    setAssignment,
+    deleteAssignment
 } from "./assignmentsReducer";
 import { KanbasState } from "../../store"; // Import the KanbasState type
 import { PiDotsSixVerticalBold } from "react-icons/pi";
