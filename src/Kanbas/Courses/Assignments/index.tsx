@@ -42,6 +42,8 @@ function Assignments() {
         setShowDeleteDialog(false);
     };
 
+    console.log(assignmentList);
+
     return (
         <>
             {/* Confirmation dialog */}
@@ -70,13 +72,16 @@ function Assignments() {
                             Group
                         </button>
 
-                        <button
-                            className="btn button-topbar-medium red-button">
-                            <GoPlus className="icon" />
-                            <Link to={`/Kanbas/Courses/${courseId}/Assignments/Editor/addNewAssignment`}>
+
+                        <Link to={`/Kanbas/Courses/${courseId}/Assignments/Editor/addNewAssignment`}>
+                            <button
+                                className="btn button-topbar-medium red-button">
+
                                 Assignment
-                            </Link>
-                        </button>
+
+                            </button>
+                        </Link>
+
 
                         <button className="btn button-topbar-medium mini-button">
                             <RxDotsVertical className="icon" />
@@ -126,7 +131,9 @@ function Assignments() {
                                         <div className="col">
                                             <div className="assignment-name">
                                                 <Link
-                                                    to={`/Kanbas/Courses/${courseId}/Assignments/Editor/${assignment._id}`}>{assignment.title}</Link>
+                                                    to={`/Kanbas/Courses/${courseId}/Assignments/Editor/${assignment._id}`}>
+                                                    {assignment.title}
+                                                </Link>
                                             </div>
 
 
