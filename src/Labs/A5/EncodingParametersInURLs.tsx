@@ -2,6 +2,7 @@ import React, { useState } from "react";
 function EncodingParametersInURLs() {
   const [a, setA] = useState(5);
   const [b, setB] = useState(2);
+
   return (
     <div>
       <h3>Encoding Parameters In URLs</h3>
@@ -14,42 +15,55 @@ function EncodingParametersInURLs() {
       <a href={`http://localhost:4001/a5/add/${a}/${b}`}>
         Add {a} + {b}
       </a>
+      (http://localhost:4001/a5/add/${a}/${b})
       <br />
 
       <a href={`http://localhost:4001/a5/subtract/${a}/${b}`}>
         Substract {a} - {b}
       </a>
+      (http://localhost:4001/a5/subtract/${a}/${b})
       <br />
 
       <a href={`http://localhost:4001/a5/multiply/${a}/${b}`}>
         Multiply {a} x {b}
       </a>
+      (http://localhost:4001/a5/multiply/${a}/${b})
       <br />
 
       <a href={`http://localhost:4001/a5/divide/${a}/${b}`}>
         Divide {a} / {b}
       </a>
+      (http://localhost:4001/a5/divide/${a}/${b})
       <br /><br />
 
       <h3>3.1.2 Query Parameters</h3>
-      <a className="btn btn-primary"
+      <a
         href={`http://localhost:4001/a5/calculator?operation=add&a=${a}&b=${b}`}>
         Add {a} + {b}
       </a>
-      <a className="btn btn-danger"
+      (http://localhost:4001/a5/calculator?operation=add&a=${a}&b=${b})
+      <br />
+
+      <a
         href={`http://localhost:4001/a5/calculator?operation=subtract&a=${a}&b=${b}`}>
         Substract {a} - {b}
       </a>
-      <a className="btn btn-primary"
+      (http://localhost:4001/a5/calculator?operation=subtract&a=${a}&b=${b})
+      <br />
+
+      <a
         href={`http://localhost:4001/a5/calculator?operation=multiply&a=${a}&b=${b}`}>
         Multiply {a} x {b}
       </a>
-      <a className="btn btn-danger"
+      (http://localhost:4001/a5/calculator?operation=multiply&a=${a}&b=${b})
+      <br />
+
+      <a
         href={`http://localhost:4001/a5/calculator?operation=divide&a=${a}&b=${b}`}>
         Divide {a} / {b}
       </a>
-
-
+      (http://localhost:4001/a5/calculator?operation=divide&a=${a}&b=${b})
+      <br />
 
     </div>
   );
