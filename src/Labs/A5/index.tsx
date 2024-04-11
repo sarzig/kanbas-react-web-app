@@ -1,14 +1,9 @@
-/*
 import EncodingParametersInURLs from "./EncodingParametersInURLs";
 import WorkingWithObjects from "./WorkingWithObjects";
-*/
-
 import WorkingWithArrays from "./WorkingWithArrays";
-
-/*
-<EncodingParametersInURLs /><br />
-<WorkingWithObjects /><br />
-*/
+import EncodingParametersInURLsAxios from "./EncodingParametersInURLsAxios";
+import WorkingWithObjectsWithAxios from "./WorkingWithObjectsWithAxios";
+import WorkingWithArraysWithAxios from "./WorkingWithArraysWithAxios";
 
 
 function Assignment5() {
@@ -19,7 +14,12 @@ function Assignment5() {
                 Welcome
             </a><br /><br />
 
+            <EncodingParametersInURLs /><br />
+            <WorkingWithObjects /><br />
             <WorkingWithArrays /><br />
+            <EncodingParametersInURLsAxios /><br />
+            <WorkingWithObjectsWithAxios /><br />
+            <WorkingWithArraysWithAxios /><br />
 
         </div>
     );

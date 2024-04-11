@@ -27,13 +27,13 @@ function WorkingWithObjects() {
         <div>
             <h3>Working With Objects</h3>
 
-            <h4>Retrieving Objects</h4>
+            <h3>Retrieving Objects</h3>
             <a href={`http://localhost:4001/a5/assignment`}>
                 Get Assignment
             </a>
             <br /><br />
 
-            <h4>3.2.2 Retrieving Properties</h4>
+            <h3>3.2.2 Retrieving Properties</h3>
             <a href="http://localhost:4001/a5/assignment/title">
                 Get Title
             </a>
@@ -48,7 +48,7 @@ function WorkingWithObjects() {
             <br /><br />
 
 
-            <h4>3.2.3 Modifying Properties</h4>
+            <h3>3.2.3 Modifying Properties</h3>
 
 
             <input type="text"
@@ -89,13 +89,13 @@ function WorkingWithObjects() {
 
             <br /><br />
             <h2>Modules - On Your Own</h2>
-            <h4>Retrieving Objects</h4>
+            <h3>Retrieving Objects</h3>
             <a href={`http://localhost:4001/a5/module`}>
                 Get Module
             </a>
             <br /><br />
 
-            <h4>3.2.2 Retrieving Properties</h4>
+            <h3>3.2.2 Retrieving Properties</h3>
             <a href="http://localhost:4001/a5/module/name">
                 Get Module Name
             </a>
@@ -114,7 +114,7 @@ function WorkingWithObjects() {
             <br /><br />
 
 
-            <h4>3.2.3 Modifying Properties</h4>
+            <h3>3.2.3 Modifying Properties</h3>
             <input type="text"
                 onChange={(e) => setModule({
                     ...module,

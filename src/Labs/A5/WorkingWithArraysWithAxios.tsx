@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-function WorkingWithArrays() {
+function WorkingWithArraysWithAxios() {
     const API = "http://localhost:4001/a5/todos";
 
     const [todo, setTodo] = useState({
@@ -10,13 +11,58 @@ function WorkingWithArrays() {
         description: "X"
     });
 
+    const [todos, setTodos] = useState<any[]>([]);
+    const fetchTodos = async () => {
+        const response = await axios.get(API);
+        setTodos(response.data);
+    };
+    useEffect(() => {
+        fetchTodos();
+    }, []);
+
+    // Remove todos is new in axios implementation
+    const removeTodo = async (todo: { id: any; }) => {
+        const response = await axios
+            .get(`${API}/${todo.id}/delete`);
+        setTodos(response.data);
+    };
+
+    // Create todos is new in axios implementation
+    const createTodo = async () => {
+        const response = await axios.get(`${API}/create`);
+        setTodos(response.data);
+      };
+    
+
+
     return (
         <div>
-            <h2>Working with Arrays</h2>
+            <h2>3.4.5 - Working with Arrays With Axios</h2>
             <h3>3.3.1 - Retrieving Arrays</h3>
             <a href={API}>
                 Get All Todos
             </a>
+            <br /><br />
+
+            This unordered list is new in the axios implementation.
+            <button onClick={createTodo} >
+                Create Todo
+            </button>
+
+
+            <ul>
+                {todos.map((todo) => (
+                    <li key={todo.id}>
+
+                        {todo.title}
+
+                        <button onClick={() => removeTodo(todo)} >
+                            Remove
+                        </button>
+
+                    </li>
+                ))}
+            </ul>
             <br /><br />
 
             <h3>3.3.2 - Retrieving an Item from an Array by ID</h3>
@@ -104,4 +150,4 @@ function WorkingWithArrays() {
         </div>
     );
 }
-export default WorkingWithArrays;
+export default WorkingWithArraysWithAxios;
