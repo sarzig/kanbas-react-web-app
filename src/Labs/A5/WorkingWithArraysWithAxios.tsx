@@ -20,6 +20,12 @@ function WorkingWithArraysWithAxios() {
         fetchTodos();
     }, []);
 
+    const postTodo = async () => {
+        const response = await axios.post(API, todo);
+        setTodos([...todos, response.data]);
+      };
+    
+
     // Remove todos is new in axios implementation
     const removeTodo = async (todo: { id: any; }) => {
         const response = await axios
@@ -74,7 +80,6 @@ function WorkingWithArraysWithAxios() {
             <button onClick={updateTitle} >
                 Update Title of Todo with ID {todo.id} to: {todo.title}
             </button>
-
 
 
             <ul>
