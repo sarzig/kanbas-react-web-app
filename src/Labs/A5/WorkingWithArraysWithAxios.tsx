@@ -31,8 +31,20 @@ function WorkingWithArraysWithAxios() {
     const createTodo = async () => {
         const response = await axios.get(`${API}/create`);
         setTodos(response.data);
-      };
-    
+    };
+
+    // fetchTodoById is new in axios implementation
+    const fetchTodoById = async (id: number) => {
+        const response = await axios.get(`${API}/${id}`);
+        setTodo(response.data);
+    };
+
+    // updateTitle is new in axios implementation
+    const updateTitle = async () => {
+        const response = await axios.get(`${API}/${todo.id}/title/${todo.title}`);
+        setTodos(response.data);
+    };
+
 
 
     return (
@@ -49,16 +61,36 @@ function WorkingWithArraysWithAxios() {
                 Create Todo
             </button>
 
+            <br /><br />
+            ID: <input type="number" value={todo.id}
+                onChange={(e) => setTodo({
+                    ...todo, id: parseInt(e.target.value)
+                })} />
+            
+            Title: <input type="text" value={todo.title}
+                onChange={(e) => setTodo({
+                    ...todo, title: e.target.value
+                })} />
+            <button onClick={updateTitle} >
+                Update Title of Todo with ID {todo.id} to: {todo.title}
+            </button>
+
+
 
             <ul>
                 {todos.map((todo) => (
                     <li key={todo.id}>
 
-                        {todo.title}
+                        {todo.title} ({todo.id})
 
                         <button onClick={() => removeTodo(todo)} >
                             Remove
                         </button>
+
+                        <button onClick={() => fetchTodoById(todo.id)} >
+                            Edit
+                        </button>
+
 
                     </li>
                 ))}
