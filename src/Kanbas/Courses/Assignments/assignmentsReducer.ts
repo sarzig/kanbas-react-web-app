@@ -1,16 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { assignments } from "../../Database";
 
-// replace modules with assignments
-// replace module with assignment
-
 const initialState = {
     assignments: assignments,
     assignment:
     {
         title: "New Assignment",
         description: "New Description",
-        points: 100
+        points: 100,
+        due_date: "2024-01-01",
+        available_from: "2024-01-01",
+        until: "2024-01-01"
     },
 };
 
@@ -24,11 +24,13 @@ const assignmentsSlice = createSlice({
                 ...state.assignments,
             ];
         },
+        
         deleteAssignment: (state, action) => {
             state.assignments = state.assignments.filter(
                 (assignment) => assignment._id !== action.payload
             );
         },
+
         updateAssignment: (state, action) => {
             state.assignments = state.assignments.map((assignment) => {
                 if (assignment._id === action.payload._id) {
@@ -38,8 +40,9 @@ const assignmentsSlice = createSlice({
                 }
             });
         },
+
         setAssignment: (state, action) => {
-            state.assignment = action.payload;
+            state.assignment = { ...action.payload };
         },
     },
 });
