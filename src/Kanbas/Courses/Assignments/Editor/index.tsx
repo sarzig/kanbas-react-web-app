@@ -96,7 +96,7 @@ function AssignmentEditor() {
 
                     {/* Right Column for Form Fields */}
                     <div className="col-md-5">
-                        <input type="text" className="form-control mb-2" id="points" defaultValue="100" placeholder="Enter Points" 
+                        <input type="text" className="form-control mb-2" id="points" value={assignment.points} placeholder="Enter Points" 
                         onChange={(e) => handleInputChange('points', e.target.value)} />
                         <input type="text" className="form-control mb-2" id="assignmentGroup" defaultValue="ASSIGNMENTS" placeholder="Enter Assignment Group" />
                         <input type="text" className="form-control mb-2" id="displayGradeAs" defaultValue="Percentage" placeholder="Enter Display Grade as" />

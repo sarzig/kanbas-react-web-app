@@ -7,7 +7,10 @@ const initialState = {
     {
         title: "New Assignment",
         description: "New Description",
-        points: 100
+        points: 100,
+        due_date: "2024-01-01",
+        available_from: "2024-01-01",
+        until: "2024-01-01"
     },
 };
 
