@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { setAssignment, addAssignment, updateAssignment } from "../assignmentsReducer";
 import { KanbasState } from "../../../store";
 import CourseIdExtract from "../../../Functions/CourseIdExtract";
-import GetAssignmentById from "../../../Functions/GetAssignmentById";
 
 function AssignmentEditor() {
     const courseId = CourseIdExtract();
