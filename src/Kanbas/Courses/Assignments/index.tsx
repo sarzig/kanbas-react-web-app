@@ -144,7 +144,7 @@ function Assignments() {
 
                                             <div className="byline">
                                                 <Link to={`#`}>Multiple Modules</Link>&nbsp;&nbsp;&nbsp;|
-                                                &nbsp;&nbsp;&nbsp;Due {assignment.due_date}&nbsp;&nbsp;&nbsp;|
+                                                &nbsp;&nbsp;&nbsp;Due: {assignment.due_date}&nbsp;&nbsp;&nbsp;|
                                                 &nbsp;&nbsp;&nbsp;{assignment.points} pts
                                             </div>
                                         </div>

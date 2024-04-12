@@ -60,7 +60,6 @@ function KanbasNavigation({ courses }: { courses: { label: string; _id: string }
 
             {showCoursesMenu && (
                 <div className="courses-menu">
-
                     <ul>
                         {courses.map((course, index) => (
                             <Link
