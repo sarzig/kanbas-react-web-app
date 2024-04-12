@@ -35,7 +35,7 @@ function ModuleList() {
                 <li className="list-group-item p-3">
 
                     <br /><br />
-                    Name:
+                    Name:<br />
                     <input
                         className = "text-box text-box-title"
                         value={module.name}
@@ -44,7 +44,7 @@ function ModuleList() {
                     />
 
                     <br /><br />
-                    Description:
+                    Description:<br />
                     <textarea
                         className = "text-box text-box-description"
                         value={module.description}
