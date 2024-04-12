@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaRegUserCircle, FaBook, FaRegCalendarAlt, FaTachometerAlt } from "react-icons/fa";
 import { FaInbox, FaRegClock, FaPlay, FaRegCircleQuestion } from "react-icons/fa6";
@@ -17,7 +16,7 @@ interface Props {
     toggleCoursesMenu: () => void; // Define toggleCoursesMenu function in Props
 }
 
-function KanbasNavigation({ courses }: Props) {
+function KanbasNavigation({ courses, toggleCoursesMenu }: Props) {
     const links = [
         { label: "Account", icon: <FaRegUserCircle className="fs-2 nav-icon" /> },
         { label: "Dashboard", icon: <FaTachometerAlt className="fs-2 nav-icon" /> },
@@ -32,11 +31,6 @@ function KanbasNavigation({ courses }: Props) {
     ];
 
     const { pathname } = useLocation();
-    const [showCoursesMenu, setShowCoursesMenu] = useState(false);
-
-    const handleCoursesClick = () => {
-        setShowCoursesMenu(!showCoursesMenu);
-    };
 
     return (
         <div className="col main-nav-sidebar">
@@ -50,11 +44,11 @@ function KanbasNavigation({ courses }: Props) {
                     <li key={index} className={pathname.includes(link.label) ? "wd-active" : ""}>
                         {/* If the label is "Courses", toggle the CoursesMenu visibility */}
                         {link.label === "Courses" ? (
-                            <button onClick={handleCoursesClick} className="nav-link-button">
+                            <div onClick={toggleCoursesMenu} className="nav-link">
                                 {link.icon}
                                 <br />
                                 {link.label}
-                            </button>
+                            </div>
                         ) : (
                             <Link to={`/Kanbas/${link.label}`} className="nav-link">
                                 {link.icon}

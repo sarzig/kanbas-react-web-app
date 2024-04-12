@@ -1,5 +1,3 @@
-// src/Kanbas/Navigation/CoursesMenu.tsx
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
