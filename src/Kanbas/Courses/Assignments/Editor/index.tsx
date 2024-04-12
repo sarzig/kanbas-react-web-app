@@ -16,9 +16,15 @@ function AssignmentEditor() {
         state.assignmentsReducer.assignment
     );
 
+    // Pull assignments list from the useSelector KanbasState
+    // Previously deprecated function GetAssignmentById was pulling from the json, which meant assignment 
+    // was not updating.
+    const assignments = useSelector((state: KanbasState) => state.assignmentsReducer.assignments);
+
     useEffect(() => {
         if (assignmentId !== undefined && assignmentId !== 'addNewAssignment') {
-            const assignment = GetAssignmentById(assignmentId);
+            //const assignment = GetAssignmentById(assignmentId);
+            const assignment = assignments.find((assignment) => assignment._id === assignmentId);
             if (assignment) {
                 dispatch(setAssignment(assignment));
                 console.log(assignment);
