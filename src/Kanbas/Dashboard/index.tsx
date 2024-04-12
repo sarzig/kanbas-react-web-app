@@ -44,7 +44,7 @@ function Dashboard(
               <div className="card flex-shrink-0">
 
                 <Link className="card-title" to={`/Kanbas/Courses/${course._id}/Home`}>
-                  <img src={`/images/${course.image}`} alt="alt_text" className="card-img-top" />
+                  <img src={`/images/${course._id.length > 6 ? 'default_no_image_loaded.jpg' : course.image}`} alt="No Image Loaded" className="card-img-top" />
                 </Link>
 
                 <Link className="card-title" to={`/Kanbas/Courses/${course._id}/Home`} title={`${course.name} - Homepage`}>
@@ -70,8 +70,8 @@ function Dashboard(
                     <br />
 
                     <div className="card-buttons">
-                      <Link to={`/Kanbas/Courses/${course._id}/Assignments`} title={`${course.name} - Assignments`} 
-                      className="btn btn-primary">
+                      <Link to={`/Kanbas/Courses/${course._id}/Assignments`} title={`${course.name} - Assignments`}
+                        className="btn btn-primary">
                         Go
                       </Link>
 
@@ -94,8 +94,6 @@ function Dashboard(
 
                       </div>
                     </div>
-
-
                   </div>
                 </Link>
               </div>

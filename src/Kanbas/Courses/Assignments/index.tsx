@@ -42,8 +42,6 @@ function Assignments() {
         setShowDeleteDialog(false);
     };
 
-    console.log(assignmentList);
-
     return (
         <>
             {/* Confirmation dialog */}
@@ -126,7 +124,6 @@ function Assignments() {
                                                 </button>
                                                 <Link
                                                     to={`/Kanbas/Courses/${courseId}/Assignments/Editor/${assignment._id}`}
-                                                    onClick={() => console.log(assignment)}
                                                 >
                                                     <FaRegPenToSquare className="modules-icon icon-green" />
                                                 </Link>

@@ -96,9 +96,9 @@
 
 /* Courses menu */
 .courses-menu {
-    z-index: 100000;
+    z-index: 1000;
     position: fixed;
-    top: 60px;
+    top: 201px;
     left: 80px; /* Adjusted left position */
     background-color: #1413132e;
 }

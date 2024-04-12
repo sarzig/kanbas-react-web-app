@@ -7,10 +7,6 @@ function Grades() {
     const as = assignments.filter((assignment) => assignment.course === courseId);
     const es = enrollments.filter((enrollment) => enrollment.course === courseId);
 
-    console.log(courseId);
-    console.log(as);
-    console.log(es);
-
     return (
         <>
             <h1>Grades</h1>

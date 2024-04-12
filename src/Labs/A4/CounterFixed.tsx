@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 export default function CounterFixed() {
     const [count, setCount] = useState(7);
-    console.log(count);
     return (
         <div>
             <h2>Counter: {count}</h2>

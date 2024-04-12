@@ -6,7 +6,18 @@ import { IoMdMail } from "react-icons/io";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 
-function KanbasNavigation({ courses }: { courses: { label: string; _id: string }[] }) {
+interface Course {
+    _id: string;
+    name: string;
+    number: string;
+}
+
+interface Props {
+    courses: Course[];
+    toggleCoursesMenu: () => void; // Define toggleCoursesMenu function in Props
+}
+
+function KanbasNavigation({ courses }: Props) {
     const links = [
         { label: "Account", icon: <FaRegUserCircle className="fs-2 nav-icon" /> },
         { label: "Dashboard", icon: <FaTachometerAlt className="fs-2 nav-icon" /> },
@@ -27,10 +38,6 @@ function KanbasNavigation({ courses }: { courses: { label: string; _id: string }
         setShowCoursesMenu(!showCoursesMenu);
     };
 
-    const hideCoursePopupMenu = () => {
-        setShowCoursesMenu(false);
-    };
-
     return (
         <div className="col main-nav-sidebar">
             <ul className="wd-kanbas-navigation">
@@ -41,14 +48,15 @@ function KanbasNavigation({ courses }: { courses: { label: string; _id: string }
                 </li>
                 {links.map((link, index) => (
                     <li key={index} className={pathname.includes(link.label) ? "wd-active" : ""}>
+                        {/* If the label is "Courses", toggle the CoursesMenu visibility */}
                         {link.label === "Courses" ? (
-                            <Link to={`#`} onClick={handleCoursesClick}>
+                            <button onClick={handleCoursesClick} className="nav-link-button">
                                 {link.icon}
                                 <br />
                                 {link.label}
-                            </Link>
+                            </button>
                         ) : (
-                            <Link to={`/Kanbas/${link.label}`}>
+                            <Link to={`/Kanbas/${link.label}`} className="nav-link">
                                 {link.icon}
                                 <br />
                                 {link.label}
@@ -57,25 +65,6 @@ function KanbasNavigation({ courses }: { courses: { label: string; _id: string }
                     </li>
                 ))}
             </ul>
-
-            {showCoursesMenu && (
-                <div className="courses-menu">
-                    <ul>
-                        {courses.map((course, index) => (
-                            <Link
-                                to={`/Kanbas/Courses/${course._id}/Home`}
-                                onClick={hideCoursePopupMenu}
-                                className="course-menu-link"
-                            >
-                                <li key={index}>
-                                    {course.label}
-                                </li>
-                            </Link>
-                        ))}
-                    </ul>
-
-                </div>
-            )}
         </div>
     );
 }

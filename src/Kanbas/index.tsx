@@ -8,10 +8,21 @@ import db from "./Database/database2";
 import { useState } from "react";
 import store from "./store";
 import { Provider } from "react-redux";
-
+import CoursesMenu from './Navigation/CoursesMenu';
 
 
 function Kanbas() {
+  const [showCoursesMenu, setShowCoursesMenu] = useState(false);
+
+  const hideCoursePopupMenu = () => {
+    setShowCoursesMenu(false);
+  };
+
+  const toggleCoursesMenu = () => {
+    setShowCoursesMenu(prevState => !prevState);
+    console.log("Kanbas component 'sees' that you toggled Courses");
+  };
+
   const [courses, setCourses] = useState(db.courses);
   const [course, setCourse] = useState({
     _id: "0", name: "New Course", number: "New Number",
@@ -51,7 +62,13 @@ function Kanbas() {
       </div>
 
       <div className="d-flex">
-        <KanbasNavigation courses={courses.map(course => ({ label: course.name, _id: course._id }))} />
+        <KanbasNavigation
+          courses={courses}
+          toggleCoursesMenu={toggleCoursesMenu}
+        />
+        {showCoursesMenu && (
+          <CoursesMenu courses={courses} hideCoursePopupMenu={hideCoursePopupMenu} />
+        )}
         <div className="flex-grow-1 p-2">
 
           <Routes>
