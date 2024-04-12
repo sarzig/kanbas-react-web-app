@@ -51,6 +51,11 @@
     text-decoration: none;
 }
 
+.wd-kanbas-navigation li {
+    color: white;
+    text-decoration: none;
+}
+
 /* Icons should be a certain size */
 .wd-kanbas-navigation .fs-2 {
     color: #d41b2c;
@@ -93,7 +98,7 @@
 .courses-menu {
     z-index: 100000;
     position: fixed;
-    top: 0;
+    top: 60px;
     left: 80px; /* Adjusted left position */
     background-color: #1413132e;
 }

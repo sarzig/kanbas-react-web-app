@@ -4,8 +4,6 @@ import { useParams } from "react-router-dom";
 import { courses } from "../../Kanbas/Database";
 import LocationLastElement from "../Functions/LocationLastElement";
 import { HiMiniBars3 } from "react-icons/hi2";
-import { useState } from 'react';
-
 
 
 function WhiteTopBar({ onToggleCourseNav }: { onToggleCourseNav: () => void }) {
@@ -18,24 +16,12 @@ function WhiteTopBar({ onToggleCourseNav }: { onToggleCourseNav: () => void }) {
        Panopto Video */
     const lastSegment = LocationLastElement();
 
-    /*Trying to handle the toggling of the Course Navigation Menu */
-
-    const [isNavigationOpen, setNavigationOpen] = useState(true);
-
-    /* Handle the toggle feature */
-    const handleToggleNavigation = () => {
-        setNavigationOpen((prev) => !prev);
-    };
-
-    /* Handle the hover text when clicking hamburger */
-    const handleToggleTitle = () => { return isNavigationOpen ? "Hide Course Navigation Menu" : "Show Course Navigation Menu"; };
-
     return (
         <div className="white-top-bar d-flex align-items-center flex-wrap">
 
             <div className="col widescreen-top-bar">
                 <h1>
-                    <HiMiniBars3 className="top-bar-menu-hamburger" onClick={onToggleCourseNav} title={handleToggleTitle()} />
+                    <HiMiniBars3 className="top-bar-menu-hamburger" onClick={onToggleCourseNav} title="Toggle Course Navigation Menu" />
                     {course?.number ?? 'Unknown Course'}: {course?.name ?? 'Unknown Course'}  {`>`}  {lastSegment}
                     <hr />
                 </h1>
