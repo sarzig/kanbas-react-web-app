@@ -28,13 +28,15 @@ function Dashboard(
       <input value={course.endDate} className="form-control" type="date"
         onChange={(e) => setCourse({ ...course, endDate: e.target.value })} />
 
-      <button onClick={addNewCourse} >
+      <div onClick={addNewCourse}
+        className="btn btn-primary" >
         Add
-      </button>
+      </div>
 
-      <button onClick={updateCourse} >
+      <div onClick={updateCourse}
+        className="btn btn-primary" >
         Update
-      </button>
+      </div>
 
       <h2>Published Courses (12)</h2> <hr />
       <div className="row">
