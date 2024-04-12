@@ -42,7 +42,7 @@ function AssignmentEditor() {
             };
             dispatch(setAssignment(newAssignment));
         }
-    }, [assignmentId, dispatch]);
+    }, [assignmentId, dispatch, assignments]);
 
     const goBackToAssignments = () => {
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
