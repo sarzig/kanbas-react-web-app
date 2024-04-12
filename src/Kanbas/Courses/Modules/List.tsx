@@ -35,21 +35,25 @@ function ModuleList() {
                 <li className="list-group-item p-3">
 
                     <br /><br />
-
-                    <input value={module.name}
+                    Name:
+                    <input
+                        style={{ width: '100%', minHeight: '20px' }}
+                        value={module.name}
                         onChange={(e) =>
                             dispatch(setModule({ ...module, name: e.target.value }))}
                     />
 
                     <br /><br />
-
-                    <textarea value={module.description}
+                    Description:
+                    <textarea
+                        style={{ width: '100%', minHeight: '60px' }}
+                        value={module.description}
                         onChange={(e) =>
-                            dispatch(setModule({ ...module, name: e.target.value }))}
+                            dispatch(setModule({ ...module, description: e.target.value }))}
                     />
 
                     <br /><br />
-                    
+
                     <button className="btn button-topbar-medium red-button p-1"
                         onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
                         Add

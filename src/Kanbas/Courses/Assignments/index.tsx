@@ -47,17 +47,20 @@ function Assignments() {
     return (
         <>
             {/* Confirmation dialog */}
-            {showDeleteDialog && (
-                <div>
-                    <h2>Delete Assignment</h2>
-                    <p>Are you sure you want to delete this assignment?</p>
-                    <div className="modal-buttons">
-                        <button onClick={handleConfirmDelete} className="button-topbar-medium red-button">Yes</button>
-                        <button onClick={handleCancelDelete} className="button-topbar-medium">No</button>
+            <div>
+                {showDeleteDialog && (
+                    <div className="popup">
+                        <h2>Delete Assignment</h2>
+                        <p>Are you sure you want to delete this assignment?</p>
+                        <div className="modal-buttons">
+                            <button onClick={handleConfirmDelete} className="button-topbar-medium red-button">Yes</button>
+                            <button onClick={handleCancelDelete} className="button-topbar-medium">No</button>
+                        </div>
                     </div>
-                </div>
 
-            )}
+                )}
+            </div>
+
 
             <div className="row button-row">
                 <div className="col-5">
@@ -77,7 +80,7 @@ function Assignments() {
                             <button
                                 className="btn button-topbar-medium red-button">
 
-                                Assignment
+                                <GoPlus className="icon" />Assignment
 
                             </button>
                         </Link>
@@ -121,8 +124,10 @@ function Assignments() {
                                                     onClick={() => handleDeleteClick(assignment._id)}                                                >
                                                     <FaTrash className="modules-icon icon-red delete-button" />
                                                 </button>
-
-                                                <Link to={`/Kanbas/Courses/${courseId}/Assignments/Editor/${assignment._id}`}>
+                                                <Link
+                                                    to={`/Kanbas/Courses/${courseId}/Assignments/Editor/${assignment._id}`}
+                                                    onClick={() => console.log(assignment)}
+                                                >
                                                     <FaRegPenToSquare className="modules-icon icon-green" />
                                                 </Link>
                                             </div>

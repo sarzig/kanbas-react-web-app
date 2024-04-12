@@ -12,6 +12,9 @@ function AssignmentEditor() {
     const dispatch = useDispatch();
     const assignmentId = useParams().assignmentId;
 
+    const assignment = useSelector((state: KanbasState) =>
+        state.assignmentsReducer.assignment
+    );
 
     useEffect(() => {
         if (assignmentId !== undefined && assignmentId !== 'addNewAssignment') {
@@ -26,15 +29,14 @@ function AssignmentEditor() {
             const newAssignment = {
                 title: "New Assignment",
                 description: "New Description",
-                points: 100
+                points: 100,
+                due_date: "2024-01-01",
+                available_from: "2024-01-01",
+                until: "2024-01-01"
             };
             dispatch(setAssignment(newAssignment));
         }
     }, [assignmentId, dispatch]);
-
-    const assignment = useSelector((state: KanbasState) =>
-        state.assignmentsReducer.assignment
-    );
 
     const goBackToAssignments = () => {
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
@@ -46,7 +48,13 @@ function AssignmentEditor() {
         } else {
             dispatch(updateAssignment(assignment));
         }
+        console.log("Logging assignment after handleSave:");
+        console.log(assignment);
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+    };
+
+    const handleInputChange = (field: any, value: any) => {
+        dispatch(setAssignment({ ...assignment, [field]: value }));
     };
 
     return (
@@ -81,7 +89,8 @@ function AssignmentEditor() {
 
                     {/* Right Column for Form Fields */}
                     <div className="col-md-5">
-                        <input type="text" className="form-control mb-2" id="points" defaultValue="100" placeholder="Enter Points" />
+                        <input type="text" className="form-control mb-2" id="points" defaultValue="100" placeholder="Enter Points" 
+                        onChange={(e) => handleInputChange('points', e.target.value)} />
                         <input type="text" className="form-control mb-2" id="assignmentGroup" defaultValue="ASSIGNMENTS" placeholder="Enter Assignment Group" />
                         <input type="text" className="form-control mb-2" id="displayGradeAs" defaultValue="Percentage" placeholder="Enter Display Grade as" />
                         <select className="form-control mb-2" id="submissionType">
@@ -89,10 +98,33 @@ function AssignmentEditor() {
                             <option value="offline">Offline</option>
                         </select>
                         <input type="text" className="form-control mb-2" id="assign" defaultValue="everyone" placeholder="Enter Assign To" />
-                        <input type="text" className="form-control mb-2" id="due" placeholder="Enter Due Date" />
-                        <input type="text" className="form-control mb-2" id="availableFrom" placeholder="Enter Available from Date" />
-                        <input type="text" className="form-control mb-2" id="until" placeholder="Enter Until Date" />
 
+                        {/* Input field for Due Date */}
+                        <input
+                            type="date"
+                            className="form-control mb-2"
+                            id="due"
+                            value={assignment.due_date}
+                            onChange={(e) => handleInputChange('due_date', e.target.value)}
+                        />
+
+                        {/* Input field for Available from Date */}
+                        <input
+                            type="date"
+                            className="form-control mb-2"
+                            id="available_from"
+                            value={assignment.available_from}
+                            onChange={(e) => handleInputChange('available_from', e.target.value)}
+                        />
+
+                        {/* Input field for Until Date */}
+                        <input
+                            type="date"
+                            className="form-control mb-2"
+                            id="until"
+                            value={assignment.until}
+                            onChange={(e) => handleInputChange('until', e.target.value)}
+                        />
 
                         <button
                             onClick={handleSave}
