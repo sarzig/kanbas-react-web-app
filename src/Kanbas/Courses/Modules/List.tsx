@@ -14,7 +14,7 @@ import {
     setModule,
 } from "./modulesReducer";
 import { KanbasState } from "../../store"; // Import the KanbasState type
-
+import "./index.css";
 
 function ModuleList() {
     const { courseId } = useParams();
@@ -37,7 +37,7 @@ function ModuleList() {
                     <br /><br />
                     Name:
                     <input
-                        style={{ width: '100%', minHeight: '20px' }}
+                        className = "text-box text-box-title"
                         value={module.name}
                         onChange={(e) =>
                             dispatch(setModule({ ...module, name: e.target.value }))}
@@ -46,7 +46,7 @@ function ModuleList() {
                     <br /><br />
                     Description:
                     <textarea
-                        style={{ width: '100%', minHeight: '60px' }}
+                        className = "text-box text-box-description"
                         value={module.description}
                         onChange={(e) =>
                             dispatch(setModule({ ...module, description: e.target.value }))}

@@ -21,6 +21,7 @@ function AssignmentEditor() {
             const assignment = GetAssignmentById(assignmentId);
             if (assignment) {
                 dispatch(setAssignment(assignment));
+                console.log(assignment);
             } else {
                 // Handle case where assignment is not found
             }
@@ -47,6 +48,7 @@ function AssignmentEditor() {
             dispatch(addAssignment({ ...assignment, course: courseId }));
         } else {
             dispatch(updateAssignment(assignment));
+            console.log("Redux State after update:", assignment);
         }
         console.log("Logging assignment after handleSave:");
         console.log(assignment);
@@ -62,14 +64,14 @@ function AssignmentEditor() {
             Assignment Name
             <input
                 value={assignment.title}
-                onChange={(e) => dispatch(setAssignment({ ...assignment, title: e.target.value }))}
+                onChange={(e) => handleInputChange('title', e.target.value)}
                 className="form-control mb-2"
             />
 
             Assignment Description
             <input
                 value={assignment.description}
-                onChange={(e) => dispatch(setAssignment({ ...assignment, description: e.target.value }))}
+                onChange={(e) => handleInputChange('description', e.target.value)}
                 className="form-control mb-2"
             />
 

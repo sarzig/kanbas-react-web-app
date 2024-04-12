@@ -1,0 +1,13 @@
+.text-box {
+    background-color: #3937371c;
+}
+
+.text-box-title {
+    width: '100%';
+    min-height: '20px';
+}
+
+.text-box-description {
+    width: '100%'; 
+    min-height: '60px';
+}
