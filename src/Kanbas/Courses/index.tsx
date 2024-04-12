@@ -23,72 +23,32 @@ import Editor from "./Assignments/Editor/";
 //Styles
 import "../styles.css";
 import "./index.css";
+import { useState } from "react";
 
 
 /* todo: xxx implement routes as a loop */
 
-/*
-interface Course {
-  _id: string;
-  name: string;
-  number: string;
-  startDate: string;
-  endDate: string;
-  image: string;
-}
-*/
 
 function Courses(
   { courses }: { courses: any[] }
 ) {
-  /*
+  const [showCourseNav, setShowCourseNav] = useState(false);
 
-    { courses, course, setCourse, addNewCourse, deleteCourse, updateCourse }: {
-    courses: any[],
-    course: any,
-    setCourse: React.Dispatch<React.SetStateAction<any>>,
-    addNewCourse: () => void,
-    deleteCourse: (id: string) => void,
-    updateCourse: () => void
-  }
-
-  const { courseId } = useParams();
-
-  const course = courses.find((course) => course._id === courseId);
-  //Get where we are. If we're at http://localhost:3000/#/Kanbas/Courses/RS101/Panopto-Video, this returns 
-  // Panopto Video
-  const lastSegment = LocationLastElement();
-
-
-  const [isNavigationOpen, setNavigationOpen] = useState(true);
-
-  //Handle the toggle feature 
-  const handleToggleNavigation = () => {
-    setNavigationOpen((prev) => !prev);
+  const toggleCourseNav = () => {
+    setShowCourseNav(!showCourseNav);
   };
-
-  //Handle the hover text when clicking hamburger 
-  const handleToggleTitle = () => { return isNavigationOpen ? "Hide Account Navigation Menu" : "Show Account Navigation Menu"; };
-
-  const [isNavigationOpen, setNavigationOpen] = useState(true);
-*/
-
-  // these lines are ruining deploy netlify
-  //const { courseId } = useParams();
-  //const course = courses.find((course) => course._id === courseId);
-
+  
   return (
     <>
       <div className="main-content">
 
         <div className="row flex">
-          <WhiteTopBar />
+          <WhiteTopBar onToggleCourseNav={toggleCourseNav} />
         </div>
 
         <div className="flex-grow-1">
           <div className="row">
-            <CourseNavigation />
-
+          {showCourseNav && <CourseNavigation />}
             <div className="col">
 
               <Routes>

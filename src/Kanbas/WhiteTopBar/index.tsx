@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 
 
-function WhiteTopBar() {
+function WhiteTopBar({ onToggleCourseNav }: { onToggleCourseNav: () => void }) {
 
     const { courseId } = useParams();
 
@@ -35,7 +35,7 @@ function WhiteTopBar() {
 
             <div className="col widescreen-top-bar">
                 <h1>
-                    <HiMiniBars3 className="top-bar-menu-hamburger" onClick={handleToggleNavigation} title={handleToggleTitle()} />
+                    <HiMiniBars3 className="top-bar-menu-hamburger" onClick={onToggleCourseNav} title={handleToggleTitle()} />
                     {course?.number ?? 'Unknown Course'}: {course?.name ?? 'Unknown Course'}  {`>`}  {lastSegment}
                     <hr />
                 </h1>

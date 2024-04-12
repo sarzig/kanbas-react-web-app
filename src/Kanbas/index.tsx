@@ -51,7 +51,7 @@ function Kanbas() {
       </div>
 
       <div className="d-flex">
-        <KanbasNavigation />
+        <KanbasNavigation courses={courses.map(course => ({ label: course.name, _id: course._id }))} />
         <div className="flex-grow-1 p-2">
 
           <Routes>
