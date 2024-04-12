@@ -42,11 +42,11 @@ function KanbasNavigation({ courses }: { courses: { label: string; _id: string }
                 {links.map((link, index) => (
                     <li key={index} className={pathname.includes(link.label) ? "wd-active" : ""}>
                         {link.label === "Courses" ? (
-                            <button className="nav-link" onClick={handleCoursesClick}>
+                            <Link to={`#`} onClick={handleCoursesClick}>
                                 {link.icon}
                                 <br />
                                 {link.label}
-                            </button>
+                            </Link>
                         ) : (
                             <Link to={`/Kanbas/${link.label}`}>
                                 {link.icon}

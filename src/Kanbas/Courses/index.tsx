@@ -32,7 +32,7 @@ import { useState } from "react";
 function Courses(
   { courses }: { courses: any[] }
 ) {
-  const [showCourseNav, setShowCourseNav] = useState(false);
+  const [showCourseNav, setShowCourseNav] = useState(true);
 
   const toggleCourseNav = () => {
     setShowCourseNav(!showCourseNav);
