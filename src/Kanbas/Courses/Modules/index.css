@@ -1,0 +1,22 @@
+/* index.css or appropriate CSS file */
+/* PRETTY-FIED this modules */
+
+.text-box {
+    width: 100%; /* Take up entire width of parent container */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    background-color: #3937371c;
+    border: 1px solid #ccc; /* Optional: Add a border for visibility */
+}
+
+.text-box-title {
+    min-height: 20px; /* Adjust minimum height for title input */
+    padding: 8px; /* Optional: Add padding for better appearance */
+    font-size: 14px; /* Optional: Customize font size */
+}
+
+.text-box-description {
+    min-height: 60px; /* Adjust minimum height for description textarea */
+    padding: 8px; /* Optional: Add padding for better appearance */
+    font-size: 14px; /* Optional: Customize font size */
+    resize: vertical; /* Allow vertical resizing of textarea */
+}

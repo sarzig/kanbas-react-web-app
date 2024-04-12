@@ -14,7 +14,7 @@ import {
     setModule,
 } from "./modulesReducer";
 import { KanbasState } from "../../store"; // Import the KanbasState type
-
+import "./index.css";
 
 function ModuleList() {
     const { courseId } = useParams();
@@ -35,21 +35,25 @@ function ModuleList() {
                 <li className="list-group-item p-3">
 
                     <br /><br />
-
-                    <input value={module.name}
+                    Name:<br />
+                    <input
+                        className = "text-box text-box-title"
+                        value={module.name}
                         onChange={(e) =>
                             dispatch(setModule({ ...module, name: e.target.value }))}
                     />
 
                     <br /><br />
-
-                    <textarea value={module.description}
+                    Description:<br />
+                    <textarea
+                        className = "text-box text-box-description"
+                        value={module.description}
                         onChange={(e) =>
-                            dispatch(setModule({ ...module, name: e.target.value }))}
+                            dispatch(setModule({ ...module, description: e.target.value }))}
                     />
 
                     <br /><br />
-                    
+
                     <button className="btn button-topbar-medium red-button p-1"
                         onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
                         Add
