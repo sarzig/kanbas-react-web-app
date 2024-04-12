@@ -28,13 +28,15 @@ function Dashboard(
       <input value={course.endDate} className="form-control" type="date"
         onChange={(e) => setCourse({ ...course, endDate: e.target.value })} />
 
-      <button onClick={addNewCourse} >
+      <div onClick={addNewCourse}
+        className="btn btn-primary" >
         Add
-      </button>
+      </div>
 
-      <button onClick={updateCourse} >
+      <div onClick={updateCourse}
+        className="btn btn-primary" >
         Update
-      </button>
+      </div>
 
       <h2>Published Courses (12)</h2> <hr />
       <div className="row">
@@ -44,7 +46,7 @@ function Dashboard(
               <div className="card flex-shrink-0">
 
                 <Link className="card-title" to={`/Kanbas/Courses/${course._id}/Home`}>
-                  <img src={`/images/${course.image}`} alt="alt_text" className="card-img-top" />
+                  <img src={`/images/${course._id.length > 6 ? 'default_no_image_loaded.jpg' : course.image}`} alt="alt_text" className="card-img-top" />
                 </Link>
 
                 <Link className="card-title" to={`/Kanbas/Courses/${course._id}/Home`} title={`${course.name} - Homepage`}>
@@ -70,8 +72,8 @@ function Dashboard(
                     <br />
 
                     <div className="card-buttons">
-                      <Link to={`/Kanbas/Courses/${course._id}/Assignments`} title={`${course.name} - Assignments`} 
-                      className="btn btn-primary">
+                      <Link to={`/Kanbas/Courses/${course._id}/Assignments`} title={`${course.name} - Assignments`}
+                        className="btn btn-primary">
                         Go
                       </Link>
 
@@ -94,8 +96,6 @@ function Dashboard(
 
                       </div>
                     </div>
-
-
                   </div>
                 </Link>
               </div>

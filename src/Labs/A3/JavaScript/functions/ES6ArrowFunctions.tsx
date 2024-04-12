@@ -6,7 +6,6 @@ const subtract = (a: number, b: number) => {
 }
 
 const threeMinusOne = subtract(3, 1);
-console.log(threeMinusOne);
 
 function ES6ArrowFunctions() {
     return (
