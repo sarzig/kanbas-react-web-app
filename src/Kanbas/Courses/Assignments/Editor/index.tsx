@@ -26,7 +26,6 @@ function AssignmentEditor() {
             const assignment = assignments.find((assignment) => assignment._id === assignmentId);
             if (assignment) {
                 dispatch(setAssignment(assignment));
-                console.log(assignment);
             } else {
                 // Handle case where assignment is not found
             }
@@ -53,10 +52,7 @@ function AssignmentEditor() {
             dispatch(addAssignment({ ...assignment, course: courseId }));
         } else {
             dispatch(updateAssignment(assignment));
-            console.log("Redux State after update:", assignment);
         }
-        console.log("Logging assignment after handleSave:");
-        console.log(assignment);
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
     };
 

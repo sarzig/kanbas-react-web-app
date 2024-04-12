@@ -365,3 +365,7 @@ body * {
     border-radius: 12px;
     padding: 2px;
 }
+
+.btn-primary {
+    margin-right: 3px;
+}

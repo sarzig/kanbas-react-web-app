@@ -26,7 +26,6 @@ import FunctionDestructing from "./functions/FunctionDestructing";
 
 
 function JavaScript() {
-    console.log("Hello World!");
     return (
         <div>
             <div className="container">
