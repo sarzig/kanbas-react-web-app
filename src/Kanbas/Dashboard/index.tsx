@@ -73,12 +73,12 @@ function Dashboard(
 
                     <div className="card-buttons">
                       <Link to={`/Kanbas/Courses/${course._id}/Assignments`} title={`${course.name} - Assignments`}
-                        className="btn btn-primary">
+                        className="btn btn-primary gray-dashboard-button">
                         Go
                       </Link>
 
                       <div className="card-button-group">
-                        <div className="btn btn-primary"
+                        <div className="btn btn-primary gray-dashboard-button"
                           onClick={(event) => {
                             event.preventDefault();
                             setCourse(course);

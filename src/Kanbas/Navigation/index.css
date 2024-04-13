@@ -73,7 +73,7 @@
   Custom icons for navigation bar
   */
 .custom-northeastern-icon {
-    background-image: url('../../images/custom_icons/northeastern_icon.png');
+    background-image: url('../../../public/images/custom_icons/northeastern_icon.png');
     background-size: cover;
     width: 70px;
     height: 45;
@@ -94,6 +94,14 @@
     border: 1pt solid rgb(151, 149, 149);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
+
+/* Hide courses menu along with Kanbas Navigation column on small screens */
+@media (max-width: 768px) {
+    .courses-menu {
+        display: none;
+    }
+}
+
 
 .courses-menu ul {
     list-style: none;

@@ -161,7 +161,8 @@ function WorkingWithArraysWithAxios() {
                 onChange={(e) => setTodo({
                     ...todo, title: e.target.value
                 })} />
-            <br />
+            <br /><br />
+            <h3>3.3.7 - On your own</h3>
             <a href={`${API}/${todo.id}/title/${todo.title}`} >
                 Update Title of Todo with ID {todo.id} to: {todo.title}
             </a>
@@ -182,7 +183,7 @@ function WorkingWithArraysWithAxios() {
             </a>
             <br /><br />
 
-            // xxx todo: implement the completed attribute!
+            xxx todo: implement the completed attribute!
 
         </div>
     );

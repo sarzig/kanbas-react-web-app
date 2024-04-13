@@ -369,3 +369,13 @@ body * {
 .btn-primary {
     margin-right: 3px;
 }
+
+.gray-dashboard-button {
+    background-color: gray;
+    border: 1px solid gray;
+}
+
+.gray-dashboard-button:hover {
+    background-color: rgba(128, 128, 128, 0.742);
+    border: 1px solid gray;
+}

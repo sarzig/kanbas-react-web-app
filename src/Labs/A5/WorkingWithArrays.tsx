@@ -99,7 +99,7 @@ function WorkingWithArrays() {
             </a>
             <br /><br />
 
-            // xxx todo: implement the completed attribute!
+            xxx todo: implement the completed attribute!
 
         </div>
     );
