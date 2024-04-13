@@ -12,6 +12,10 @@ import axios from "axios";
 
 
 function Kanbas() {
+  const COURSES_API = "http://localhost:4001/api/courses";
+
+
+  // Handling courses menu____________________________________________
   const [showCoursesMenu, setShowCoursesMenu] = useState(false);
 
   const hideCoursePopupMenu = () => {
@@ -20,50 +24,61 @@ function Kanbas() {
 
   const toggleCoursesMenu = () => {
     setShowCoursesMenu(prevState => !prevState);
-    console.log("Kanbas component 'sees' that you toggled Courses");
   };
+  // End handling courses menu
 
+  // Handing courses___________________________________________________
+  // Initializing default values for courses and course
   const [courses, setCourses] = useState<any[]>([]);
 
-  const COURSES_API = "http://localhost:4001/api/courses";
   const findAllCourses = async () => {
     const response = await axios.get(COURSES_API);
     setCourses(response.data);
   };
+
   useEffect(() => {
     findAllCourses();
   }, []);
 
-
   const [course, setCourse] = useState({
-    _id: "0", name: "New Course", number: "New Number",
-    startDate: "2023-09-10", endDate: "2023-12-15",
-    image: "/images/reactjs.jpg"
+    _id: "0",
+    name: "New Course",
+    number: "New Number",
+    startDate: "2023-09-10",
+    endDate: "2023-12-15",
+    image: "/images/default_no_image_loaded.jpg"
   });
 
-  const addNewCourse = () => {
-    const newCourse = {
-      ...course,
-      _id: new Date().getTime().toString()
-    };
-    setCourses([...courses, { ...course, ...newCourse }]);
+  const addNewCourse = async () => {
+    const response = await axios.post(COURSES_API, course);
+    setCourses([...courses, response.data]);
   };
 
-  const deleteCourse = (courseId: string) => {
-    setCourses(courses.filter((course) => course._id !== courseId));
+
+  const deleteCourse = async (courseId: string) => {
+    const response = await axios.delete(
+      `${COURSES_API}/${courseId}`
+    );
+    setCourses(courses.filter(
+      (c) => c._id !== courseId));
   };
 
-  const updateCourse = () => {
+
+  const updateCourse = async () => {
+    const response = await axios.put(
+      `${COURSES_API}/${course._id}`,
+      course
+    );
     setCourses(
       courses.map((c) => {
         if (c._id === course._id) {
           return course;
-        } else {
-          return c;
         }
+        return c;
       })
     );
   };
+  // End handling courses______________________________________________
 
 
   return (
@@ -94,7 +109,7 @@ function Kanbas() {
                 deleteCourse={deleteCourse}
                 updateCourse={updateCourse} />
             } />
-            <Route path="Courses/:courseId/*" element={<Courses courses={courses} />} />
+            <Route path="Courses/:courseId/*" element={<Courses />} />
           </Routes>
         </div>
       </div>

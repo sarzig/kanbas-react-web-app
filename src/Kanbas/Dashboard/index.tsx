@@ -1,30 +1,55 @@
-import React from "react";
 import { Link } from "react-router-dom";
-// import { courses } from "../Database";
 import "./index.css";
 
 function Dashboard(
   { courses, course, setCourse, addNewCourse, deleteCourse, updateCourse }: {
     courses: any[],
     course: any,
-    setCourse: React.Dispatch<React.SetStateAction<any>>,
+    setCourse: (course: any) => void,
     addNewCourse: () => void,
     deleteCourse: (id: string) => void,
     updateCourse: () => void
   }
 ) {
+  /*
+  console.log("dashboard");
+  console.log("the singular course in the dashboard with name 'course' is:");
+  console.log(course);
+  console.log("the courses in the dashboard are:");
+  console.log(courses);
+*/
+  const addCourseHandler = () => {
+    console.log("addCourseHandler invoked");
+    if (course._id === "0") {
+      console.log("addCourseHandler - course id is 0");
+      setCourse({
+        _id: "0",
+        name: course.name,
+        number: course.number,
+        startDate: course.startDate,
+        endDate: course.endDate,
+        image: course.image
+      });
+      addNewCourse();
+    }
+  }
 
   return (
     <div>
       <h1>Dashboard</h1>
+      <h2>All Courses</h2>
+
       <hr />
       <h5>Course</h5>
       <input value={course.name} className="form-control"
         onChange={(e) => setCourse({ ...course, name: e.target.value })} />
+
       <input value={course.number} className="form-control"
         onChange={(e) => setCourse({ ...course, number: e.target.value })} />
+
       <input value={course.startDate} className="form-control" type="date"
         onChange={(e) => setCourse({ ...course, startDate: e.target.value })} />
+
       <input value={course.endDate} className="form-control" type="date"
         onChange={(e) => setCourse({ ...course, endDate: e.target.value })} />
 
@@ -38,7 +63,8 @@ function Dashboard(
         Update
       </div>
 
-      <h2>Published Courses (12)</h2> <hr />
+      <h2>Published Courses (12)</h2>
+      <hr />
       <div className="row">
         <div className="row row-cols-1 row-cols-md-5 g-200">
           {courses.map((course) => (
@@ -103,6 +129,16 @@ function Dashboard(
           ))}
         </div>
       </div>
+      Troubleshooting
+
+      <ul>
+        {courses.map((course) => (
+          <li key={course._id}>
+            id:{course._id}, name:{course.name}, number:{course.number}, startDate:{course.startDate}, endDate:{course.endDate}<br />
+
+          </li>
+        ))}
+      </ul>
     </div >
   );
 }

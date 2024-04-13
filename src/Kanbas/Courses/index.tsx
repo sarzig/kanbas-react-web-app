@@ -1,6 +1,6 @@
 
 // React Elements
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useParams } from "react-router-dom";
 
 // Icons
 
@@ -15,28 +15,31 @@ import Home from "./Home/";
 import Assignments from "./Assignments";
 import Editor from "./Assignments/Editor/";
 
-
-// Functions
-
-// Data
-
 //Styles
 import "../styles.css";
 import "./index.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 
-/* todo: xxx implement routes as a loop */
 
-
-function Courses(
-  { courses }: { courses: any[] }
-) {
+function Courses() {
   const [showCourseNav, setShowCourseNav] = useState(true);
 
   const toggleCourseNav = () => {
     setShowCourseNav(!showCourseNav);
   };
+
+  const { courseId } = useParams();
+  const COURSES_API = "http://localhost:4000/api/courses";
+  const [course, setCourse] = useState<any>({ _id: "" });
+  const findCourseById = async (courseId?: string) => {
+    const response = await axios.get(
+      `${COURSES_API}/${courseId}`
+    );
+    setCourse(response.data);
+  };
+
   
   return (
     <>
