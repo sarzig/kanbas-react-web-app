@@ -107,16 +107,6 @@ function Dashboard(
           ))}
         </div>
       </div>
-      Troubleshooting
-
-      <ul>
-        {courses.map((course) => (
-          <li key={course._id}>
-            id:{course._id}, name:{course.name}, number:{course.number}, startDate:{course.startDate}, endDate:{course.endDate}<br />
-
-          </li>
-        ))}
-      </ul>
     </div >
   );
 }
