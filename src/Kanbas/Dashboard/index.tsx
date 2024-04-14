@@ -11,28 +11,6 @@ function Dashboard(
     updateCourse: () => void
   }
 ) {
-  /*
-  console.log("dashboard");
-  console.log("the singular course in the dashboard with name 'course' is:");
-  console.log(course);
-  console.log("the courses in the dashboard are:");
-  console.log(courses);
-*/
-  const addCourseHandler = () => {
-    console.log("addCourseHandler invoked");
-    if (course._id === "0") {
-      console.log("addCourseHandler - course id is 0");
-      setCourse({
-        _id: "0",
-        name: course.name,
-        number: course.number,
-        startDate: course.startDate,
-        endDate: course.endDate,
-        image: course.image
-      });
-      addNewCourse();
-    }
-  }
 
   return (
     <div>
@@ -63,7 +41,7 @@ function Dashboard(
         Update
       </div>
 
-      <h2>Published Courses (12)</h2>
+      <h2>Published Courses ({courses.length})</h2>
       <hr />
       <div className="row">
         <div className="row row-cols-1 row-cols-md-5 g-200">

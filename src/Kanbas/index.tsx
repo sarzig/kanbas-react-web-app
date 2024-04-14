@@ -9,6 +9,7 @@ import store from "./store";
 import { Provider } from "react-redux";
 import CoursesMenu from './Navigation/CoursesMenu';
 import axios from "axios";
+import CourseNavigation from "./Courses/Navigation";
 
 
 function Kanbas() {
@@ -50,6 +51,7 @@ function Kanbas() {
   });
 
   const addNewCourse = async () => {
+    console.log('course', course)
     const response = await axios.post(COURSES_API, course);
     setCourses([...courses, response.data]);
   };
