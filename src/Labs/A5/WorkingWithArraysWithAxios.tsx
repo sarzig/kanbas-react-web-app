@@ -16,9 +16,22 @@ function WorkingWithArraysWithAxios() {
         const response = await axios.get(API);
         setTodos(response.data);
     };
+
     useEffect(() => {
-        fetchTodos();
-    }, [fetchTodos]);
+        const fetchTodos = async () => {
+            try {
+                const response = await axios.get(API);
+                setTodos(response.data);
+            } catch (error) {
+                console.error('Error fetching todos:', error);
+            }
+        };
+
+        fetchTodos(); // Call fetchTodos immediately
+
+        // No need to include fetchTodos in the dependency array
+    }, []); // Empty dependency array means this effect runs once on component mount
+
 
     /*
     const postTodo = async () => {
