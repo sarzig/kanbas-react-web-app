@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-function WorkingWithObjects() {
+function WorkingWithObjectsWithAxios() {
 
     const [assignment, setAssignment] = useState({
         id: 1, title: "NodeJS Assignment",
@@ -45,4 +45,4 @@ function WorkingWithObjects() {
         </div >
     );
 }
-export default WorkingWithObjects;
+export default WorkingWithObjectsWithAxios;
