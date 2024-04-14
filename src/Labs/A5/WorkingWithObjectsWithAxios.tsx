@@ -13,12 +13,12 @@ function WorkingWithObjectsWithAxios() {
 
     const ASSIGNMENT_URL = `http://localhost:4001/a5/assignment`;
 
-    /*
+
     const fetchAssignment = async () => {
         const response = await axios.get(`${ASSIGNMENT_URL}`);
         setAssignment(response.data);
     };
-    */
+
 
     const updateTitle = async () => {
         const response = await axios
