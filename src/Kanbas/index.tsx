@@ -88,7 +88,8 @@ function Kanbas() {
   return (
     <Provider store={store}>
       <div className="row flex">
-        <BlackTopBar />
+        <BlackTopBar courses={courses} />
+
       </div>
 
       <div className="d-flex">
@@ -113,7 +114,7 @@ function Kanbas() {
                 deleteCourse={deleteCourse}
                 updateCourse={updateCourse} />
             } />
-            <Route path="Courses/:courseId/*" element={<Courses />} />
+            <Route path="Courses/:courseId/*" element={<Courses courses={courses}/>} />
           </Routes>
         </div>
       </div>

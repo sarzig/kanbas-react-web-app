@@ -1,13 +1,16 @@
 /* Black bar that pops up on small screen */
 import { FaBars, FaAngleDown } from 'react-icons/fa';
 import "./index.css";
-import { courses } from "../Database";
 import LocationLastElement from "../Functions/LocationLastElement";
 import CourseIdExtract from '../Functions/CourseIdExtract';
 import "../styles.css";
 
 
-function BlackTopBar() {
+function BlackTopBar({
+    courses,
+}: {
+    courses: any[];
+}) {
 
     // Extract the final segment of the path (for http://localhost:3000/#/Kanbas/Dashboard it returns Dashboard)
     const lastSegment = LocationLastElement();

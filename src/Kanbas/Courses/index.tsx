@@ -23,7 +23,10 @@ import { useState } from "react";
 
 
 
-function Courses() {
+function Courses(
+  { courses }: { courses: any[] }
+) {
+
   const [showCourseNav, setShowCourseNav] = useState(true);
 
   const toggleCourseNav = () => {
@@ -47,7 +50,7 @@ const findCourseById = async (courseId?: string) => {
       <div className="main-content">
 
         <div className="row flex">
-          <WhiteTopBar onToggleCourseNav={toggleCourseNav} />
+          <WhiteTopBar courses={courses} onToggleCourseNav={toggleCourseNav} />
         </div>
 
         <div className="flex-grow-1">

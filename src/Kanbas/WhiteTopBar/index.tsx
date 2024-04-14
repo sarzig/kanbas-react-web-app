@@ -1,19 +1,24 @@
 /* White bar that pops up on medium to large screen */
 import "./index.css";
-import { useParams } from "react-router-dom";
-import { courses } from "../../Kanbas/Database";
 import LocationLastElement from "../Functions/LocationLastElement";
 import { HiMiniBars3 } from "react-icons/hi2";
+import CourseIdExtract from "../Functions/CourseIdExtract";
 
 
-function WhiteTopBar({ onToggleCourseNav }: { onToggleCourseNav: () => void }) {
+function WhiteTopBar({
+    courses,
+    onToggleCourseNav,
+}: {
+    courses: any[];
+    onToggleCourseNav: () => void;
+}) {
 
-    const { courseId } = useParams();
 
+    const courseId = CourseIdExtract();
     const course = courses.find((course) => course._id === courseId);
 
     /* Get where we are. If we're at http://localhost:3000/#/Kanbas/Courses/RS101/Panopto-Video, this returns 
-       Panopto Video */
+         Panopto Video */
     const lastSegment = LocationLastElement();
 
     return (
