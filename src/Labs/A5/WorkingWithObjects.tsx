@@ -3,6 +3,8 @@ import React, { useState } from "react";
 
 function WorkingWithObjects() {
 
+    const API_BASE = process.env.REACT_APP_API_BASE;
+
     const [assignment, setAssignment] = useState({
         id: 1, title: "NodeJS Assignment",
         description: "Create a NodeJS server with ExpressJS",
@@ -11,7 +13,7 @@ function WorkingWithObjects() {
         score: 0,
     });
 
-    const ASSIGNMENT_URL = `http://localhost:4001/a5/assignment`;
+    const ASSIGNMENT_URL = `${API_BASE}/a5/assignment`;
 
     const [module, setModule] = useState({
         id: 1,
@@ -20,7 +22,7 @@ function WorkingWithObjects() {
         course: "Baby 101"
     });
 
-    const MODULE_URL = `http://localhost:4001/a5/module`;
+    const MODULE_URL = `${API_BASE}/a5/module`;
 
 
     return (
@@ -28,21 +30,21 @@ function WorkingWithObjects() {
             <h3>Working With Objects</h3>
 
             <h3>Retrieving Objects</h3>
-            <a href={`http://localhost:4001/a5/assignment`}>
+            <a href={`${API_BASE}/a5/assignment`}>
                 Get Assignment
             </a>
             <br /><br />
 
             <h3>3.2.2 Retrieving Properties</h3>
-            <a href="http://localhost:4001/a5/assignment/title">
+            <a href={`${API_BASE}/a5/assignment/title`}>
                 Get Title
             </a>
             <br />
-            <a href="http://localhost:4001/a5/assignment/score">
+            <a href={`${API_BASE}/a5/assignment/score`}>
                 Get Score
             </a>
             <br />
-            <a href="http://localhost:4001/a5/assignment/completed">
+            <a href={`${API_BASE}/a5/assignment/completed`}>
                 Get Completed
             </a>
             <br /><br />
@@ -90,31 +92,31 @@ function WorkingWithObjects() {
             <br /><br />
             <h2>Modules - On Your Own</h2>
             <h3>Retrieving Objects</h3>
-            <a href={`http://localhost:4001/a5/module`}>
+            <a href={`${API_BASE}/a5/module`}>
                 Get Module
             </a>
             <br /><br />
 
             <h3>3.2.2 Retrieving Properties</h3>
-            <a href="http://localhost:4001/a5/module/name">
+            <a href={`${API_BASE}/a5/module/name`}>
                 Get Module Name
             </a>
             <br />
-            <a href="http://localhost:4001/a5/module/id">
+            <a href={`${API_BASE}/a5/module/id`}>
                 Get Module ID
             </a>
             <br />
-            <a href="http://localhost:4001/a5/module/description">
+            <a href={`${API_BASE}/a5/module/description`}>
                 Get Module Description
             </a>
             <br />
-            <a href="http://localhost:4001/a5/module/course">
+            <a href={`${API_BASE}/a5/module/course`}>
                 Get Module Course
             </a>
             <br /><br />
 
 
-            <h3>3.2.3 Modifying Properties</h3>
+            <h3>3.2.3 Modifying Properties for Module</h3>
             <input type="text"
                 onChange={(e) => setModule({
                     ...module,

@@ -11,7 +11,8 @@ function WorkingWithObjectsWithAxios() {
         score: 0,
     });
 
-    const ASSIGNMENT_URL = `http://localhost:4001/a5/assignment`;
+    const API_BASE = process.env.REACT_APP_API_BASE;
+    const ASSIGNMENT_URL = `${API_BASE}/a5/assignment`;
 
     // Memoize fetchAssignment using useCallback
     const fetchAssignment = useCallback(async () => {

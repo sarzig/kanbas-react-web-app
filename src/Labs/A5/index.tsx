@@ -7,10 +7,12 @@ import WorkingWithArraysWithAxios from "./WorkingWithArraysWithAxios";
 
 
 function Assignment5() {
+    const API_BASE = process.env.REACT_APP_API_BASE;
+
     return (
         <div>
             <h1>Assignment 5</h1>
-            <a href="http://localhost:4001/a5/welcome">
+            <a href={`${API_BASE}/a5/welcome`}>
                 Welcome
             </a><br /><br />
 

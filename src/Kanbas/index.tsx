@@ -11,11 +11,10 @@ import CoursesMenu from './Navigation/CoursesMenu';
 import axios from "axios";
 
 function Kanbas() {
-  //for local
-  //const COURSES_API = "http://localhost:4001/api/courses";
+  const API_BASE = process.env.REACT_APP_API_BASE;
 
   // for web deployment:
-  const COURSES_API = "https://kanbas-node-server-app-96jf.onrender.com/api/courses";
+  const COURSES_API = `${API_BASE}/api/courses`;
 
 
   // Handling courses menu____________________________________________

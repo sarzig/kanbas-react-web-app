@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 function WorkingWithArraysWithAxios() {
-    const API = "http://localhost:4001/a5/todos";
+    const API_BASE = process.env.REACT_APP_API_BASE;
+    const API = `${API_BASE}/a5/todos`;
 
     const [todo, setTodo] = useState({
         id: 1,
@@ -33,7 +34,7 @@ function WorkingWithArraysWithAxios() {
         fetchTodos(); // Call fetchTodos immediately
 
         // No need to include fetchTodos in the dependency array
-    }, []); // Empty dependency array means this effect runs once on component mount
+    }, [API]); // Empty dependency array means this effect runs once on component mount
 
 
     /*
