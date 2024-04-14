@@ -12,18 +12,30 @@ function WorkingWithObjectsWithAxios() {
     });
 
     const ASSIGNMENT_URL = `http://localhost:4001/a5/assignment`;
+
+    /*
     const fetchAssignment = async () => {
         const response = await axios.get(`${ASSIGNMENT_URL}`);
         setAssignment(response.data);
     };
+    */
+
     const updateTitle = async () => {
         const response = await axios
             .get(`${ASSIGNMENT_URL}/title/${assignment.title}`);
         setAssignment(response.data);
     };
+
     useEffect(() => {
-        fetchAssignment();
-    }, []);
+        const fetchAssignment = async () => {
+            const response = await axios.get(`${ASSIGNMENT_URL}`);
+            setAssignment(response.data);
+        };
+
+        fetchAssignment(); // Initial fetch on component mount
+
+        // Include fetchAssignment in the dependency array
+    }, [fetchAssignment]); // Now useEffect will re-run if fetchAssignment changes
 
     return (
         <div>
