@@ -18,7 +18,7 @@ function WorkingWithArraysWithAxios() {
     };
     useEffect(() => {
         fetchTodos();
-    }, []);
+    }, [fetchTodos]);
 
     /*
     const postTodo = async () => {
@@ -51,7 +51,6 @@ function WorkingWithArraysWithAxios() {
         const response = await axios.get(`${API}/${todo.id}/title/${todo.title}`);
         setTodos(response.data);
     };
-
 
 
     return (

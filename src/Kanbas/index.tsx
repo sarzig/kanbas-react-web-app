@@ -60,19 +60,16 @@ function Kanbas() {
 
 
   const deleteCourse = async (courseId: string) => {
-    const response = await axios.delete(
-      `${COURSES_API}/${courseId}`
-    );
-    setCourses(courses.filter(
-      (c) => c._id !== courseId));
+    const response = await axios.delete(`${COURSES_API}/${courseId}`);
+    setCourses(courses.filter((c) => c._id !== courseId));
+    console.log("deleteCourse response:", response); // logging to actually use the response
   };
 
 
   const updateCourse = async () => {
-    const response = await axios.put(
-      `${COURSES_API}/${course._id}`,
-      course
-    );
+    const response = await axios.put(`${COURSES_API}/${course._id}`, course);
+    console.log("updateCourse response:", response); // logging to actually use the response
+
     setCourses(
       courses.map((c) => {
         if (c._id === course._id) {
@@ -83,7 +80,7 @@ function Kanbas() {
     );
   };
 
-  
+
   // End handling courses______________________________________________
 
 

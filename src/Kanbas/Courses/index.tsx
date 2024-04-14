@@ -30,19 +30,18 @@ function Courses() {
     setShowCourseNav(!showCourseNav);
   };
 
-  const COURSES_API = "https://kanbas-node-server-app-96jf.onrender.com/api/courses";
-
   /*
-  const [course, setCourse] = useState<any>({ _id: "" });
-  const findCourseById = async (courseId?: string) => {
-    const response = await axios.get(
-      `${COURSES_API}/${courseId}`
-    );
-    setCourse(response.data);
-  };
-  */
+const COURSES_API = "https://kanbas-node-server-app-96jf.onrender.com/api/courses";
+const [course, setCourse] = useState<any>({ _id: "" });
+const findCourseById = async (courseId?: string) => {
+  const response = await axios.get(
+    `${COURSES_API}/${courseId}`
+  );
+  setCourse(response.data);
+};
+*/
 
-  
+
   return (
     <>
       <div className="main-content">
@@ -53,7 +52,7 @@ function Courses() {
 
         <div className="flex-grow-1">
           <div className="row">
-          {showCourseNav && <CourseNavigation />}
+            {showCourseNav && <CourseNavigation />}
             <div className="col">
 
               <Routes>
