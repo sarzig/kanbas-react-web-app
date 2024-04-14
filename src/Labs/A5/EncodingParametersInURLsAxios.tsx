@@ -20,13 +20,16 @@ function EncodingParametersInURLs() {
 
 
     const [welcome, setWelcome] = useState("");
-    const fetchWelcome = async () => {
-        const response = await axios.get(`${API_BASE}/a5/welcome`);
-        setWelcome(response.data);
-    };
     useEffect(() => {
-        fetchWelcome();
-    }, []);
+        const fetchWelcome = async () => {
+            const response = await axios.get(`${API_BASE}/a5/welcome`);
+            setWelcome(response.data);
+        };
+
+        fetchWelcome(); // Initial fetch on component mount
+
+        // No need to include fetchWelcome in the dependency array
+    }); // Empty dependency array means this effect runs once on mount
 
     return (
         <div>

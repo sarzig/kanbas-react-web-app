@@ -33,14 +33,16 @@ function Kanbas() {
   // Initializing default values for courses and course
   const [courses, setCourses] = useState<any[]>([]);
 
-  const findAllCourses = async () => {
-    const response = await axios.get(COURSES_API);
-    setCourses(response.data);
-  };
-
   useEffect(() => {
-    findAllCourses();
-  }, []);
+    const findAllCourses = async () => {
+      const response = await axios.get(COURSES_API);
+      setCourses(response.data);
+    };
+
+    findAllCourses(); // Initial fetch on component mount
+
+    // No need to include findAllCourses in the dependency array
+  }); // Empty dependency array means this effect runs once on mount
 
   const [course, setCourse] = useState({
     _id: "0",
