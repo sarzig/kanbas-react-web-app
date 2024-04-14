@@ -8,6 +8,7 @@ import WorkingWithArraysWithAxios from "./WorkingWithArraysWithAxios";
 
 function Assignment5() {
     const API_BASE = process.env.REACT_APP_API_BASE;
+    console.log('API_BASE:', API_BASE);
 
     return (
         <div>
