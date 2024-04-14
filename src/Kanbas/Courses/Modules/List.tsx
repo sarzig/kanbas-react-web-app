@@ -1,23 +1,48 @@
 import { FaCheckCircle } from "react-icons/fa";
-import { useParams } from "react-router";
+//import { useParams } from "react-router";
 import { RxDotsVertical } from "react-icons/rx";
 import { PiDotsSixVerticalBold } from "react-icons/pi";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { GoPlus } from "react-icons/go";
 import "../../styles.css";
 import "../Assignments/index.css";
+import "./index.css";
+
 import { useSelector, useDispatch } from "react-redux";
 import {
     addModule,
     deleteModule,
     updateModule,
     setModule,
+    setModules
 } from "./modulesReducer";
+import * as client from "./client";
+
 import { KanbasState } from "../../store"; // Import the KanbasState type
-import "./index.css";
+import { useEffect } from "react";
+import CourseIdExtract from "../../Functions/CourseIdExtract";
 
 function ModuleList() {
-    const { courseId } = useParams();
+    const courseId = CourseIdExtract();
+    useEffect(() => {
+        client.findModulesForCourse(courseId)
+            .then((modules) =>
+                dispatch(setModules(modules))
+            );
+    }, [courseId]);
+
+    const handleDeleteModule = (moduleId: string) => {
+        client.deleteModule(moduleId).then((status) => {
+          dispatch(deleteModule(moduleId));
+        });
+      };
+
+    const handleAddModule = () => {
+        client.createModule(courseId, module).then((module) => {
+          dispatch(addModule(module));
+        });
+      };    
+
     const moduleList = useSelector((state: KanbasState) =>
         state.modulesReducer.modules // Use KanbasState to define the type
     );
@@ -37,7 +62,7 @@ function ModuleList() {
                     <br /><br />
                     Name:<br />
                     <input
-                        className = "text-box text-box-title"
+                        className="text-box text-box-title"
                         value={module.name}
                         onChange={(e) =>
                             dispatch(setModule({ ...module, name: e.target.value }))}
@@ -46,7 +71,7 @@ function ModuleList() {
                     <br /><br />
                     Description:<br />
                     <textarea
-                        className = "text-box text-box-description"
+                        className="text-box text-box-description"
                         value={module.description}
                         onChange={(e) =>
                             dispatch(setModule({ ...module, description: e.target.value }))}
@@ -55,7 +80,7 @@ function ModuleList() {
                     <br /><br />
 
                     <button className="btn button-topbar-medium red-button p-1"
-                        onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+                        onClick={handleAddModule}>
                         Add
                     </button>
 
@@ -86,7 +111,7 @@ function ModuleList() {
 
                                     <button
                                         className="btn button-topbar-medium red-button mt-0"
-                                        onClick={() => dispatch(deleteModule(module._id))}>
+                                        onClick={() => handleDeleteModule(module._id)} >
                                         Delete
                                     </button>
                                     <FaCheckCircle className="modules-icon icon-green" />

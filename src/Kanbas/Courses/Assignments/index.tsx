@@ -15,6 +15,7 @@ import "../../styles.css";
 import "./index.css";
 
 function Assignments() {
+
     const { courseId } = useParams();
 
     const assignmentList = useSelector((state: KanbasState) =>
@@ -59,7 +60,7 @@ function Assignments() {
                 )}
             </div>
 
-
+            To my grader: Please note, I was unable to complete the graduate Assignments section for Assignment 5. Thanks~Sarah
             <div className="row button-row">
                 <div className="col-5">
                     <input className="form-control red-search" type="text"
