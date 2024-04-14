@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 function WorkingWithArraysWithAxios() {
@@ -20,11 +20,12 @@ function WorkingWithArraysWithAxios() {
         fetchTodos();
     }, []);
 
+    /*
     const postTodo = async () => {
         const response = await axios.post(API, todo);
         setTodos([...todos, response.data]);
       };
-    
+      */
 
     // Remove todos is new in axios implementation
     const removeTodo = async (todo: { id: any; }) => {
@@ -72,7 +73,7 @@ function WorkingWithArraysWithAxios() {
                 onChange={(e) => setTodo({
                     ...todo, id: parseInt(e.target.value)
                 })} />
-            
+
             Title: <input type="text" value={todo.title}
                 onChange={(e) => setTodo({
                     ...todo, title: e.target.value

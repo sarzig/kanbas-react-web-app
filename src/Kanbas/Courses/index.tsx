@@ -1,6 +1,6 @@
 
 // React Elements
-import { Navigate, Route, Routes, useParams } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 // Icons
 
@@ -18,8 +18,8 @@ import Editor from "./Assignments/Editor/";
 //Styles
 import "../styles.css";
 import "./index.css";
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useState } from "react";
+//import axios from "axios";
 
 
 
@@ -30,8 +30,9 @@ function Courses() {
     setShowCourseNav(!showCourseNav);
   };
 
-  const { courseId } = useParams();
-  const COURSES_API = "http://localhost:4000/api/courses";
+  const COURSES_API = "https://kanbas-node-server-app-96jf.onrender.com/api/courses";
+
+  /*
   const [course, setCourse] = useState<any>({ _id: "" });
   const findCourseById = async (courseId?: string) => {
     const response = await axios.get(
@@ -39,6 +40,7 @@ function Courses() {
     );
     setCourse(response.data);
   };
+  */
 
   
   return (

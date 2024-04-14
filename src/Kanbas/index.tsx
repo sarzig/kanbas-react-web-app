@@ -9,15 +9,13 @@ import store from "./store";
 import { Provider } from "react-redux";
 import CoursesMenu from './Navigation/CoursesMenu';
 import axios from "axios";
-import CourseNavigation from "./Courses/Navigation";
-
 
 function Kanbas() {
   //for local
   //const COURSES_API = "http://localhost:4001/api/courses";
 
   // for web deployment:
-  const COURSES_API = "https://kanbas-node-server-app.onrender.com/api/courses";
+  const COURSES_API = "https://kanbas-node-server-app-96jf.onrender.com/api/courses";
 
 
   // Handling courses menu____________________________________________
@@ -84,6 +82,8 @@ function Kanbas() {
       })
     );
   };
+
+  
   // End handling courses______________________________________________
 
 
