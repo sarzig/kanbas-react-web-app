@@ -89,6 +89,8 @@
     position: fixed;
     top: 201px;
     left: 80px;
+    min-width: 160px;
+    min-height: 50px;
     background-color: rgb(233, 231, 231); /* Fully opaque color */
     border-color: black;
     border: 1pt solid rgb(151, 149, 149);

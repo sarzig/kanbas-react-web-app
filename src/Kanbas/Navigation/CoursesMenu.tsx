@@ -15,17 +15,21 @@ interface CoursesMenuProps {
 const CoursesMenu: React.FC<CoursesMenuProps> = ({ courses, hideCoursePopupMenu }) => (
     <div className="courses-menu">
         <ul>
-            {courses.map((course, index) => (
-                <Link
-                    to={`/Kanbas/Courses/${course._id}/Home`}
-                    onClick={hideCoursePopupMenu}
-                    className="course-menu-link"
-                >
-                    <li key={index}>
-                        {course.number}: {course.name}
-                    </li>
-                </Link>
-            ))}
+            {courses.length === 0 ? (
+                <li>No courses</li>
+            ) : (
+                courses.map((course, index) => (
+                    <Link
+                        to={`/Kanbas/Courses/${course._id}/Home`}
+                        onClick={hideCoursePopupMenu}
+                        className="course-menu-link"
+                    >
+                        <li key={index}>
+                            {course.number}: {course.name}
+                        </li>
+                    </Link>
+                ))
+            )}
         </ul>
     </div>
 );
