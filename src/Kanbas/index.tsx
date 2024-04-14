@@ -13,7 +13,11 @@ import CourseNavigation from "./Courses/Navigation";
 
 
 function Kanbas() {
-  const COURSES_API = "http://localhost:4001/api/courses";
+  //for local
+  //const COURSES_API = "http://localhost:4001/api/courses";
+
+  // for web deployment:
+  const COURSES_API = "https://kanbas-node-server-app.onrender.com/api/courses";
 
 
   // Handling courses menu____________________________________________
