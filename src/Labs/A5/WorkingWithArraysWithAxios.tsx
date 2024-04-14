@@ -12,10 +12,13 @@ function WorkingWithArraysWithAxios() {
     });
 
     const [todos, setTodos] = useState<any[]>([]);
+
+    /*
     const fetchTodos = async () => {
         const response = await axios.get(API);
         setTodos(response.data);
     };
+    */
 
     useEffect(() => {
         const fetchTodos = async () => {
