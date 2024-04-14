@@ -12,57 +12,57 @@ function EncodingParametersInURLs() {
       <input type="number"
         onChange={(e) => setB(parseInt(e.target.value))} value={b} />
       <h3>3.1.1 Path Parameters</h3>
-      <a href={`http://localhost:4001/a5/add/${a}/${b}`}>
+      <a href={`https://kanbas-node-server-app-96jf.onrender.com/a5/add/${a}/${b}`}>
         Add {a} + {b}
       </a>
-      (http://localhost:4001/a5/add/${a}/${b})
+      (https://kanbas-node-server-app-96jf.onrender.com/a5/add/${a}/${b})
       <br />
 
-      <a href={`http://localhost:4001/a5/subtract/${a}/${b}`}>
+      <a href={`https://kanbas-node-server-app-96jf.onrender.com/a5/subtract/${a}/${b}`}>
         Substract {a} - {b}
       </a>
-      (http://localhost:4001/a5/subtract/${a}/${b})
+      (https://kanbas-node-server-app-96jf.onrender.com/a5/subtract/${a}/${b})
       <br />
 
-      <a href={`http://localhost:4001/a5/multiply/${a}/${b}`}>
+      <a href={`https://kanbas-node-server-app-96jf.onrender.com/a5/multiply/${a}/${b}`}>
         Multiply {a} x {b}
       </a>
-      (http://localhost:4001/a5/multiply/${a}/${b})
+      (https://kanbas-node-server-app-96jf.onrender.com/a5/multiply/${a}/${b})
       <br />
 
-      <a href={`http://localhost:4001/a5/divide/${a}/${b}`}>
+      <a href={`https://kanbas-node-server-app-96jf.onrender.com/a5/divide/${a}/${b}`}>
         Divide {a} / {b}
       </a>
-      (http://localhost:4001/a5/divide/${a}/${b})
+      (https://kanbas-node-server-app-96jf.onrender.com/a5/divide/${a}/${b})
       <br /><br />
 
       <h3>3.1.2 Query Parameters</h3>
       <a
-        href={`http://localhost:4001/a5/calculator?operation=add&a=${a}&b=${b}`}>
+        href={`https://kanbas-node-server-app-96jf.onrender.com/a5/calculator?operation=add&a=${a}&b=${b}`}>
         Add {a} + {b}
       </a>
-      (http://localhost:4001/a5/calculator?operation=add&a=${a}&b=${b})
+      (https://kanbas-node-server-app-96jf.onrender.com/a5/calculator?operation=add&a=${a}&b=${b})
       <br />
 
       <a
-        href={`http://localhost:4001/a5/calculator?operation=subtract&a=${a}&b=${b}`}>
+        href={`https://kanbas-node-server-app-96jf.onrender.com/a5/calculator?operation=subtract&a=${a}&b=${b}`}>
         Substract {a} - {b}
       </a>
-      (http://localhost:4001/a5/calculator?operation=subtract&a=${a}&b=${b})
+      (https://kanbas-node-server-app-96jf.onrender.com/a5/calculator?operation=subtract&a=${a}&b=${b})
       <br />
 
       <a
-        href={`http://localhost:4001/a5/calculator?operation=multiply&a=${a}&b=${b}`}>
+        href={`https://kanbas-node-server-app-96jf.onrender.com/a5/calculator?operation=multiply&a=${a}&b=${b}`}>
         Multiply {a} x {b}
       </a>
-      (http://localhost:4001/a5/calculator?operation=multiply&a=${a}&b=${b})
+      (https://kanbas-node-server-app-96jf.onrender.com/a5/calculator?operation=multiply&a=${a}&b=${b})
       <br />
 
       <a
-        href={`http://localhost:4001/a5/calculator?operation=divide&a=${a}&b=${b}`}>
+        href={`https://kanbas-node-server-app-96jf.onrender.com/a5/calculator?operation=divide&a=${a}&b=${b}`}>
         Divide {a} / {b}
       </a>
-      (http://localhost:4001/a5/calculator?operation=divide&a=${a}&b=${b})
+      (https://kanbas-node-server-app-96jf.onrender.com/a5/calculator?operation=divide&a=${a}&b=${b})
       <br />
 
     </div>

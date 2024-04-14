@@ -18,7 +18,7 @@ function Dashboard(
       <h2>All Courses</h2>
 
       <hr />
-      <h5>Course</h5>
+      <h5>Add / Update Courses</h5>
       <input value={course.name} className="form-control"
         onChange={(e) => setCourse({ ...course, name: e.target.value })} />
 
