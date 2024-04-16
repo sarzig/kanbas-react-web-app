@@ -73,6 +73,9 @@ function ModuleList() {
         client.updateModule(module).then((module) => {
             dispatch(updateModule(module));
         });
+        client.updateModule(module).then((module) => {
+            dispatch(updateModule(module));
+        });
         dummyIncrementer(); // force update with useEffect
 
         // Reset the module to default values
