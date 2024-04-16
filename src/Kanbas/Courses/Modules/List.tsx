@@ -33,15 +33,27 @@ function ModuleList() {
 
     const handleDeleteModule = (moduleId: string) => {
         client.deleteModule(moduleId).then((status) => {
-          dispatch(deleteModule(moduleId));
+            dispatch(deleteModule(moduleId));
         });
-      };
+    };
 
     const handleAddModule = () => {
         client.createModule(courseId, module).then((module) => {
-          dispatch(addModule(module));
+            dispatch(addModule(module));
         });
-      };    
+
+        // Reset the module to default values
+        //dispatch(setModule({ name: "New Module", description: "New description" }));
+    };
+
+    const handleUpdateModule = () => {
+        client.updateModule(module).then((module) => {
+            dispatch(updateModule(module));
+        });
+
+        // Reset the module to default values
+        //dispatch(setModule({ name: "New Module", description: "New description" }));
+    }
 
     const moduleList = useSelector((state: KanbasState) =>
         state.modulesReducer.modules // Use KanbasState to define the type
@@ -85,7 +97,7 @@ function ModuleList() {
                     </button>
 
                     <button className="btn button-topbar-medium red-button p-1"
-                        onClick={() => dispatch(updateModule(module))}>
+                        onClick={handleUpdateModule}>
                         Update
                     </button>
                 </li>

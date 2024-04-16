@@ -22,7 +22,6 @@ function AssignmentEditor() {
 
     useEffect(() => {
         if (assignmentId !== undefined && assignmentId !== 'addNewAssignment') {
-            //const assignment = GetAssignmentById(assignmentId);
             const assignment = assignments.find((assignment) => assignment._id === assignmentId);
             if (assignment) {
                 dispatch(setAssignment(assignment));

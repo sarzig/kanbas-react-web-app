@@ -10,6 +10,7 @@ const modulesSlice = createSlice({
   initialState,
   reducers: {
     setModules: (state, action) => {
+      console.log("Kanbas/Courses/Modules/modulesreducer.ts: setModules: action.payload: ", action.payload);
       state.modules = action.payload;
     },
 

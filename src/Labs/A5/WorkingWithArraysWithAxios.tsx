@@ -34,7 +34,7 @@ function WorkingWithArraysWithAxios() {
         fetchTodos(); // Call fetchTodos immediately
 
         // No need to include fetchTodos in the dependency array
-    }, [API]); // Empty dependency array means this effect runs once on component mount
+    }); // Empty dependency array means this effect runs once on component mount
 
 
     /*

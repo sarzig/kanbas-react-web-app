@@ -42,7 +42,7 @@ function Kanbas() {
     findAllCourses(); // Initial fetch on component mount
 
     // No need to include findAllCourses in the dependency array
-  }); // Empty dependency array means this effect runs once on mount
+  }, [COURSES_API]); // Empty dependency array means this effect runs once on mount
 
   const [course, setCourse] = useState({
     _id: "0",
