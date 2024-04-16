@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { assignments } from "../../Database";
 
 const initialState = {
-    assignments: assignments,
+    assignments: assignments, // xxx should this be assignments: [] as any, like in modulesReducer.ts?
     assignment:
     {
         title: "New Assignment",
@@ -18,6 +18,11 @@ const assignmentsSlice = createSlice({
     name: "assignments",
     initialState,
     reducers: {
+        setAssignments: (state, action) => {
+            console.log("Kanbas/Courses/Assignments/assignmentsreducer.ts: setAssignments: action.payload: ", action.payload);
+            state.assignments = action.payload;
+          },
+
         addAssignment: (state, action) => {
             state.assignments = [
                 { ...action.payload, _id: new Date().getTime().toString() },

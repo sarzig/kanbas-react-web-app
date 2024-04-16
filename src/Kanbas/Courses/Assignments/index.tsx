@@ -13,6 +13,7 @@ import { FaRegPenToSquare } from "react-icons/fa6";
 import { RxDotsVertical } from "react-icons/rx";
 import "../../styles.css";
 import "./index.css";
+import * as client from "./client";
 
 function Assignments() {
 
@@ -20,6 +21,10 @@ function Assignments() {
 
     const assignmentList = useSelector((state: KanbasState) =>
         state.assignmentsReducer.assignments
+    );
+    
+    const assignment = useSelector((state: KanbasState) =>
+        state.assignmentsReducer.assignment // Use KanbasState to define the type
     );
 
     const dispatch = useDispatch();
@@ -33,8 +38,15 @@ function Assignments() {
         setShowDeleteDialog(true);
     };
 
+    const handleDeleteAssignment = (assignmentId: string) => {
+        client.deleteAssignment(assignmentId).then((status) => {
+            dispatch(deleteAssignment(assignmentId));
+        });
+    };
+
     const handleConfirmDelete = () => {
-        dispatch(deleteAssignment(selectedAssignmentId));
+        //dispatch(deleteAssignment(selectedAssignmentId));
+        handleDeleteAssignment(assignment);
         setShowDeleteDialog(false);
     };
 
@@ -60,7 +72,6 @@ function Assignments() {
                 )}
             </div>
 
-            To my grader: Please note, I was unable to complete the graduate Assignments section for Assignment 5. Thanks~Sarah
             <div className="row button-row">
                 <div className="col-5">
                     <input className="form-control red-search" type="text"
