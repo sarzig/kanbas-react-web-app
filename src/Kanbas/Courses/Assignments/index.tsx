@@ -24,7 +24,7 @@ function Assignments() {
     const assignmentList = useSelector((state: KanbasState) =>
         state.assignmentsReducer.assignments
     );
-    
+
     const assignment = useSelector((state: KanbasState) =>
         state.assignmentsReducer.assignment // Use KanbasState to define the type
     );
@@ -46,10 +46,13 @@ function Assignments() {
         });
     };
 
-    const handleConfirmDelete = () => {
+    const handleConfirmDelete = (assignmentId: any) => {
         //dispatch(deleteAssignment(selectedAssignmentId));
-        handleDeleteAssignment(assignment);
-        setShowDeleteDialog(false);
+
+        if (assignmentId) {
+            handleDeleteAssignment(assignment);
+            setShowDeleteDialog(false);
+        }
     };
 
     const handleCancelDelete = () => {
@@ -61,7 +64,7 @@ function Assignments() {
         if (courseId) { // Check if courseId is defined
             client.findAssignmentsForCourse(courseId).then((assignmentList) => dispatch(setAssignments(assignmentList)));
         }
-    }, [courseId]);
+    }, [courseId, dispatch]);
 
     return (
         <>
@@ -72,7 +75,7 @@ function Assignments() {
                         <h2>Delete Assignment</h2>
                         <p>Are you sure you want to delete this assignment?</p>
                         <div className="modal-buttons">
-                            <button onClick={handleConfirmDelete} className="button-topbar-medium red-button">Yes</button>
+                            <button onClick={() => handleConfirmDelete(selectedAssignmentId)} className="button-topbar-medium red-button">Yes</button>
                             <button onClick={handleCancelDelete} className="button-topbar-medium">No</button>
                         </div>
                     </div>
