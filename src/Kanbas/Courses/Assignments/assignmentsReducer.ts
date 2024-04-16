@@ -1,8 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { assignments } from "../../Database";
 
 const initialState = {
-    assignments: assignments, // xxx should this be assignments: [] as any, like in modulesReducer.ts?
+    assignments: [] as any, 
     assignment:
     {
         title: "New Assignment",
@@ -32,12 +31,12 @@ const assignmentsSlice = createSlice({
         
         deleteAssignment: (state, action) => {
             state.assignments = state.assignments.filter(
-                (assignment) => assignment._id !== action.payload
+                (assignment: { _id: any; }) => assignment._id !== action.payload
             );
         },
 
         updateAssignment: (state, action) => {
-            state.assignments = state.assignments.map((assignment) => {
+            state.assignments = state.assignments.map((assignment: { _id: any; }) => {
                 if (assignment._id === action.payload._id) {
                     return action.payload;
                 } else {
