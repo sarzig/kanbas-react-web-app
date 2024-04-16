@@ -24,12 +24,21 @@ import CourseIdExtract from "../../Functions/CourseIdExtract";
 
 function ModuleList() {
     const courseId = CourseIdExtract();
+    const dispatch = useDispatch();
+    const moduleList = useSelector((state: KanbasState) =>
+        state.modulesReducer.modules // Use KanbasState to define the type
+    );
+
+    const module = useSelector((state: KanbasState) =>
+        state.modulesReducer.module // Use KanbasState to define the type
+    );
+
     useEffect(() => {
         client.findModulesForCourse(courseId)
             .then((modules) =>
                 dispatch(setModules(modules))
             );
-    });
+    }, [courseId, dispatch, moduleList]);
 
     const handleDeleteModule = (moduleId: string) => {
         client.deleteModule(moduleId).then((status) => {
@@ -43,26 +52,19 @@ function ModuleList() {
         });
 
         // Reset the module to default values
-        //dispatch(setModule({ name: "New Module", description: "New description" }));
+        dispatch(setModule({ name: "New Module", description: "New description" }));
     };
 
     const handleUpdateModule = () => {
+        console.log("client calls Modules/List.tsx: handleUpdateModule: module: ", module);
+
         client.updateModule(module).then((module) => {
             dispatch(updateModule(module));
         });
 
         // Reset the module to default values
-        //dispatch(setModule({ name: "New Module", description: "New description" }));
+        dispatch(setModule({ name: "New Module", description: "New description" }));
     }
-
-    const moduleList = useSelector((state: KanbasState) =>
-        state.modulesReducer.modules // Use KanbasState to define the type
-    );
-    const module = useSelector((state: KanbasState) =>
-        state.modulesReducer.module // Use KanbasState to define the type
-    );
-    const dispatch = useDispatch();
-
 
     return (
         <>
