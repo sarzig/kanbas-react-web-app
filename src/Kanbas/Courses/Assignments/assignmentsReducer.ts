@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    assignments: [] as any, 
+    assignments: [] as any,
     assignment:
     {
         title: "New Assignment",
@@ -20,7 +20,7 @@ const assignmentsSlice = createSlice({
         setAssignments: (state, action) => {
             console.log("Kanbas/Courses/Assignments/assignmentsreducer.ts: setAssignments: action.payload: ", action.payload);
             state.assignments = action.payload;
-          },
+        },
 
         addAssignment: (state, action) => {
             state.assignments = [
@@ -28,7 +28,7 @@ const assignmentsSlice = createSlice({
                 ...state.assignments,
             ];
         },
-        
+
         deleteAssignment: (state, action) => {
             state.assignments = state.assignments.filter(
                 (assignment: { _id: any; }) => assignment._id !== action.payload
@@ -55,5 +55,6 @@ export const {
     addAssignment,
     deleteAssignment,
     updateAssignment,
-    setAssignment } = assignmentsSlice.actions;
+    setAssignment,
+    setAssignments } = assignmentsSlice.actions;
 export default assignmentsSlice.reducer;

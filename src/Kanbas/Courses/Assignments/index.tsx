@@ -1,9 +1,10 @@
-import { useState } from "react"; // Import useState
+import { useEffect, useState } from "react"; // Import useState
 import { FaCheckCircle, FaTrash } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
-    deleteAssignment
+    deleteAssignment,
+    setAssignments
 } from "./assignmentsReducer";
 import { KanbasState } from "../../store"; // Import the KanbasState type
 import { PiDotsSixVerticalBold } from "react-icons/pi";
@@ -14,6 +15,7 @@ import { RxDotsVertical } from "react-icons/rx";
 import "../../styles.css";
 import "./index.css";
 import * as client from "./client";
+
 
 function Assignments() {
 
@@ -54,6 +56,12 @@ function Assignments() {
         // Hide the delete confirmation dialog
         setShowDeleteDialog(false);
     };
+
+    useEffect(() => {
+        if (courseId) { // Check if courseId is defined
+            client.findAssignmentsForCourse(courseId).then((assignmentList) => dispatch(setAssignments(assignmentList)));
+        }
+    }, [courseId]);
 
     return (
         <>
