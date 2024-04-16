@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { setAssignment, addAssignment, updateAssignment } from "../assignmentsReducer";
+import { setAssignment, addAssignment } from "../assignmentsReducer";
 import { KanbasState } from "../../../store";
 import CourseIdExtract from "../../../Functions/CourseIdExtract";
+import * as client from "../client";
 
 function AssignmentEditor() {
     const courseId = CourseIdExtract();
@@ -48,9 +49,15 @@ function AssignmentEditor() {
 
     const handleSave = () => {
         if (assignmentId === 'addNewAssignment') {
-            dispatch(addAssignment({ ...assignment, course: courseId }));
+            //dispatch(addAssignment({ ...assignment, course: courseId }));
+            client.createAssignment(courseId, assignment).then((assignment) => {
+                dispatch(addAssignment(assignment));
+              });
         } else {
-            dispatch(updateAssignment(assignment));
+           // dispatch(updateAssignment(assignment));
+           client.updateAssignment(assignment).then((assignment) => {
+            dispatch(addAssignment(assignment));
+          });
         }
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
     };
