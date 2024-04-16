@@ -38,7 +38,7 @@ function ModuleList() {
             .then((modules) =>
                 dispatch(setModules(modules))
             );
-    }, [courseId, dispatch, moduleList]);
+    }, [courseId, dispatch, module]);
 
     const handleDeleteModule = (moduleId: string) => {
         client.deleteModule(moduleId).then((status) => {
