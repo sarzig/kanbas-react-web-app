@@ -1,9 +1,16 @@
-import { assignments, enrollments, grades, users } from "../../Database";
+import { enrollments, grades, users } from "../../Database";
 import CourseIdExtract from "../../Functions/CourseIdExtract";
+import { useSelector, useDispatch } from "react-redux";
+import { KanbasState } from "../../store"; // Import the KanbasState type
 
 
 function Grades() {
     const courseId = CourseIdExtract();
+    const dispatch = useDispatch();
+    const assignments = useSelector((state: KanbasState) =>
+        state.assignmentsReducer.assignments // Use KanbasState to define the type
+    );
+
     const as = assignments.filter((assignment) => assignment.course === courseId);
     const es = enrollments.filter((enrollment) => enrollment.course === courseId);
 
