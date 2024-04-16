@@ -12,6 +12,34 @@ function Dashboard(
   }
 ) {
 
+  const handleUpdateCourse = () => {
+    // Invoke addNewCourse function to add a new course
+    updateCourse();
+  
+    // Dispatch an action to set the course state to default values
+    setCourse({
+      name: "New Course",
+      number: "New Number",
+      startDate: "2023-09-10",
+      endDate: "2023-12-15",
+      image: "/images/default_no_image_loaded.jpg"
+    });
+  };
+
+  const handleAddNewCourse = () => {
+    // Invoke addNewCourse function to add a new course
+    addNewCourse();
+  
+    // Dispatch an action to set the course state to default values
+    setCourse({
+      name: "New Course",
+      number: "New Number",
+      startDate: "2023-09-10",
+      endDate: "2023-12-15",
+      image: "/images/default_no_image_loaded.jpg"
+    });
+  };
+
   return (
     <div>
       <h1>Dashboard</h1>
@@ -31,12 +59,12 @@ function Dashboard(
       <input value={course.endDate} className="form-control" type="date"
         onChange={(e) => setCourse({ ...course, endDate: e.target.value })} />
 
-      <div onClick={addNewCourse}
+      <div onClick={handleAddNewCourse}
         className="btn btn-primary" >
         Add
       </div>
 
-      <div onClick={updateCourse}
+      <div onClick={handleUpdateCourse}
         className="btn btn-primary" >
         Update
       </div>
@@ -111,3 +139,4 @@ function Dashboard(
   );
 }
 export default Dashboard;
+

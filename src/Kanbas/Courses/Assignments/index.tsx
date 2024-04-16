@@ -50,7 +50,7 @@ function Assignments() {
         //dispatch(deleteAssignment(selectedAssignmentId));
 
         if (assignmentId) {
-            handleDeleteAssignment(assignment);
+            handleDeleteAssignment(assignmentId);
             setShowDeleteDialog(false);
         }
     };
@@ -64,7 +64,7 @@ function Assignments() {
         if (courseId) { // Check if courseId is defined
             client.findAssignmentsForCourse(courseId).then((assignmentList) => dispatch(setAssignments(assignmentList)));
         }
-    }, [courseId, dispatch]);
+    }, [courseId, dispatch, assignment]);
 
     return (
         <>

@@ -23,7 +23,7 @@ import { useEffect } from "react";
 import CourseIdExtract from "../../Functions/CourseIdExtract";
 
 function ModuleList() {
-    const courseId = CourseIdExtract();
+    const courseId = CourseIdExtract(); /// change to useParams() like in assignments?
     const dispatch = useDispatch();
     const moduleList = useSelector((state: KanbasState) =>
         state.modulesReducer.modules // Use KanbasState to define the type
@@ -33,37 +33,51 @@ function ModuleList() {
         state.modulesReducer.module // Use KanbasState to define the type
     );
 
+    let dummy = 1; // this is to force changes to be detected
+
+    const dummyIncrementer = () => {
+        dummy++;
+    };
+
     useEffect(() => {
         client.findModulesForCourse(courseId)
             .then((modules) =>
                 dispatch(setModules(modules))
             );
-    }, [courseId, dispatch, module]);
+    }, [courseId, dispatch, module, dummy]);
 
     const handleDeleteModule = (moduleId: string) => {
         client.deleteModule(moduleId).then((status) => {
             dispatch(deleteModule(moduleId));
         });
+        dummyIncrementer(); // force update with useEffect
     };
 
     const handleAddModule = () => {
+        dummyIncrementer(); // force update with useEffect
+
         client.createModule(courseId, module).then((module) => {
             dispatch(addModule(module));
         });
 
         // Reset the module to default values
         dispatch(setModule({ name: "New Module", description: "New description" }));
+        dummyIncrementer(); // force update with useEffect
     };
 
     const handleUpdateModule = () => {
+        dummyIncrementer(); // force update with useEffect
+
         console.log("client calls Modules/List.tsx: handleUpdateModule: module: ", module);
 
         client.updateModule(module).then((module) => {
             dispatch(updateModule(module));
         });
+        dummyIncrementer(); // force update with useEffect
 
         // Reset the module to default values
         dispatch(setModule({ name: "New Module", description: "New description" }));
+        dummyIncrementer(); // force update with useEffect
     }
 
     return (
@@ -119,13 +133,20 @@ function ModuleList() {
                                 <span className="float-end">
                                     <button
                                         className="btn button-topbar-medium red-button mt-0"
-                                        onClick={() => dispatch(setModule(module))}>
+                                        onClick={() => {
+                                            dispatch(setModule(module));
+                                            dummyIncrementer();
+                                        }}>
                                         Edit
                                     </button>
 
                                     <button
                                         className="btn button-topbar-medium red-button mt-0"
-                                        onClick={() => handleDeleteModule(module._id)} >
+                                        onClick={() => {
+                                            handleDeleteModule(module._id);
+                                            dummyIncrementer();
+                                        }
+                                        } >
                                         Delete
                                     </button>
                                     <FaCheckCircle className="modules-icon icon-green" />
