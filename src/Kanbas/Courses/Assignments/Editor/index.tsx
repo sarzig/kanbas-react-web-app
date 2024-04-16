@@ -20,6 +20,7 @@ function AssignmentEditor() {
     // Previously deprecated function GetAssignmentById was pulling from the json, which meant assignment 
     // was not updating.
     const assignments = useSelector((state: KanbasState) => state.assignmentsReducer.assignments);
+    let dummy = 1;
 
     useEffect(() => {
         if (assignmentId !== undefined && assignmentId !== 'addNewAssignment') {
@@ -41,13 +42,16 @@ function AssignmentEditor() {
             };
             dispatch(setAssignment(newAssignment));
         }
-    }, [assignmentId, dispatch, assignments]);
+    }, [assignmentId, dispatch, assignments, dummy]);
 
     const goBackToAssignments = () => {
+        dummy++;
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
     };
 
     const handleSave = () => {
+        dummy++;
+
         if (assignmentId === 'addNewAssignment') {
             //dispatch(addAssignment({ ...assignment, course: courseId }));
             client.createAssignment(courseId, assignment).then((assignment) => {
