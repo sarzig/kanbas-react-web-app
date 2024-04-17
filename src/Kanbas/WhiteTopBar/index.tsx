@@ -27,7 +27,7 @@ function WhiteTopBar({
             <div className="col widescreen-top-bar">
                 <h1>
                     <HiMiniBars3 className="top-bar-menu-hamburger" onClick={onToggleCourseNav} title="Toggle Course Navigation Menu" />
-                    {course?.number ?? 'Unknown Course'}: {course?.name ?? 'Unknown Course'}  {`>`} Assignment {lastSegment}
+                    {course?.number ?? 'Unknown Course'}: {course?.name ?? 'Unknown Course'}  {`>`} {lastSegment}
                     <hr />
                 </h1>
             </div>
