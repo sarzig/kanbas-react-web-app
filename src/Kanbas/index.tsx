@@ -9,6 +9,7 @@ import store from "./store";
 import { Provider } from "react-redux";
 import CoursesMenu from './Navigation/CoursesMenu';
 import axios from "axios";
+import Account from "./Account";
 
 function Kanbas() {
   const API_BASE = process.env.REACT_APP_API_BASE;
@@ -104,7 +105,7 @@ function Kanbas() {
 
           <Routes>
             <Route path="/" element={<Navigate to="Dashboard" />} />
-            <Route path="Account" element={<h1>Account</h1>} />
+            <Route path="/Account/*" element={<Account />} />
             <Route path="Dashboard" element={
               <Dashboard
                 courses={courses}
@@ -114,7 +115,7 @@ function Kanbas() {
                 deleteCourse={deleteCourse}
                 updateCourse={updateCourse} />
             } />
-            <Route path="Courses/:courseId/*" element={<Courses courses={courses}/>} />
+            <Route path="Courses/:courseId/*" element={<Courses courses={courses} />} />
           </Routes>
         </div>
       </div>
