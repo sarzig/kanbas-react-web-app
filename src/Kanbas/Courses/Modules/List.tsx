@@ -103,7 +103,7 @@ function ModuleList() {
 
                     <button className="btn button-topbar-medium red-button p-1"
                         onClick={handleUpdateModule}>
-                        Update (Double Click)
+                        Update
                     </button>
                 </li>
 
