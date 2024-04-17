@@ -49,8 +49,8 @@ function AssignmentEditor() {
 
     const handleSave = () => {
         if (assignmentId === 'addNewAssignment') {
-            client.createAssignment(courseId, assignment).then((assignment) => {
-                dispatch(addAssignment(assignment));
+            client.createAssignment(courseId, assignment).then((newAssignment) => {
+                dispatch(addAssignment(newAssignment));
               });
         } else {
            client.updateAssignment(assignment).then(() => {
