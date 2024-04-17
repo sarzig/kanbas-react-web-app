@@ -107,7 +107,6 @@ function ModuleList() {
                     </button>
                 </li>
 
-
                 {moduleList
                     .filter((module) => module.course === courseId)
                     .map((module) => (
