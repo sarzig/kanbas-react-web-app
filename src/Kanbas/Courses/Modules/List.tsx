@@ -1,5 +1,4 @@
 import { FaCheckCircle } from "react-icons/fa";
-//import { useParams } from "react-router";
 import { RxDotsVertical } from "react-icons/rx";
 import { PiDotsSixVerticalBold } from "react-icons/pi";
 import { IoMdArrowDropdown } from "react-icons/io";
@@ -33,54 +32,41 @@ function ModuleList() {
         state.modulesReducer.module // Use KanbasState to define the type
     );
 
-    let dummy = 1; // this is to force changes to be detected
-
-    const dummyIncrementer = () => {
-        dummy++;
-    };
-
     useEffect(() => {
         client.findModulesForCourse(courseId)
             .then((modules) =>
                 dispatch(setModules(modules))
             );
-    }, [courseId, dispatch, module, dummy]);
+    }, 
+    //[courseId, dispatch, module, dummy]);
+    [courseId, dispatch]); // 
 
     const handleDeleteModule = (moduleId: string) => {
         client.deleteModule(moduleId).then((status) => {
             dispatch(deleteModule(moduleId));
         });
-        dummyIncrementer(); // force update with useEffect
     };
 
     const handleAddModule = () => {
-        dummyIncrementer(); // force update with useEffect
 
-        client.createModule(courseId, module).then((module) => {
-            dispatch(addModule(module));
+        client.createModule(courseId, module).then((addedModule) => {
+            dispatch(addModule(addedModule));
         });
 
         // Reset the module to default values
         dispatch(setModule({ name: "New Module", description: "New description" }));
-        dummyIncrementer(); // force update with useEffect
     };
 
     const handleUpdateModule = () => {
-        dummyIncrementer(); // force update with useEffect
 
         console.log("client calls Modules/List.tsx: handleUpdateModule: module: ", module);
 
-        client.updateModule(module).then((module) => {
+        client.updateModule(module).then(() => {
             dispatch(updateModule(module));
         });
-        client.updateModule(module).then((module) => {
-            dispatch(updateModule(module));
-        });
-        dummyIncrementer(); // force update with useEffect
 
         // Reset the module to default values
         dispatch(setModule({ name: "New Module", description: "New description" }));
-        dummyIncrementer(); // force update with useEffect
     }
 
     return (
@@ -124,8 +110,8 @@ function ModuleList() {
 
                 {moduleList
                     .filter((module) => module.course === courseId)
-                    .map((module, index) => (
-                        <li key={index} className="list-group-item">
+                    .map((module) => (
+                        <li key={module._id} className="list-group-item">
 
                             <div className="kanbas-modules-title">
                                 <PiDotsSixVerticalBold className="modules-icon" />
@@ -138,7 +124,6 @@ function ModuleList() {
                                         className="btn button-topbar-medium red-button mt-0"
                                         onClick={() => {
                                             dispatch(setModule(module));
-                                            dummyIncrementer();
                                         }}>
                                         Edit
                                     </button>
@@ -147,7 +132,6 @@ function ModuleList() {
                                         className="btn button-topbar-medium red-button mt-0"
                                         onClick={() => {
                                             handleDeleteModule(module._id);
-                                            dummyIncrementer();
                                         }
                                         } >
                                         Delete
