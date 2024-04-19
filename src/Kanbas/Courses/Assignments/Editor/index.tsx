@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { setAssignment, addAssignment } from "../assignmentsReducer";
+import { setAssignment, addAssignment, updateAssignment } from "../assignmentsReducer";
 import { KanbasState } from "../../../store";
 import CourseIdExtract from "../../../Functions/CourseIdExtract";
 import * as client from "../client";
@@ -20,7 +20,6 @@ function AssignmentEditor() {
     // Previously deprecated function GetAssignmentById was pulling from the json, which meant assignment 
     // was not updating.
     const assignments = useSelector((state: KanbasState) => state.assignmentsReducer.assignments);
-    let dummy = 1;
 
     useEffect(() => {
         if (assignmentId !== undefined && assignmentId !== 'addNewAssignment') {
@@ -42,26 +41,21 @@ function AssignmentEditor() {
             };
             dispatch(setAssignment(newAssignment));
         }
-    }, [assignmentId, dispatch, assignments, dummy]);
+    }, [assignmentId, dispatch, assignments]);
 
     const goBackToAssignments = () => {
-        dummy++;
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
     };
 
     const handleSave = () => {
-        dummy++;
-
         if (assignmentId === 'addNewAssignment') {
-            //dispatch(addAssignment({ ...assignment, course: courseId }));
-            client.createAssignment(courseId, assignment).then((assignment) => {
-                dispatch(addAssignment(assignment));
+            client.createAssignment(courseId, assignment).then((newAssignment) => {
+                dispatch(addAssignment(newAssignment));
               });
         } else {
-           // dispatch(updateAssignment(assignment));
-           client.updateAssignment(assignment).then((assignment) => {
-            dispatch(addAssignment(assignment));
-          });
+           client.updateAssignment(assignment).then(() => {
+            dispatch(updateAssignment(assignment));
+            });
         }
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
     };
