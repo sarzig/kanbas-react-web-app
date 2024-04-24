@@ -13,7 +13,7 @@ function Labs() {
                 <Nav />
                 <div style={{ margin: '20px' }}>
                     <Routes>
-                        <Route path="/" element={<Navigate to="a4" />} />
+                        <Route path="/" element={<Navigate to="a5" />} />
                         <Route path="a3" element={<Assignment3 />} />
                         <Route path="a4" element={<Assignment4 />} />
                         <Route path="a5" element={<Assignment5 />} />
